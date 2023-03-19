@@ -4,15 +4,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script
+    src="https://github.com/dirkarnez/webpack-umd-action/releases/download/%40octokit%2Fcore.2.0.10/core.2.0.10.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
-  <script type="module"
-    src="https://cdn.jsdelivr.net/gh/dirkarnez/githubjs-wrapper@main/githubjs-wrapper.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/dirkarnez/githubjs-wrapper@main/githubjs-wrapper.js"></script>
   <script>
     window.key = "github-auth-cookie";
+  </script>
+  <script>
+    function b64toBlob(b64Data, contentType = '', sliceSize = 512) {
+      const byteCharacters = atob(b64Data);
+      const byteArrays = [];
+
+      for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+        const slice = byteCharacters.slice(offset, offset + sliceSize);
+
+        const byteNumbers = new Array(slice.length);
+        for (let i = 0; i < slice.length; i++) {
+          byteNumbers[i] = slice.charCodeAt(i);
+        }
+
+        const byteArray = new Uint8Array(byteNumbers);
+        byteArrays.push(byteArray);
+      }
+
+      const blob = new Blob(byteArrays, { type: contentType });
+      return blob;
+    }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
   <style>
@@ -234,9 +256,9 @@
               </div>
               <form className="form-inline" encType="multipart/form-data" method="post" action="https://zxing.org/w/decode">
                 <div className="form-group">
-                  <input className="form-control" id="f" name="f" type="file"/>
+                  <input className="form-control" id="f" name="f" type="file" />
                 </div>
-                <input type="submit" className="btn btn-primary"/>
+                <input type="submit" className="btn btn-primary" />
               </form>
 
             </div>
@@ -255,9 +277,9 @@
                 }}
                 action="" method="post">
                 <div className="form-group">
-                  <input className="form-control" id="tel-input" type="text"/>
+                  <input className="form-control" id="tel-input" type="text" />
                 </div>
-                <input className="btn btn-primary" id="whatsapp-button" type="submit" value="Submit"/>
+                <input className="btn btn-primary" id="whatsapp-button" type="submit" value="Submit" />
               </form>
             </div>
           </div>
@@ -281,15 +303,15 @@
           <div className="row">
             <div className="col">
               <label htmlFor="github-auth">GitHub Auth:</label>
-              <input type="text" id="github-auth" defaultValue={Cookies.get(window.key) || ""} 
-              onChange={() => {
-                Cookies.set(window.key, event.target.value);
-              }}/>
+              <input type="text" id="github-auth" defaultValue={Cookies.get(window.key) || ""}
+                onChange={() => {
+                  Cookies.set(window.key, event.target.value);
+                }} />
             </div>
           </div>
           <br />
           <LoadedComponent />
-          {/*!!InternalMusicPlayer ? <InternalMusicPlayer/> : ""*/}
+          {InternalMusicPlayer ? <InternalMusicPlayer /> : ""}
           <br />
           <br />
         </div>
@@ -297,73 +319,61 @@
     }
 
   </script>
+  <script type="text/babel">
+    window.init = () => {
+      window.root = ReactDOM.createRoot(document.getElementById('app'));
+      window.root.render(<Application />);
+      debugger;
+    };
+  </script>
   <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
   <!-- https://unpkg.com/react@18.2.0/umd/react.production.min.js -->
   <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
   <!-- https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js -->
   <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
-  <script type="text/babel">
+  <script type="module">
     //window.addEventListener('DOMContentLoaded', (event) => {
-      const githubClient = window.github(Cookies.get(window.key) || "");
-      githubClient.init("dirkarnez", "internal-private-apps");
-      
-      function githubReadBranchRecursive() {
-        githubClient
-          .readBranchRecursive("main")
-          .then(response => response.data.tree.map(leaf =>  ({ path: leaf.path, sha: leaf.sha})))
-          .then(tree => tree.filter(leaf => (leaf.path == "README.yaml"))[0].sha)
-          .then(README_YAML_SHA => githubClient.readAsString(README_YAML_SHA))
-          .then(content => {
-            const appRegistry = jsyaml.load(content);
-            if (!Array.isArray(appRegistry)) {
-              throw "Malformatted"
-            }
-            return appRegistry;
-          })
-          .then(appRegistry => Promise.all(appRegistry.map((app => {
+    const githubClient = window.github(Cookies.get(window.key) || "");
+    githubClient.init("dirkarnez", "internal-private-apps");
+
+    function githubReadBranchRecursive() {
+      githubClient
+        .readBranchRecursive("main")
+        .then(response => response.data.tree.map(leaf => ({ path: leaf.path, sha: leaf.sha })))
+        .then(tree => tree.filter(leaf => (leaf.path == "README.yaml"))[0].sha)
+        .then(README_YAML_SHA => githubClient.readAsString(README_YAML_SHA))
+        .then(content => {
+          const appRegistry = jsyaml.load(content);
+          if (!Array.isArray(appRegistry)) {
+            throw "Malformatted"
+          }
+          return appRegistry;
+        })
+        .then(appRegistry => {
+          const tasks = appRegistry.map(app => {
             const githubClientPerApp = window.github(Cookies.get(window.key) || "");
             githubClient.init("dirkarnez", app);
-            githubClient.readBranchRecursive("main")
-            .then(response => response.data.tree.map(leaf =>  ({ path: leaf.path, sha: leaf.sha})))
-            .then(tree => tree.filter(leaf => (leaf.path == "index.js"))[0].sha)
-            .then(INDEX_JS_SHA => githubClient.readAsString(INDEX_JS_SHA))
-            .then(content => new Promise((res) => {
-                debugger;
+            return githubClient.readBranchRecursive("main")
+              .then(response => response.data.tree.map(leaf => ({ path: leaf.path, sha: leaf.sha })))
+              .then(tree => tree.filter(leaf => (leaf.path == "index.js"))[0].sha)
+              .then(INDEX_JS_SHA => githubClient.readAsString(INDEX_JS_SHA))
+              .then(content => new Promise(resolve => {
                 const script = document.createElement("script");
-                script.addEventListener('load', (event) => {
-                  res(true);
-                });
                 script.type = "text/babel";
                 script.text = content;
-                script.async = true;
                 document.body.appendChild(script);
-              }))}
-            )))
-
-
-            // const script = document.createElement("script");
-            //   script.addEventListener('load', (event) => {
-            //     console.log("!!!!!!!!!!!!!!");
-            //   });
-            //   script.type = "text/babel";
-            //   script.text = content;
-            //   debugger;
-            //   script.async = true;
-            //   document.body.appendChild(script);
-            //   Babel.transformScriptTags();
-            
-          )
-          .then(() => {
-            Babel.transformScriptTags();
-            window.root = ReactDOM.createRoot(document.getElementById('app'));
-            window.root.render(<Application />);
-          })
-          .catch(function (error) {
-            debugger;
+                resolve(true);
+              }))
           });
-      }
+          return Promise.all(tasks);
+        })
+        .then((a) => {
+          Babel.transformScriptTags();
+          window.init();
+        });
+    }
 
-      githubReadBranchRecursive();
+    githubReadBranchRecursive();
   /*});*/
   </script>
   <script>
