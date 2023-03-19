@@ -366,16 +366,20 @@
                 const script = document.createElement("script");
                 script.type = "text/babel";
                 script.text = content;
-                document.body.appendChild(script);
+                document.querySelector('head').appendChild(script);
                 resolve(true);
               }))
           });
           return Promise.all(tasks);
         })
-        .then((a) => {
+        .then(a => new Promise(resolve => setTimeout(resolve, 3000)))
+        .then(() => {
           Babel.transformScriptTags();
+          return new Promise(resolve => setTimeout(resolve, 0))
+        })
+        .then(() => {
           window.init();
-        });
+        }); 
     }
 
     githubReadBranchRecursive();
