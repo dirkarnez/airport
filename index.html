@@ -333,6 +333,11 @@
   <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
   <script type="module">
     //window.addEventListener('DOMContentLoaded', (event) => {
+    
+    if (Cookies.get(window.key)) {
+      Cookies.set(window.key, prompt('Type here'));
+    }
+      
     const githubClient = window.github(Cookies.get(window.key) || "");
     githubClient.init("dirkarnez", "internal-private-apps");
 
