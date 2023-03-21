@@ -334,7 +334,7 @@
   <script type="module">
     //window.addEventListener('DOMContentLoaded', (event) => {
     
-    if (!Cookies.get(window.key)) {
+    if (!Cookies.get(window.key) || Cookies.get(window.key) == 'null') {
       Cookies.set(window.key, prompt('Type here'));
     }
       
