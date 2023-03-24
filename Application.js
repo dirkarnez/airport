@@ -170,6 +170,7 @@ function Application() {
             </div>
           </div>
           <br />
+          {InternalSTEMexTimesheet ? <div style={{maxHeight: "500px", overflowY: "scroll" }}><InternalSTEMexTimesheet /></div> : ""}
           {InternalMusicPlayer ? <div style={{maxHeight: "500px", overflowY: "scroll" }}><InternalMusicPlayer /></div> : ""}
           <br />
           <br />
