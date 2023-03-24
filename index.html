@@ -166,8 +166,7 @@
     function githubReadBranchRecursive() {
       githubClient
         .readBranchRecursive("main")
-        .then(response => response.data.tree.map(leaf => ({ path: leaf.path, sha: leaf.sha })))
-        .then(tree => tree.filter(leaf => !!leaf.path && (leaf.path == "README.yaml"))[0].sha)
+        .then(response => response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "README.yaml"))[0].sha)
         .then(README_YAML_SHA => githubClient.readAsString(README_YAML_SHA))
         .then(content => {
           const appRegistry = jsyaml.load(content);
@@ -181,7 +180,10 @@
             const githubClientPerApp = window.github(Cookies.get(window.key) || "");
             githubClient.init("dirkarnez", app);
             return githubClient.readBranchRecursive("main")
-              .then(response => response.data.tree.filter(leaf => "index.js" == leaf.path)[0].sha)
+              .then(response => {
+                const filtered = response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "index.js"))[0];
+                return filtered.sha;
+              })
               .then(INDEX_JS_SHA => githubClient.readAsString(INDEX_JS_SHA))
               .then(content => new Promise(resolve => {
                 const script = document.createElement("script");
