@@ -160,14 +160,16 @@
       Cookies.set(window.key, prompt('Type here'));
     }
       
-    const githubClient = window.github(Cookies.get(window.key) || "");
-    githubClient.init("dirkarnez", "internal-private-apps");
+    window.myOctokit = new octokitCore.Octokit({ auth: (Cookies.get(window.key) || "")});
+    
+    const githubClientPrivateApps = window.github(window.myOctokit);
+    githubClientPrivateApps.init("dirkarnez", "internal-private-apps");
 
     function githubReadBranchRecursive() {
-      githubClient
+      githubClientPrivateApps
         .readBranchRecursive("main")
         .then(response => response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "README.yaml"))[0].sha)
-        .then(README_YAML_SHA => githubClient.readAsString(README_YAML_SHA))
+        .then(README_YAML_SHA => githubClientPrivateApps.readAsString(README_YAML_SHA))
         .then(content => {
           const appRegistry = jsyaml.load(content);
           if (!Array.isArray(appRegistry)) {
@@ -177,14 +179,14 @@
         })
         .then(appRegistry => {
           const tasks = appRegistry.map(app => {
-            const githubClientPerApp = window.github(Cookies.get(window.key) || "");
-            githubClient.init("dirkarnez", app);
-            return githubClient.readBranchRecursive("main")
+            const githubClientPerApp = window.github(window.myOctokit);
+            githubClientPerApp.init("dirkarnez", app);
+            return githubClientPerApp.readBranchRecursive("main")
               .then(response => {
                 const filtered = response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "index.js"))[0];
                 return filtered.sha;
               })
-              .then(INDEX_JS_SHA => githubClient.readAsString(INDEX_JS_SHA))
+              .then(INDEX_JS_SHA => githubClientPerApp.readAsString(INDEX_JS_SHA))
               .then(content => new Promise(resolve => {
                 const script = document.createElement("script");
                 script.type = "text/babel";
