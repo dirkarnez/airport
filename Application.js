@@ -170,7 +170,6 @@ function Application() {
             </div>
           </div>
           <br />
-          <LoadedComponent />
           {InternalMusicPlayer ? <div style={{maxHeight: "500px"}}><InternalMusicPlayer /></div> : ""}
           <br />
           <br />
