@@ -171,7 +171,7 @@ function Application() {
           </div>
           <br />
           <LoadedComponent />
-          {InternalMusicPlayer ? <InternalMusicPlayer /> : ""}
+          {InternalMusicPlayer ? <div style={{maxHeight: "500px"}}><InternalMusicPlayer /></div> : ""}
           <br />
           <br />
         </div>
