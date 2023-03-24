@@ -170,7 +170,7 @@ function Application() {
             </div>
           </div>
           <br />
-          {InternalMusicPlayer ? <div style={{maxHeight: "500px"}}><InternalMusicPlayer /></div> : ""}
+          {InternalMusicPlayer ? <div style={{maxHeight: "500px", overflowY: "scroll" }}><InternalMusicPlayer /></div> : ""}
           <br />
           <br />
         </div>
