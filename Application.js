@@ -170,8 +170,12 @@ function Application() {
             </div>
           </div>
           <br />
-          {InternalSTEMexTimesheet ? <div style={{maxHeight: "500px", overflowY: "scroll" }}><InternalSTEMexTimesheet /></div> : ""}
-          {InternalMusicPlayer ? <div style={{maxHeight: "500px", overflowY: "scroll" }}><InternalMusicPlayer /></div> : ""}
+            <input type="radio" id="private-app-radio" name="private_app" value="A">
+            <input type="radio" id="private-app-radio" name="private_app" value="B">
+            <input type="radio" id="private-app-radio" name="private_app" value="C">
+          <br />
+          {InternalSTEMexTimesheet ? <div style={{maxHeight: "500px", overflowY: "auto" }}><InternalSTEMexTimesheet /></div> : ""}
+          {InternalMusicPlayer ? <div style={{maxHeight: "500px", overflowY: "auto" }}><InternalMusicPlayer /></div> : ""}
           <br />
           <br />
         </div>
