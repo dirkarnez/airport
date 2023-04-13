@@ -187,20 +187,17 @@
                 return filtered.sha;
               })
               .then(INDEX_JS_SHA => githubClientPerApp.readAsString(INDEX_JS_SHA))
-              .then(content => new Promise(resolve => {
+              .then(content => new Promise((resolve, reject) => {
+                const code = Babel.transform(content, {
+                    presets: ['es2015', 'react']
+                }).code;
                 const script = document.createElement("script");
-                script.type = "text/babel";
-                script.text = content;
+                script.text = code;
                 document.querySelector('head').appendChild(script);
                 resolve(true);
               }))
           });
           return Promise.all(tasks);
-        })
-        .then(a => new Promise(resolve => setTimeout(resolve, 3000)))
-        .then(() => {
-          Babel.transformScriptTags();
-          return new Promise(resolve => setTimeout(resolve, 0))
         })
         .then(() => {
           window.init();
