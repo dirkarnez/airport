@@ -13,7 +13,7 @@
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
   <script type="module" src="https://dirkarnez.github.io/githubjs-wrapper/githubjs-wrapper.js"></script>
   <script>
-    window.key = "github-auth-cookie";
+    window.key = "github-auth-cookie-secret-key";
   </script>
   <script>
     function b64toBlob(b64Data, contentType = '', sliceSize = 512) {
@@ -159,8 +159,11 @@
     if (!Cookies.get(window.key) || Cookies.get(window.key) == 'null') {
       Cookies.set(window.key, prompt('Type here'));
     }
-      
-    window.myOctokit = new octokitCore.Octokit({ auth: (Cookies.get(window.key) || "")});
+    
+    /*
+    CryptoJS.AES.encrypt(github personal access token, custom password).toString();
+    */
+    window.myOctokit = new octokitCore.Octokit({ auth: CryptoJS.AES.decrypt("U2FsdGVkX18B/daxI0ga0a9tbRshogTAx7BkqjziiDckXhGXBxdSod8cv4Fh6ALjenQ3e4aWHHCkQhAXJCtuDQ==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8) });
     
     const githubClientPrivateApps = window.github(window.myOctokit);
     githubClientPrivateApps.init("dirkarnez", "internal-private-apps");
