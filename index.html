@@ -165,7 +165,7 @@
     CryptoJS.AES.encrypt(github personal access token, custom password).toString();
     */
     function githubReadBranchRecursive() {
-      const decrypted = CryptoJS.AES.decrypt("U2FsdGVkX18B/daxI0ga0a9tbRshogTAx7BkqjziiDckXhGXBxdSod8cv4Fh6ALjenQ3e4aWHHCkQhAXJCtuDQ==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
+      window.decrypted = CryptoJS.AES.decrypt("U2FsdGVkX18B/daxI0ga0a9tbRshogTAx7BkqjziiDckXhGXBxdSod8cv4Fh6ALjenQ3e4aWHHCkQhAXJCtuDQ==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
       window.myOctokit = new octokitCore.Octokit({ auth: decrypted });
 
       var githubClientPrivateApps = window.github(window.myOctokit);
