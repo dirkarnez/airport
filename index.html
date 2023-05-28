@@ -12,7 +12,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
   <script type="module" src="https://dirkarnez.github.io/githubjs-wrapper/githubjs-wrapper.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     window.key = "github-auth-cookie-secret-key";
   </script>
@@ -149,27 +151,26 @@
     };
   </script>
   <!-- <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script> -->
-  
+
   <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
   <!-- <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script> -->
   <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.21.3/babel.min.js"></script>
   <script type="module">
     //window.addEventListener('DOMContentLoaded', (event) => {
-    
-    if (!Cookies.get(window.key) || Cookies.get(window.key) == 'null') {
-      Cookies.set(window.key, prompt('Type here'));
-    }
-    
+
+
+
     /*
     CryptoJS.AES.encrypt(github personal access token, custom password).toString();
     */
-    window.myOctokit = new octokitCore.Octokit({ auth: CryptoJS.AES.decrypt("U2FsdGVkX18B/daxI0ga0a9tbRshogTAx7BkqjziiDckXhGXBxdSod8cv4Fh6ALjenQ3e4aWHHCkQhAXJCtuDQ==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8) });
-    
-    const githubClientPrivateApps = window.github(window.myOctokit);
-    githubClientPrivateApps.init("dirkarnez", "internal-private-apps");
-
     function githubReadBranchRecursive() {
+      const decrypted = CryptoJS.AES.decrypt("U2FsdGVkX18B/daxI0ga0a9tbRshogTAx7BkqjziiDckXhGXBxdSod8cv4Fh6ALjenQ3e4aWHHCkQhAXJCtuDQ==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
+      window.myOctokit = new octokitCore.Octokit({ auth: decrypted });
+
+      var githubClientPrivateApps = window.github(window.myOctokit);
+      githubClientPrivateApps.init("dirkarnez", "internal-private-apps");
+
       githubClientPrivateApps
         .readBranchRecursive("main")
         .then(response => response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "README.yaml"))[0].sha)
@@ -193,7 +194,7 @@
               .then(INDEX_JS_SHA => githubClientPerApp.readAsString(INDEX_JS_SHA))
               .then(content => new Promise((resolve, reject) => {
                 const code = Babel.transform(content, {
-                    presets: ['es2015', 'react']
+                  presets: ['es2015', 'react']
                 }).code;
                 const script = document.createElement("script");
                 script.text = code;
@@ -205,7 +206,11 @@
         })
         .then(() => {
           window.init();
-        }); 
+        })
+        .catch(e => {
+          Cookies.set(window.key, prompt('Type here'));
+          githubReadBranchRecursive();
+        });
     }
 
     githubReadBranchRecursive();
