@@ -176,6 +176,7 @@ function Application() {
           <br />
           {InternalSTEMexTimesheet ? <div style={{maxHeight: "500px", overflowY: "auto" }}><InternalSTEMexTimesheet /></div> : ""}
           {InternalMusicPlayer ? <div style={{maxHeight: "500px", overflowY: "auto" }}><InternalMusicPlayer /></div> : ""}
+            {InternalJ ? <div style={{maxHeight: "500px", overflowY: "auto" }}><InternalJ /></div> : ""}
           <br />
           <br />
         </div>
