@@ -172,7 +172,9 @@
           
           var githubClientPrivateApps = window.github(window.myOctokit);
           githubClientPrivateApps.init("dirkarnez", "internal-private-apps");
-          githubClientPrivateApps.readBranchRecursive("main"))
+          
+          githubClientPrivateApps
+            .readBranchRecursive("main")
             .then(response => response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "README.yaml"))[0].sha)
             .then(README_YAML_SHA => res(githubClientPrivateApps.readAsString(README_YAML_SHA)));
         } catch (error) {
