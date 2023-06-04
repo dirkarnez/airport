@@ -176,7 +176,8 @@
           githubClientPrivateApps
             .readBranchRecursive("main")
             .then(response => response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "README.yaml"))[0].sha)
-            .then(README_YAML_SHA => res(githubClientPrivateApps.readAsString(README_YAML_SHA)));
+            .then(README_YAML_SHA => res(githubClientPrivateApps.readAsString(README_YAML_SHA)))
+            .catch(e => rej(e));
         } catch (error) {
           rej(error)
         }
