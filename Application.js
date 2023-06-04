@@ -3,6 +3,9 @@
 browser version of babel do all the work for us.
 */
 function Application() {
+      
+      const [currentApp, setCurrentApp] = React.useState("");
+      
       return (
         <div className="container">
           <div className="row">
@@ -170,13 +173,12 @@ function Application() {
             </div>
           </div>
           <br />
-            <input type="radio" id="private-app-radio" name="private_app" value="A"/>
-            <input type="radio" id="private-app-radio" name="private_app" value="B"/>
-            <input type="radio" id="private-app-radio" name="private_app" value="C"/>
+            <input type="radio" name="private_app" value="internal-j" onChange={e => { setCurrentApp(event.target.value) }}/>
+            <input type="radio" name="private_app" value="internal-music-player" onChange={e => { setCurrentApp(event.target.value) }}/>
           <br />
           {InternalSTEMexTimesheet ? <div style={{maxHeight: "500px", overflowY: "auto" }}><InternalSTEMexTimesheet /></div> : ""}
-          {InternalMusicPlayer ? <div style={{maxHeight: "500px", overflowY: "auto" }}><InternalMusicPlayer /></div> : ""}
-            {InternalJ ? <div style={{maxHeight: "500px", overflowY: "auto" }}><InternalJ /></div> : ""}
+          {InternalMusicPlayer && currentApp == "internal-music-player" ? <div style={{maxHeight: "500px", overflowY: "auto" }}><InternalMusicPlayer /></div> : ""}
+            {InternalJ  && currentApp == "internal-j"  ? <div style={{maxHeight: "500px", overflowY: "auto" }}><InternalJ /></div> : ""}
           <br />
           <br />
         </div>
