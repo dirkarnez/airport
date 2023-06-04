@@ -169,17 +169,16 @@
         try {
           window.decrypted = CryptoJS.AES.decrypt("U2FsdGVkX18B/daxI0ga0a9tbRshogTAx7BkqjziiDckXhGXBxdSod8cv4Fh6ALjenQ3e4aWHHCkQhAXJCtuDQ==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
           window.myOctokit = new octokitCore.Octokit({ auth: window.decrypted });
-
+          
           var githubClientPrivateApps = window.github(window.myOctokit);
           githubClientPrivateApps.init("dirkarnez", "internal-private-apps");
-          res(githubClientPrivateApps);
+          githubClientPrivateApps.readBranchRecursive("main"))
+            .then(response => response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "README.yaml"))[0].sha)
+            .then(README_YAML_SHA => res(githubClientPrivateApps.readAsString(README_YAML_SHA)));
         } catch (error) {
           rej(error)
         }
-      }).then(githubClientPrivateApps => githubClientPrivateApps.readBranchRecursive("main"))
-        .then(response => response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "README.yaml"))[0].sha)
-        .then(README_YAML_SHA => githubClientPrivateApps.readAsString(README_YAML_SHA))
-        .then(content => {
+      }).then(content => {
           const appRegistry = jsyaml.load(content);
           if (!Array.isArray(appRegistry)) {
             throw "Malformatted"
