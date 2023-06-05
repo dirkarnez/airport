@@ -119,7 +119,7 @@ function Application() {
               </div>
               <form className="form-inline" encType="multipart/form-data" method="post" action="https://zxing.org/w/decode">
                 <div className="form-group">
-                  <input className="form-control" id="f" name="f" type="file" />
+                  <input className="form-control" id="f" name="f" type="file" capture="user"/>
                 </div>
                 <input type="submit" className="btn btn-primary" />
               </form>
