@@ -216,7 +216,7 @@
                 const EntryPoint = "testing";
                 resolve({
                   entryPoint: EntryPoint,
-                  code: eval(`() => { ${code}; return ${EntryPoint}; }`);
+                  code: eval(`() => { ${code}; return ${EntryPoint}; }`)
                 });
               }));
           });
