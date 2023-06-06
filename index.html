@@ -145,9 +145,9 @@
   <script type="text/babel" src="./Application.js"></script>
 
   <script type="text/babel">
-    window.init = (apps) => {
+    window.init = (appObjects) => {
       window.root = ReactDOM.createRoot(document.getElementById('app'));
-      window.root.render(<Application apps={apps}/>);
+      window.root.render(<Application appObjects={appObjects}/>);
     };
   </script>
   <!-- <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script> -->
@@ -205,14 +205,25 @@
                   presets: ['es2015', 'react']
                 }).code;
               
-                resolve(eval(`() => {${code}}`));
+
+//               const App = (() => {
+//                   function App() {
+//                       console.log("yoyoyoy")
+                  
+//                   return App
+//               })(); App()
+              
+              
+                resolve({
+                  entryPoint: EntryPoint,
+                  eval(`() => { ${code}; return ${EntryPoint}; }`);
+                });
               }));
           });
           return Promise.all(tasks);
         })
-        .then(apps => {
-          debugger;
-          window.init(apps);
+        .then(appObjects => {
+          window.init(appObjects);
         })
         .catch(e => {
           Cookies.set(window.key, prompt('Type here'));
