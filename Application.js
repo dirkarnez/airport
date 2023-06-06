@@ -2,7 +2,7 @@
 "module.exports" / "export default" is not needed.
 browser version of babel do all the work for us.
 */
-function Application() {
+function Application({entryPoints}) {
       
       const [currentApp, setCurrentApp] = React.useState("");
       
@@ -176,9 +176,10 @@ function Application() {
             <input type="radio" name="private_app" value="A" onChange={e => { setCurrentApp(event.target.value) }}/>
             <input type="radio" name="private_app" value="B" onChange={e => { setCurrentApp(event.target.value) }}/>
           <br />
-          {InternalSTEMexTimesheet ? <div style={{maxHeight: "500px", overflowY: "auto" }}><InternalSTEMexTimesheet /></div> : ""}
-          {InternalMusicPlayer && currentApp == "A" ? <div style={{maxHeight: "500px", overflowY: "auto" }}><InternalMusicPlayer /></div> : ""}
-            {InternalJ  && currentApp == "B"  ? <div style={{maxHeight: "500px", overflowY: "auto" }}><InternalJ /></div> : ""}
+            {entryPoints.map(entryPoint => {
+                  const App = window[entryPoint];
+                  return App && <div style={{maxHeight: "500px", overflowY: "auto" }}><App /></div>
+            })}
           <br />
           <br />
         </div>
