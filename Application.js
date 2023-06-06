@@ -173,9 +173,18 @@ function Application({entryPoints}) {
             </div>
           </div>
           <br />
-            <input type="radio" name="private_app" value="A" onChange={e => { setCurrentApp(event.target.value) }}/>
-            <input type="radio" name="private_app" value="B" onChange={e => { setCurrentApp(event.target.value) }}/>
-          <br />
+             {entryPoints.map(entryPoint => (
+              <div>
+                        <input type="radio" 
+                              id={entryPoint}
+                              name="private_app"
+                              value={entryPoint}
+                              onChange={e => { setCurrentApp(event.target.value) }}
+                              checked={currentApp === entryPoint}/>
+                        <label for={entryPoint}>{entryPoint}</label>
+                </div>
+              ))}
+            <br />
             {entryPoints.map(entryPoint => {
                   const App = window[entryPoint];
                   return App && <div style={{maxHeight: "500px", overflowY: "auto" }}><App /></div>
