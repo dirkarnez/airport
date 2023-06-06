@@ -189,9 +189,9 @@
           return appRegistry;
         })
         .then(appRegistry => {
-          const tasks = appRegistry.map(app => {
+          const tasks = appRegistry.map((app, appIndex) => {
             const githubClientPerApp = window.github(window.myOctokit);
-            githubClientPerApp.init("dirkarnez", app);
+            githubClientPerApp.init("dirkarnez", app.repo);
             
             return githubClientPerApp.readBranchRecursive("main")
               .then(response => {
@@ -213,10 +213,9 @@
 //                   return App
 //               })(); App()
               
-                const EntryPoint = "testing";
                 resolve({
-                  entryPoint: EntryPoint,
-                  code: eval(`() => { ${code}; return ${EntryPoint}; }`)
+                  entryPoint: app.entry,
+                  code: eval(`() => { ${code}; return ${app.entry}; }`)
                 });
               }));
           });
