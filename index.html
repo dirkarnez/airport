@@ -151,7 +151,7 @@
       });
       
       window.root = ReactDOM.createRoot(document.getElementById('app'));
-      window.root.render(<Application/>);
+      window.root.render(<Application entryPoints={appObjects.map(appObject => appObject.entry)}/>);
     };
   </script>
   <!-- <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script> -->
