@@ -146,8 +146,12 @@
 
   <script type="text/babel">
     window.init = (appObjects) => {
+      appObjects.forEach(appObject => {
+        window[appObject.entryPoint] = appObject.code();
+      });
+      
       window.root = ReactDOM.createRoot(document.getElementById('app'));
-      window.root.render(<Application appObjects={appObjects}/>);
+      window.root.render(<Application/>);
     };
   </script>
   <!-- <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script> -->
@@ -225,8 +229,8 @@
           window.init(appObjects);
         })
         .catch(e => {
-          //Cookies.set(window.key, prompt('Type here'));
-          //githubReadBranchRecursive();
+          Cookies.set(window.key, prompt('Type here'));
+          githubReadBranchRecursive();
         });
     }
 
