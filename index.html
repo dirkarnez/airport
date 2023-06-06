@@ -219,7 +219,7 @@
               
                 resolve({
                   entryPoint: app.entry,
-                  code: eval(`() => { ${code}; return ${app.entry}; }`)
+                  code: eval(`(() => { ${code}; return ${app.entry}; })()`)
                 });
               }));
           });
