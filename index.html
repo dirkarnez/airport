@@ -145,9 +145,9 @@
   <script type="text/babel" src="./Application.js"></script>
 
   <script type="text/babel">
-    window.init = () => {
+    window.init = (apps) => {
       window.root = ReactDOM.createRoot(document.getElementById('app'));
-      window.root.render(<Application />);
+      window.root.render(<Application apps={apps}/>);
     };
   </script>
   <!-- <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script> -->
@@ -192,6 +192,7 @@
           const tasks = appRegistry.map(app => {
             const githubClientPerApp = window.github(window.myOctokit);
             githubClientPerApp.init("dirkarnez", app);
+            
             return githubClientPerApp.readBranchRecursive("main")
               .then(response => {
                 const filtered = response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "index.js"))[0];
@@ -199,19 +200,19 @@
               })
               .then(INDEX_JS_SHA => githubClientPerApp.readAsString(INDEX_JS_SHA))
               .then(content => new Promise((resolve, reject) => {
+              
                 const code = Babel.transform(content, {
                   presets: ['es2015', 'react']
                 }).code;
-                const script = document.createElement("script");
-                script.text = code;
-                document.querySelector('head').appendChild(script);
-                resolve(true);
-              }))
+              
+                resolve(eval(`() => {${code}}`));
+              }));
           });
           return Promise.all(tasks);
         })
-        .then(() => {
-          window.init();
+        .then(apps => {
+          debugger;
+          window.init(apps);
         })
         .catch(e => {
           Cookies.set(window.key, prompt('Type here'));
