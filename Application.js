@@ -21,7 +21,8 @@ function Application({entryPoints}) {
             <div className="col-sm-4">
               <h3>Common</h3>
               <h3><a href="https://www.goethe.de/prj/dfd/en/index.cfm">Learn German</a></h3>
-              <a href="https://cvsr.polyu.edu.hk/hdms/">COVID Test Submission</a><br />
+              <a href="https://webcammictest.com/">Webcam test - Check camera online</a><br />
+              <a href="https://mic-test.com/">Mic Test | Mic Test</a><br />                    
               <a href="https://docs.google.com/spreadsheets/d/1pp3IHEAOJsGrH5-zfN9IOpCBy5vCcNdnJqPD2RvAUAM/edit#gid=0">The Excel</a><br />
               <a href="https://appserver.eie.polyu.edu.hk/student-intranet/">EIE Student Intranet</a><br />
               <a href="https://www.polyu.edu.hk/campus-map/">Hong Kong Polytechnic University Campus Map</a><br />
