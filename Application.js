@@ -182,7 +182,7 @@ function Application({entryPoints}) {
                               value={entryPoint}
                               onChange={e => { setCurrentApp(event.target.value) }}
                               checked={currentApp === entryPoint}/>
-                        <label for={entryPoint}>{entryPoint}</label>
+                        <label for={entryPoint} style={{paddingLeft: "10px"}}>{entryPoint}</label>
                 </div>
               ))}
             <br />
