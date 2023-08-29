@@ -72,7 +72,6 @@ function Application({entryPoints}) {
                 href="https://learn.polyu.edu.hk/ultra/courses//cl/outline">
                 <img className="bb"
                   src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a>
-              <ul>
             <hr />
               <a href="https://github.com/dirkarnez/EIE3100">EIE2102 Basic Electronics</a>
               <a href="https://teams.microsoft.com/_?culture=zh-hk&country=HK&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school/files/General?threadId=19:KGkcYY8WSyx5wI-WwHwIYg6is1-9OvPWshAcIrUDIy01@thread.tacv2&ctx=channel&rootfolder=%252Fsites%252FEIE2102_20212_A%252FShared%2520Documents%252FGeneral%252FRecordings%252FView%2520Only">
