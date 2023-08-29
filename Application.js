@@ -119,6 +119,7 @@ function Application({entryPoints}) {
               <ul>
                 <li><a href="https://drive.google.com/drive/folders/1St1UaDbiRAP_-NZcxLb6rp6Wuaxfxwhq">Folder - Google Drive</a></li>
               </ul>
+            </div>
           </div>
           <br />
           <div className="row">
