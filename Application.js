@@ -32,7 +32,48 @@ function Application({entryPoints}) {
               <a href="https://www.polyu.edu.hk/its/orientation/NewStudent/vscc.php">vscc</a>
             </div>
             <div className="col-sm-8">
-              <h3>Courses</h3>
+                  <h3>Courses</h3>
+              <a href="https://github.com/dirkarnez/EIE3105">EIE3105 Integrated Project</a><a
+                      href="https://learn.polyu.edu.hk/ultra/courses/_93112_1/cl/outline"><img className="bb"
+                        src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
+             <a href="https://github.com/dirkarnez/EIE3100">EIE3100 Analogue Circuit Fundamentals</a><a
+                            href="https://learn.polyu.edu.hk/ultra/courses/_93109_1/cl/outline"><img className="bb"
+                              src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
+              <a href="https://github.com/dirkarnez/EIE4433">EIE4433 Honours Project</a><a
+                href="https://learn.polyu.edu.hk/ultra/courses/_93133_1/cl/outline"><img className="bb"
+                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a>
+              <ul>
+                <li><a href="https://www.turnitin.com/login_page.asp">turnitin, school ac and pw, "42470 202122S1 Start"</a>
+                </li>
+              </ul>
+              <a href="https://github.com/dirkarnez/EIE3333">EIE3333 Data And Computer Communications </a><a
+                      href="https://learn.polyu.edu.hk/ultra/courses//cl/outline"><img className="bb"
+                        src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
+              <a href="https://github.com/dirkarnez/EIE3312">EIE3312 Linear Systems</a><a
+                      href="https://learn.polyu.edu.hk/ultra/courses//cl/outline"><img className="bb"
+                        src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
+            <hr />
+             <a href="https://github.com/dirkarnez/AMA2104">AMA2104 Probability and Engineering Statistics</a><a
+                href="https://learn.polyu.edu.hk/ultra/courses/_96485_1/cl/outline">
+                <img className="bb"
+                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a>
+              <ul>
+                <li><a href="https://dirkarnez.github.io/math-cheatsheet/">math-cheatsheet</a></li>
+                <li><a href="https://github.com/dirkarnez/AMA2104-playground">AMA2104-playground</a></li>
+              </ul>
+              <a href="https://github.com/dirkarnez/EIE3331">EIE3331 Communication Fundamentals</a><a
+                href="https://learn.polyu.edu.hk/ultra/courses/_96553_1/cl/outline">
+                <img className="bb"
+                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a>
+              <ul>
+                <li><a href="https://dirkarnez.github.io/telecommunication-cheatsheet/">telecommunication-cheatsheet</a></li>
+              </ul>
+             <a href="https://github.com/dirkarnez/EIE4413">EIE4413 Digital Signal Processing</a><a
+                href="https://learn.polyu.edu.hk/ultra/courses//cl/outline">
+                <img className="bb"
+                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a>
+              <ul>
+            <hr />
               <a href="https://github.com/dirkarnez/EIE3100">EIE2102 Basic Electronics</a>
               <a href="https://teams.microsoft.com/_?culture=zh-hk&country=HK&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school/files/General?threadId=19:KGkcYY8WSyx5wI-WwHwIYg6is1-9OvPWshAcIrUDIy01@thread.tacv2&ctx=channel&rootfolder=%252Fsites%252FEIE2102_20212_A%252FShared%2520Documents%252FGeneral%252FRecordings%252FView%2520Only">
                 <img className="bb" src="https://statics.teams.cdn.office.net/hashed/favicon/prod/favicon-9e2b8f1.ico"></img></a><br />
@@ -50,21 +91,6 @@ function Application({entryPoints}) {
                 href="https://learn.polyu.edu.hk/ultra/courses/_98891_1/cl/outline">
                 <img className="bb"
                   src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
-              <a href="https://github.com/dirkarnez/EIE3331">EIE3331 Communication Fundamentals</a><a
-                href="https://learn.polyu.edu.hk/ultra/courses/_96553_1/cl/outline">
-                <img className="bb"
-                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a>
-              <ul>
-                <li><a href="https://dirkarnez.github.io/telecommunication-cheatsheet/">telecommunication-cheatsheet</a></li>
-              </ul>
-              <a href="https://github.com/dirkarnez/AMA2104">AMA2104 Probability and Engineering Statistics</a><a
-                href="https://learn.polyu.edu.hk/ultra/courses/_96485_1/cl/outline">
-                <img className="bb"
-                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a>
-              <ul>
-                <li><a href="https://dirkarnez.github.io/math-cheatsheet/">math-cheatsheet</a></li>
-                <li><a href="https://github.com/dirkarnez/AMA2104-playground">AMA2104-playground</a></li>
-              </ul>
               <a href="https://github.com/dirkarnez/IC382">IC382 Multidisciplinary Manufacturing Project</a><a
                 href="https://learn.polyu.edu.hk/ultra/courses/_93077_1/cl/outline">
                 <img className="bb"
@@ -80,20 +106,7 @@ function Application({entryPoints}) {
               <a href="https://github.com/dirkarnez/TM1115">IC2114_TM1115 Introduction of Embedded System</a><a
                 href="https://learn.polyu.edu.hk/ultra/courses/_98109_1/cl/outline"><img className="bb"
                   src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
-              <a href="https://github.com/dirkarnez/EIE3105">EIE3105 Integrated Project</a><a
-                href="https://learn.polyu.edu.hk/ultra/courses/_96547_1/cl/outline"><img className="bb"
-                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
-              <a href="https://github.com/dirkarnez/EIE4433">EIE4433 Honours Project</a><a
-                href="https://learn.polyu.edu.hk/ultra/courses/_93133_1/cl/outline"><img className="bb"
-                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a>
-              <ul>
-                <li><a href="https://www.turnitin.com/login_page.asp">turnitin, school ac and pw, "42470 202122S1 Start"</a>
-                </li>
-              </ul>
               <hr />
-              <a href="https://github.com/dirkarnez/EIE3105">EIE3105 Integrated Project</a><a
-                href="https://learn.polyu.edu.hk/ultra/courses/_93112_1/cl/outline"><img className="bb"
-                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
               <a href="https://github.com/dirkarnez/AF3625">AF3625 Engineering Economics</a><a
                 href="https://learn.polyu.edu.hk/ultra/courses/_94224_1/cl/outline"><img className="bb"
                   src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
@@ -101,9 +114,6 @@ function Application({entryPoints}) {
                 <li><a href="https://dirkarnez.github.io/economics-cheatsheet/">dirkarnez.github.io/economics-cheatsheet</a>
                 </li>
               </ul>
-              <a href="https://github.com/dirkarnez/EIE3100">EIE3100 Analogue Circuit Fundamentals</a><a
-                href="https://learn.polyu.edu.hk/ultra/courses/_93109_1/cl/outline"><img className="bb"
-                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
               <a href="https://github.com/dirkarnez/ENG3004">ENG3004 Society and the Engineer</a><a
                 href="https://learn.polyu.edu.hk/ultra/courses/_93687_1/cl/outline"><img className="bb"
                   src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
