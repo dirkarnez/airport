@@ -158,6 +158,7 @@ function Application({entryPoints}) {
           </div>
           <div className="row">
             <div className="col">
+              <a href="https://dirkarnez.github.io/cpk-automated/">cpk-automated</a><br />
               <a href="https://dirkarnez.github.io/music-notation-cheatsheet/">Music Notation Cheatsheet</a><br />
               <a href="https://dirkarnez.github.io/responsive-viewport">Responsive Viewport</a><br />
               <a href="https://dirkarnez.github.io/filetype-detecter">filetype-detecter</a><br />
