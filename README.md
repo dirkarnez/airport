@@ -71,4 +71,38 @@
       audioElement.play();
     </script>
     ```
+    ```js
+    // Create an AudioContext instance
+    const audioContext = new AudioContext();
+    
+    // Load the audio file
+    const audioFile = 'path/to/audiofile.wav';
+    
+    fetch(audioFile)
+      .then(response => response.arrayBuffer())
+      .then(buffer => audioContext.decodeAudioData(buffer))
+      .then(audioBuffer => {
+        // Get the audio buffer's channel data
+        const channelData = audioBuffer.getChannelData(0); // Assuming mono audio
+    
+        // Find the peak level in the channel data
+        let peakLevel = 0;
+        for (let i = 0; i < channelData.length; i++) {
+          const absValue = Math.abs(channelData[i]);
+          if (absValue > peakLevel) {
+            peakLevel = absValue;
+          }
+        }
+    
+        // Calculate the headroom
+        const maxLevel = 1.0; // Maximum level before distortion
+        const headroom = maxLevel - peakLevel;
+    
+        // Output the headroom value
+        console.log('Headroom:', headroom);
+      })
+      .catch(error => {
+        console.error('Error loading audio file:', error);
+      });
+    ```
 - [ ] Web audio API - Monkey's audio codec
