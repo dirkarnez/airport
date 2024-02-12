@@ -14,3 +14,61 @@
         }).code;
         console.log(output);
         ```
+- [ ] Web audio API - auto-gain
+  - ```js
+    <audio id="audioElement" src="path/to/audiofile.wav"></audio>
+    
+    <script>
+      // Create an AudioContext instance
+      const audioContext = new AudioContext();
+    
+      // Get the <audio> element
+      const audioElement = document.getElementById('audioElement');
+    
+      // Wait for the audio to be loaded and ready to play
+      audioElement.addEventListener('canplaythrough', () => {
+        // Create a MediaElementAudioSourceNode from the <audio> element
+        const sourceNode = audioContext.createMediaElementSource(audioElement);
+    
+        // Connect the source node to an analyzer node
+        const analyzerNode = audioContext.createAnalyser();
+        sourceNode.connect(analyzerNode);
+        analyzerNode.connect(audioContext.destination);
+    
+        // Analyze the audio data in real-time
+        const bufferLength = analyzerNode.frequencyBinCount;
+        const dataArray = new Float32Array(bufferLength);
+    
+        function analyzeAudio() {
+          analyzerNode.getFloatTimeDomainData(dataArray);
+    
+          // Find the peak level in the data array
+          let peakLevel = 0;
+          for (let i = 0; i < bufferLength; i++) {
+            const absValue = Math.abs(dataArray[i]);
+            if (absValue > peakLevel) {
+              peakLevel = absValue;
+            }
+          }
+    
+          // Calculate the headroom
+          const maxLevel = 1.0; // Maximum level before distortion
+          const headroom = maxLevel - peakLevel;
+    
+          // Output the headroom value
+          console.log('Headroom:', headroom);
+    
+          // Schedule the next analysis
+          requestAnimationFrame(analyzeAudio);
+        }
+    
+        // Start the analysis
+        analyzeAudio();
+      });
+    
+      // Load and play the audio
+      audioElement.load();
+      audioElement.play();
+    </script>
+    ```
+- [ ] Web audio API - Monkey's audio codec
