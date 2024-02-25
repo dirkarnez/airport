@@ -1,24 +1,25 @@
 importScripts('https://cdnjs.cloudflare.com/ajax/libs/workbox-sw/7.0.0/workbox-sw.min.js');
 
-self.addEventListener('activate', (event) => {
-    event.waitUntil(self.clients.claim());
-    console.log('Service Worker activated');
-});
+// self.addEventListener('activate', (event) => {
+//     event.waitUntil(self.clients.claim());
+//     console.log('Service Worker activated');
+// });
 
-self.addEventListener('message', (event) => {
-  // if (event.data && event.data.type === 'EVAL') {
-  //   event.ports[0].postMessage();
-  // }
-  if (event.data.type === 'CACHE_CACHEFIRST') {
-    pattern = event.data.regexPattern;
+workbox.routing.registerRoute(
+  new RegExp('https://api\.github\.com/repos/'),
+  workbox.strategies.CacheFirst()
+);
 
-    workbox.routing.registerRoute(
-      new RegExp(pattern),
-      new workbox.strategies.CacheFirst()
-    );
-    event.source.postMessage("ok");
-  }
-});
+// self.addEventListener('message', (event) => {
+//   // if (event.data && event.data.type === 'EVAL') {
+//   //   event.ports[0].postMessage();
+//   // }
+//   if (event.data.type === 'CACHE_CACHEFIRST') {
+//     pattern = event.data.regexPattern;
+
+//     event.source.postMessage("ok");
+//   }
+// });
 
 // self.addEventListener('fetch', event => {
 //     debugger;
