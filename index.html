@@ -27,7 +27,7 @@
         });
       
       navigator.serviceWorker
-        .register('https://dirkarnez.github.io/dummy-service-worker/sw.js')
+        .register('./sw.js')
         .then(registration => {
           console.log('Service Worker registered');
           debugger;
