@@ -36,7 +36,7 @@ importScripts('https://cdnjs.cloudflare.com/ajax/libs/workbox-sw/7.0.0/workbox-s
 
 workbox.routing.registerRoute(
   new RegExp('https://api\.github\.com/repos/'),
-  new CacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: 'my-cache',
     plugins: [
       new workbox.cacheableResponse.CacheableResponsePlugin({
