@@ -5,9 +5,24 @@ importScripts('https://cdnjs.cloudflare.com/ajax/libs/workbox-sw/7.0.0/workbox-s
 //     console.log('Service Worker activated');
 // });
 
+class CustomCacheFirst extends workbox.strategies.CacheFirst {
+  // Override the handle method to handle opaque responses
+  async handle({ event }) {
+    const response = await super.handle({ event });
+
+    // Check if the response is opaque
+    if (response && response.type === 'opaque') {
+      // Handle the opaque response here
+      // You can choose to cache it or handle it in a different way
+    }
+
+    return response;
+  }
+}
+
 workbox.routing.registerRoute(
   new RegExp('https://api\.github\.com/repos/'),
-  new workbox.strategies.StaleWhileRevalidate()
+  new CustomCacheFirst()
 );
 
 
