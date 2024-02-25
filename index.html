@@ -19,6 +19,25 @@
     window.key = "github-auth-cookie-secret-key";
   </script>
   <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .ready
+        .then((registration) => {
+          debugger;
+        });
+      
+      navigator.serviceWorker
+        .register('https://dirkarnez.github.io/dummy-service-worker/sw.js')
+        .then(registration => {
+          console.log('Service Worker registered');
+          debugger;
+        })
+        .catch(error => {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
+  </script>
+  <script>
     function b64toBlob(b64Data, contentType = '', sliceSize = 512) {
       const byteCharacters = atob(b64Data);
       const byteArrays = [];
