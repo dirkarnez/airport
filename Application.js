@@ -30,6 +30,7 @@ function Application({entryPoints}) {
               <a href="https://vdesk.polyu.edu.hk/RDWeb/Pages/en-US/login.aspx">vdesk</a><br />
               <a href="https://puuds.polyu.edu.hk/uds/page/services">uds</a><br />
               <a href="https://www.polyu.edu.hk/its/orientation/NewStudent/vscc.php">vscc</a>
+              <a href="https://www.polyu.edu.hk/cfso/docdrive/_sso/services/both/lostandfound.html">Lost property</a>
             </div>
             <div className="col-sm-8">
                   <h3>Courses</h3>
