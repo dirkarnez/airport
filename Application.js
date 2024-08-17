@@ -19,19 +19,19 @@ function Application({entryPoints}) {
           <br />
           <div className="row">
             <div className="col-sm-4">
-              <h3>Common</h3>
-              <h3><a href="https://www.goethe.de/prj/dfd/en/index.cfm">Learn German</a></h3>
-              <a href="https://outlook.office365.com/owa/calendar/IEMakerLabSelfserviceBooking3DPrinterSmall@polyuit.onmicrosoft.com/bookings/">3D printing</a><br>  
-              <a href="https://webcammictest.com/">Webcam test - Check camera online</a><br />
-              <a href="https://mic-test.com/">Mic Test | Mic Test</a><br />                    
-              <a href="https://booking3.lib.polyu.edu.hk/login">iBooking</a><br />
-              <a href="https://appserver.eie.polyu.edu.hk/student-intranet/">EIE Student Intranet</a><br />
-              <a href="https://www.polyu.edu.hk/campus-map/">Hong Kong Polytechnic University Campus Map</a><br />
-              <a href="https://ilearningx.huawei.com/portal/micro/course-v1:HuaweiX+EBG2020NCHW1100015+microcourse/about?blockID=85fed4a9ea3344f99f1e5e7d3fabca83">Huawei ICT Competition 2021-2022—Cloud Track (19081126d, 35234772)</a><br />
-              <a href="https://vdesk.polyu.edu.hk/RDWeb/Pages/en-US/login.aspx">vdesk</a><br />
-              <a href="https://puuds.polyu.edu.hk/uds/page/services">uds</a><br />
-              <a href="https://www.polyu.edu.hk/its/orientation/NewStudent/vscc.php">vscc</a>
-              <a href="https://www.polyu.edu.hk/cfso/docdrive/_sso/services/both/lostandfound.html">Lost property</a>
+                  <h3>Common</h3>
+                  <a href="https://www.goethe.de/prj/dfd/en/index.cfm">Learn German</a>
+                  <a href="https://outlook.office365.com/owa/calendar/IEMakerLabSelfserviceBooking3DPrinterSmall@polyuit.onmicrosoft.com/bookings/">3D printing</a><br/>  
+                  <a href="https://webcammictest.com/">Webcam test - Check camera online</a><br />
+                  <a href="https://mic-test.com/">Mic Test | Mic Test</a><br />                    
+                  <a href="https://booking3.lib.polyu.edu.hk/login">iBooking</a><br />
+                  <a href="https://appserver.eie.polyu.edu.hk/student-intranet/">EIE Student Intranet</a><br />
+                  <a href="https://www.polyu.edu.hk/campus-map/">Hong Kong Polytechnic University Campus Map</a><br />
+                  <a href="https://ilearningx.huawei.com/portal/micro/course-v1:HuaweiX+EBG2020NCHW1100015+microcourse/about?blockID=85fed4a9ea3344f99f1e5e7d3fabca83">Huawei ICT Competition 2021-2022—Cloud Track (19081126d, 35234772)</a><br />
+                  <a href="https://vdesk.polyu.edu.hk/RDWeb/Pages/en-US/login.aspx">vdesk</a><br />
+                  <a href="https://puuds.polyu.edu.hk/uds/page/services">uds</a><br />
+                  <a href="https://www.polyu.edu.hk/its/orientation/NewStudent/vscc.php">vscc</a>
+                  <a href="https://www.polyu.edu.hk/cfso/docdrive/_sso/services/both/lostandfound.html">Lost property</a>
             </div>
             <div className="col-sm-8">
                   <h3>Courses</h3>
