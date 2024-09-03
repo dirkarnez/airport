@@ -190,7 +190,7 @@
     function githubReadBranchRecursive() {
       new Promise((res, rej) => {
         try {
-          window.decrypted = CryptoJS.AES.decrypt("U2FsdGVkX1/Lu/38h0K/mDSbgRzMg5K229LzEBjMnS2XEyeA7B5lYf8FAd1ZfvzRUYwZZqy4KBGxbHnqKyhuYA==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
+          window.decrypted = CryptoJS.AES.decrypt("U2FsdGVkX18ddmycZUQ1S1f4wYKG1bxJcxbFU5BJsCLjBA5tLbCCXYiibUotCfaZUp3wrGxzXvq0ckrekR4ovQ==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
           window.myOctokit = new octokitCore.Octokit({ auth: window.decrypted });
           
           var githubClientPrivateApps = window.github(window.myOctokit);
