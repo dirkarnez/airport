@@ -31,8 +31,9 @@ function Application({entryPoints}) {
                   <a href="https://ilearningx.huawei.com/portal/micro/course-v1:HuaweiX+EBG2020NCHW1100015+microcourse/about?blockID=85fed4a9ea3344f99f1e5e7d3fabca83">Huawei ICT Competition 2021-2022—Cloud Track (19081126d, 35234772)</a><br />
                   <a href="https://vdesk.polyu.edu.hk/RDWeb/Pages/en-US/login.aspx">vdesk</a><br />
                   <a href="https://puuds.polyu.edu.hk/uds/page/services">uds</a><br />
-                  <a href="https://www.polyu.edu.hk/its/orientation/NewStudent/vscc.php">vscc</a>
-                  <a href="https://ptps-fo.polyu.edu.hk/ptpsauth">Part-time Payment System</a>
+                  <a href="https://www.polyu.edu.hk/its/orientation/NewStudent/vscc.php">vscc</a><br />
+                  <a href="https://ptps-fo.polyu.edu.hk/ptpsauth">Part-time Payment System</a><br />
+                  <a href="https://pvrp-sao.polyu.edu.hk/student/login">Job Seeker Login | PolyU VRP</a><br />
                   <a href="https://www.polyu.edu.hk/cfso/docdrive/_sso/services/both/lostandfound.html">Lost property</a>
             </div>
             <div className="col-sm-8">
