@@ -36,7 +36,12 @@ function Application({entryPoints}) {
                   <a href="https://pvrp-sao.polyu.edu.hk/student/login">Job Seeker Login | PolyU VRP</a><br />
                   <a href="https://www.polyu.edu.hk/cfso/docdrive/_sso/services/both/lostandfound.html">Lost property</a>
                   <a href="https://www.hangseng.com/zh-hk/security">eBanking</a>
-            
+                  <hr>
+                  <div>
+                        <a href="https://www.bmf.edu.hk/">佛教茂峰法師紀念中學</a><br />
+                        <a href="https://maps.app.goo.gl/yPqhY2ZaQwGQfDth9">map</a><br />
+                        <a href="https://bit.ly/43k3scg6">materials</a>
+                  </div>
             </div>
             <div className="col-sm-8">
                   <h3>Courses</h3>
