@@ -42,6 +42,13 @@ function Application({entryPoints}) {
                         <a href="https://maps.app.goo.gl/yPqhY2ZaQwGQfDth9">map</a><br />
                         <a href="https://bit.ly/43k3scg6">materials</a>
                   </div>
+            <br/>
+                        <div>
+                        <a href="http://tkps.edu.hk/">朗屏邨東莞學校 (WIFI: BestTKPS2122*)</a><br />
+                        <a href="https://maps.app.goo.gl/tRi9Z7hQY4cxKyq9A">map</a><br />
+                        <a href="https://bit.ly/3tx4gkw">materials</a>
+                  </div>
+            
             </div>
             <div className="col-sm-8">
                   <h3>Courses</h3>
