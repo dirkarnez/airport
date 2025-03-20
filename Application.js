@@ -34,9 +34,9 @@ function Application({entryPoints}) {
                   <a href="https://www.polyu.edu.hk/its/orientation/NewStudent/vscc.php">vscc</a><br />
                   <a href="https://ptps-fo.polyu.edu.hk/ptpsauth">Part-time Payment System</a><br />
                   <a href="https://pvrp-sao.polyu.edu.hk/student/login">Job Seeker Login | PolyU VRP</a><br />
-                  <a href="https://www.polyu.edu.hk/cfso/docdrive/_sso/services/both/lostandfound.html">Lost property</a>
+                  <a href="https://www.polyu.edu.hk/cfso/docdrive/_sso/services/both/lostandfound.html">Lost property</a><br />
                   <a href="https://www.aha-music.com/identify-songs-music-recognition-online">Identify Songs Online - Music Recognition Online</a><br />
-                  <a href="https://www.hangseng.com/zh-hk/security">eBanking</a>
+                  <a href="https://www.hangseng.com/zh-hk/security">eBanking</a><br />
                   <hr/>
                   <div>
                         <a href="https://www.bmf.edu.hk/">佛教茂峰法師紀念中學</a><br />
