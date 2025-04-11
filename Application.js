@@ -19,7 +19,7 @@ function Application({entryPoints}) {
                   <a href="https://ftp.ee.polyu.edu.hk/Student/Login">EEE Student Intranet</a><br />
                   <a href="https://appserver.eie.polyu.edu.hk/student-intranet/">EIE Student Intranet</a><br />
                   <a href="https://www.polyu.edu.hk/campus-map/">Hong Kong Polytechnic University Campus Map</a><br />
-                  <a href="https://ilearningx.huawei.com/portal/micro/course-v1:HuaweiX+EBG2020NCHW1100015+microcourse/about?blockID=85fed4a9ea3344f99f1e5e7d3fabca83">Huawei ICT Competition 2021-2022—Cloud Track (19081126d, 35234772)</a><br />
+                  { /* <a href="https://ilearningx.huawei.com/portal/micro/course-v1:HuaweiX+EBG2020NCHW1100015+microcourse/about?blockID=85fed4a9ea3344f99f1e5e7d3fabca83">Huawei ICT Competition 2021-2022—Cloud Track (19081126d, 35234772)</a><br /> */ }
                   <a href="https://vdesk.polyu.edu.hk/RDWeb/Pages/en-US/login.aspx">vdesk</a><br />
                   <a href="https://puuds.polyu.edu.hk/uds/page/services">uds</a><br />
                   <a href="https://www.polyu.edu.hk/its/orientation/NewStudent/vscc.php">vscc</a><br />
@@ -35,12 +35,6 @@ function Application({entryPoints}) {
                         <a href="https://bit.ly/43k3scg6">materials</a>
                   </div>
             <br/>
-                        <div>
-                        <a href="http://tkps.edu.hk/">朗屏邨東莞學校 (WIFI: BestTKPS2122*)</a><br />
-                        <a href="https://maps.app.goo.gl/tRi9Z7hQY4cxKyq9A">map</a><br />
-                        <a href="https://bit.ly/3tx4gkw">materials</a>
-                  </div>
-            
             </div>
             <div className="col-sm-8">
                   <h3>Courses</h3>
