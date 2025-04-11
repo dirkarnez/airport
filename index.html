@@ -249,7 +249,6 @@
           window.init(appObjects);
         })
         .catch(e => {
-          document.getElementById('app').innerHTML = `Error ${e}`;
           Cookies.set(window.key, prompt('Type here'));
           githubReadBranchRecursive();
         });
