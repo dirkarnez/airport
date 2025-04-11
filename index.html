@@ -168,7 +168,7 @@
       appObjects.forEach(appObject => {
         window[appObject.entryPoint] = appObject.code;
       });
-      
+      document.getElementById('app').innerHTML = "";
       window.root = ReactDOM.createRoot(document.getElementById('app'));
       window.root.render(<Application entryPoints={appObjects.map(appObject => appObject.entryPoint)}/>);
     };
@@ -188,6 +188,7 @@
     CryptoJS.AES.encrypt(github personal access token, custom password).toString();
     */
     function githubReadBranchRecursive() {
+      document.getElementById('app').innerHTML = "Loading...";
       new Promise((res, rej) => {
         try {
           window.decrypted = CryptoJS.AES.decrypt("U2FsdGVkX1/lOKpKrewfeOn3wApzUx9zDvCQK5ulDmLdBMBjdMM7glwqG28AvzJrIjVuYLTHBuMTRJmlLsTF7g==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
@@ -248,6 +249,7 @@
           window.init(appObjects);
         })
         .catch(e => {
+          document.getElementById('app').innerHTML = `Error ${e}`;
           Cookies.set(window.key, prompt('Type here'));
           githubReadBranchRecursive();
         });
