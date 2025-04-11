@@ -9,15 +9,6 @@ function Application({entryPoints}) {
       return (
         <div className="container">
           <div className="row">
-            {/*
-                          <iframe
-              src="https://calendar.google.com/calendar/embed?height=1000&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FShanghai&showNav=0&showTitle=0&showCalendars=1&showPrint=0&showDate=1&mode=WEEK&src=c21hbGxkaXJrYWxleEBnbWFpbC5jb20&src=ZW4uaG9uZ19rb25nI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA&color=%237986CB"
-              style={{ borderWidth: 0 }} frameBorder={0} scrolling={"no"}></iframe>
-            */}
-          </div>
-          <br />
-          <br />
-          <div className="row">
             <div className="col-sm-4">
                   <h3>Common</h3>
                   <a href="https://www.goethe.de/prj/dfd/en/index.cfm">Learn German</a><br/>
@@ -222,6 +213,11 @@ function Application({entryPoints}) {
             })}
           <br />
           <br />
+          <div className="row">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?height=1000&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FShanghai&showNav=0&showTitle=0&showCalendars=1&showPrint=0&showDate=1&mode=WEEK&src=c21hbGxkaXJrYWxleEBnbWFpbC5jb20&src=ZW4uaG9uZ19rb25nI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA&color=%237986CB"
+              style={{ borderWidth: 0 }} frameBorder={0} scrolling={"no"}></iframe>
+          </div>
         </div>
       )
     }
