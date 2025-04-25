@@ -31,10 +31,15 @@ function Application({entryPoints}) {
                   <hr/>
                   <div>
                         <a href="https://www.bmf.edu.hk/">佛教茂峰法師紀念中學</a><br />
-                        <a href="https://maps.app.goo.gl/yPqhY2ZaQwGQfDth9">map</a><br />
+                        <a href="https://maps.app.goo.gl/yPqhY2ZaQwGQfDth9">Map</a><br />
                         <a href="https://bit.ly/43k3scg6">materials</a>
                   </div>
-            <br/>
+                  <br/>
+                  <div>
+                        <a href="https://www.ymtcps.edu.hk/">油⿇地天主教小學</a><br />
+                        <a href="https://maps.app.goo.gl/nS2XUkMCAoY2AGwC9">Map</a><br />
+                        <a href="https://bit.ly/43DoGGa">materials</a>
+                  </div>
             </div>
             <div className="col-sm-8">
                   <h3>Courses</h3>
