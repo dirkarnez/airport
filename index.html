@@ -201,57 +201,61 @@
             .readBranchRecursive("main")
             .then(response => response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "README.yaml"))[0].sha)
             .then(README_YAML_SHA => res(githubClientPrivateApps.readAsString(README_YAML_SHA)))
-            .catch(e => rej(e));
+            .catch(e => {
+              alert("pw wrong")
+              rej(e);
+            });
         } catch (error) {
           rej(error)
         }
-      }).then(content => {
-          const appRegistry = jsyaml.load(content);
-          if (!Array.isArray(appRegistry)) {
-            throw "Malformatted"
-          }
-          return appRegistry;
-        })
-        .then(appRegistry => {
-          const tasks = appRegistry.map((app, appIndex) => {
-            const githubClientPerApp = window.github(window.myOctokit);
-            githubClientPerApp.init("dirkarnez", app.repo);
+      })
+      .then(content => {
+        const appRegistry = jsyaml.load(content);
+        if (!Array.isArray(appRegistry)) {
+          throw "Malformatted"
+        }
+        return appRegistry;
+      })
+      .then(appRegistry => {
+        const tasks = appRegistry.map((app, appIndex) => {
+          const githubClientPerApp = window.github(window.myOctokit);
+          githubClientPerApp.init("dirkarnez", app.repo);
+          
+          return githubClientPerApp.readBranchRecursive("main")
+            .then(response => {
+              const filtered = response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "index.js"))[0];
+              return filtered.sha;
+            })
+            .then(INDEX_JS_SHA => githubClientPerApp.readAsString(INDEX_JS_SHA))
+            .then(content => new Promise((resolve, reject) => {
             
-            return githubClientPerApp.readBranchRecursive("main")
-              .then(response => {
-                const filtered = response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "index.js"))[0];
-                return filtered.sha;
-              })
-              .then(INDEX_JS_SHA => githubClientPerApp.readAsString(INDEX_JS_SHA))
-              .then(content => new Promise((resolve, reject) => {
-              
-                const code = Babel.transform(content, {
-                  presets: ['es2015', 'react']
-                }).code;
-              
+              const code = Babel.transform(content, {
+                presets: ['es2015', 'react']
+              }).code;
+            
 
 //               const App = (() => {
 //                   function App() {
 //                       console.log("yoyoyoy")
-                  
+                
 //                   return App
 //               })(); App()
-              
-                resolve({
-                  entryPoint: app.entry,
-                  code: eval(`(() => { ${code}; return ${app.entry}; })()`)
-                });
-              }));
-          });
-          return Promise.all(tasks);
-        })
-        .then(appObjects => {
-          window.init(appObjects);
-        })
-        .catch(e => {
-          Cookies.set(window.key, prompt('Type here'));
-          githubReadBranchRecursive();
+            
+              resolve({
+                entryPoint: app.entry,
+                code: eval(`(() => { ${code}; return ${app.entry}; })()`)
+              });
+            }));
         });
+        return Promise.all(tasks);
+      })
+      .then(appObjects => {
+        window.init(appObjects);
+      })
+      .catch(e => {
+        Cookies.set(window.key, prompt('Type here'));
+        githubReadBranchRecursive();
+      });
     }
 
     githubReadBranchRecursive();
