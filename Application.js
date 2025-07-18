@@ -28,6 +28,8 @@ function Application({entryPoints}) {
                   <a href="https://www.polyu.edu.hk/cfso/docdrive/_sso/services/both/lostandfound.html">Lost property</a><br />
                   <a href="https://www.aha-music.com/identify-songs-music-recognition-online">Identify Songs Online - Music Recognition Online</a><br />
                   <a href="https://www.hangseng.com/zh-hk/security">eBanking</a><br />
+                  <a href="https://forms.office.com/r/FfhfP3X6E1">IC Facilities Booking Request (HSC)</a><br />
+{ /*    
                   <hr/>
                   <div>
                         <a href="https://www.bmf.edu.hk/">佛教茂峰法師紀念中學</a><br />
@@ -40,6 +42,7 @@ function Application({entryPoints}) {
                         <a href="https://maps.app.goo.gl/nS2XUkMCAoY2AGwC9">Map</a><br />
                         <a href="https://bit.ly/43DoGGa">materials</a>
                   </div>
+*/ }            
             </div>
             <div className="col-sm-8">
                   <h3>Courses</h3>
