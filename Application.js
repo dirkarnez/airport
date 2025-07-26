@@ -151,11 +151,10 @@ function Application({entryPoints}) {
                         
           <div className="row">
             <div className="col">
-                  <script type="text/babel" src="./OnlineDocViewer.js"></script>
+                  <OnlineDocViewer/>
             </div>
           </div>
-
-                           
+                        
           <br />
 
           <div className="row">
