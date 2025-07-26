@@ -146,9 +146,16 @@ function Application({entryPoints}) {
                 </div>
                 <input type="submit" className="btn btn-primary" />
               </form>
-
             </div>
           </div>
+                        
+          <div className="row">
+            <div className="col">
+                  <script type="text/babel" src="./OnlineDocViewer.js"></script>
+            </div>
+          </div>
+
+                           
           <br />
 
           <div className="row">
