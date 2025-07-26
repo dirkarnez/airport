@@ -3,10 +3,17 @@
 browser version of babel do all the work for us.
 */
 function OnlineDocViewer() {
-	return (
-	  <div className="myDiv">
-		<h2>This is a heading in a div element</h2>
-		<p>This is some text in a div element.</p>
-	  </div>
-	)
+	const [ url, setUrl ] = React.useState("https://www.mtr.com.hk/digitalleaflet/data/upload/ch/article/pdf/WEK-leaflet-Digital-202506_1750939c6496.pdf");
+
+  	const handleChange = (event) => {
+		setUrl(event.target.value);
+	};
+  
+        return (
+		<React.Fragment>
+			<input type="text" value={url} onChange={handleChange} style={{width: "100%"}}/>
+			<br/>
+			<iframe src={`https://docs.google.com/gview?embedded=true&url=${url}`} style={{width: "100%", height: "1000px"}} frameborder="0"></iframe>
+		</React.Fragment>
+        )
 }
