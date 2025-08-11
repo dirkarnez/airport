@@ -189,7 +189,8 @@ function Application({entryPoints}) {
               <a href="https://dirkarnez.github.io/github-forms">github-forms</a><br />
               <a href="https://dirkarnez.github.io/spotify-playlist-exporter">spotify-playlist-exporter</a><br />
               <a href="https://dirkarnez.github.io/primrose-playground">primrose-playground</a><br />
-              <a href="https://dirkarnez.github.io/web-compiler">Web Compiler</a>
+              <a href="https://dirkarnez.github.io/web-compiler">Web Compiler</a><br />
+              <a href="https://dirkarnez.github.io/printing-units-calculator">Printing Units Calculator</a>
             </div>
           </div>
 
