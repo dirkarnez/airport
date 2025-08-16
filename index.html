@@ -193,6 +193,10 @@
     function githubReadBranchRecursive() {
       document.getElementById('app').innerHTML = "Loading...";
       new Promise((res, rej) => {
+        if (!Cookies.get(window.key)) {
+          rej();
+          return;
+        }
         try {
           window.decrypted = CryptoJS.AES.decrypt("U2FsdGVkX1/uTQJYnGJQJzyV/5C9ZwPDbqISR1KIPuAN3Sc0srV2wEmHCDf1LcTSZ6SzqTO9IN8nBRUfIJlIbA==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
           window.myOctokit = new octokitCore.Octokit({ auth: window.decrypted });
