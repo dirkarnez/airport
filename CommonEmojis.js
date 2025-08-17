@@ -30,6 +30,6 @@ function CommonEmojis() {
     "😰",
     "🤬"
   ].map(emoji => 
-        <button onClick={() => setCopied(`${emoji}`)}>{emoji}{copied == emoji && " is copied"}</button>
+        <button type="button" className="btn btn-primary" onClick={() => setCopied(`${emoji}`)}>{emoji}{copied == emoji && " is copied"}</button>
   )
 }
