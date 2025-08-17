@@ -9,7 +9,7 @@ browser version of babel do all the work for us.
 function CommonEmojis() {
   const [ copied, setCopied ] = React.useState("");
   
-  React.useEffect(() => {
+  React.useEffect(async () => {
      await navigator.clipboard.writeText(copied);
   }, [ copied ]);
   
