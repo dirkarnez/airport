@@ -155,6 +155,15 @@ function Application({entryPoints}) {
             </div>
           </div>
                         
+            <br />         
+          
+      <div className="row">
+            <div className="col">
+                  <CommonEmojis/>
+            </div>
+          </div>
+ 
+                        
           <br />
 
           <div className="row">
