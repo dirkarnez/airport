@@ -22,6 +22,6 @@ function CommonEmojis() {
     "😰",
     "🤬"
   ].map(emoji => 
-        <button onClick={() =>  navigator.clipboard.writeText('Copy this text to clipboard')}>{emoji}</button>
+        <button onClick={() =>  navigator.clipboard.writeText(`${emoji}`)}>{emoji}</button>
   )
 }
