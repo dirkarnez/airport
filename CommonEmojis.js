@@ -34,7 +34,7 @@ function CommonEmojis() {
   ].map(emoji => 
         <button 
           type="button" 
-          style={{ marginRight: "10px" }} 
+          style={{ marginRight: "10px", marginBottom: "10px" }} 
           className="btn btn-primary" 
           onClick={() => {
             setToCopy(`${emoji}`)
