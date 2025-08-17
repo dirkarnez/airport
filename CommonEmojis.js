@@ -7,13 +7,15 @@ browser version of babel do all the work for us.
 [首頁 | Emoji表情符號詞典 📓 | Emojiall繁體中文官方網站](https://www.emojiall.com/zh-hant)
 */
 function CommonEmojis() {
+  const [ toCopy, setToCopy ] = React.useState("");
   const [ copied, setCopied ] = React.useState("");
   
   React.useEffect(() => {
       (async () => {
-        await navigator.clipboard.writeText(copied);
+        await navigator.clipboard.writeText(toCopy);
+        setCopied(toCopy);
       })();
-  }, [ copied ]);
+  }, [ toCopy ]);
   
   return [
     "🙋‍♂️",
@@ -30,6 +32,15 @@ function CommonEmojis() {
     "😰",
     "🤬"
   ].map(emoji => 
-        <button type="button" className="btn btn-primary" onClick={() => setCopied(`${emoji}`)}>{emoji}{copied == emoji && " is copied"}</button>
+        <button 
+          type="button" 
+          style={{ marginRight: "10px" }} 
+          className="btn btn-primary" 
+          onClick={() => {
+            setToCopy(`${emoji}`)
+          }}
+        >
+          {emoji}{copied == emoji && " is copied"}
+        </button>
   )
 }
