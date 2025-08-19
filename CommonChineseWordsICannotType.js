@@ -4,7 +4,7 @@ browser version of babel do all the work for us.
 */
 
 /*
-[首頁 | Emoji表情符號詞典 📓 | Emojiall繁體中文官方網站](https://www.emojiall.com/zh-hant)
+[hkcards 倉頡字典](https://www.hkcards.com/)
 */
 function CommonChineseWordsICannotType() {
   const [ toCopy, setToCopy ] = React.useState("");
