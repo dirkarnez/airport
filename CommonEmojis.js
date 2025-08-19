@@ -11,10 +11,12 @@ function CommonEmojis() {
   const [ copied, setCopied ] = React.useState("");
   
   React.useEffect(() => {
-      (async () => {
-        await navigator.clipboard.writeText(toCopy);
-        setCopied(toCopy);
-      })();
+      if (!!toCopy) {
+        (async () => {
+          await navigator.clipboard.writeText(toCopy);
+          setCopied(toCopy);
+        })();
+      }
   }, [ toCopy ]);
   
   return [
