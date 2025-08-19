@@ -219,7 +219,7 @@ function Application({entryPoints}) {
           <div className="row">
             <div className="col">
               <label htmlFor="github-auth">GitHub Auth:</label>
-              <input type="text" id="github-auth" defaultValue={Cookies.get(window.key) || ""}
+              <input type="text" id="github-auth" defaultValue={Cookies.get(window.key) || ""} style={{ width: "100%" }}
                 onChange={() => {
                   Cookies.set(window.key, event.target.value);
                 }} />
