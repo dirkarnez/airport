@@ -231,7 +231,7 @@ function Application({entryPoints}) {
             <br />
             {entryPoints.map(entryPoint => {
                   const App = window[entryPoint];
-                  return App && currentApp === entryPoint && <div style={{maxHeight: "500px", overflowY: "auto" }}><App /></div>
+                  return App && currentApp === entryPoint && <App />
             })}
           <br />
           <br />
