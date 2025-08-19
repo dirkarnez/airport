@@ -156,8 +156,17 @@ function Application({entryPoints}) {
           </div>
                         
             <br />         
-          
-      <div className="row">
+
+          <div className="row">
+            <div className="col">
+                  <CommonChineseWordsICannotType/>
+            </div>
+          </div>    
+                        
+            <br />         
+
+                        
+          <div className="row">
             <div className="col">
                   <CommonEmojis/>
             </div>
