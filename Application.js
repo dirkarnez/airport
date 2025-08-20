@@ -159,6 +159,14 @@ function Application({entryPoints}) {
 
           <div className="row">
             <div className="col">
+                  <Name/>
+            </div>
+          </div>
+                        
+            <br />
+                        
+          <div className="row">
+            <div className="col">
                   <CommonChineseWordsICannotType/>
             </div>
           </div>    
