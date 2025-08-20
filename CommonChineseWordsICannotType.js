@@ -66,7 +66,7 @@ function CommonChineseWordsICannotType() {
                   setToCopy(`${word}`)
                 }}
               >
-                {word}({howto}){copied == word && " is copied"}
+                {word} ({howto}){copied == word && " is copied"}
               </button>
         )
       }
