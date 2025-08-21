@@ -1,0 +1,60 @@
+name: sync-multiple-to-azure
+
+# on: 
+#   push
+
+# concurrency:
+#   group: ${{ github.workflow }}-${{ github.ref }}
+#   cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # <-- clone with complete history
+          repository: ${{ secrets.repository }}
+          path: ${{ secrets.repository }}
+          submodules: 'recursive'
+
+    # Powershell:  [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("dirkarnez:MY_PAT"))
+      - continue-on-error: true
+        run: |
+          result="$(echo -n "dirkarnez:${{ secrets.AZURE_PAT }}" | base64 | tr -d '\n')" && \
+          curl -X POST "https://dev.azure.com/dirkarnez/My%20GitHub%20backup/_apis/git/repositories?api-version=7.1" \
+          -H 'Content-Type: application/json' \
+          -H "Authorization: Basic $result"  \
+          -d '{"name":"${{ secrets.repository }}"}' && \
+          ls
+
+      - shell: cmd
+        run: | 
+          cd ${{ secrets.repository }} &&^
+          git config --global user.name "dirkarnez" && ^
+          git config --global user.email "smalldirkalex@gmail.com" && ^
+          git remote add azure "https://dirkarnez:${{ secrets.AZURE_PAT }}@dev.azure.com/dirkarnez/My%20GitHub%20backup/_git/${{ secrets.repository }}" && ^
+          
+          
+
+          
+          git clone https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/${{ env.target_repo }}.git && ^
+          cd "${{ env.target_repo }}" && ^
+          
+      - continue-on-error: true
+        run: |
+          cd 
+          
+
+      # - uses: yesolutions/mirror-action@v0.7.0
+      #   with:
+      #       REMOTE: ssh://git@bitbucket.org/dirkarnez/${{ github.event.repository.name }}.git
+      #       GIT_SSH_PRIVATE_KEY: ${{ secrets.GIT_SSH_PRIVATE_KEY }}
+      #       GIT_SSH_NO_VERIFY_HOST: "true"
+
+      # https://github.com/dirkarnez/internal-git-notes/blob/master/Bitbucket/azure/private-openssh-format
+      - uses: yesolutions/mirror-action@v0.7.0
+        with:
+            REMOTE: git@ssh.dev.azure.com:v3/dirkarnez/My%20GitHub%20backup/${{ github.event.repository.name }}
+            GIT_SSH_PRIVATE_KEY: ${{ secrets.AZURE_REPO_SSH_PRIVATE_KEY }}
+            GIT_SSH_NO_VERIFY_HOST: "true"
