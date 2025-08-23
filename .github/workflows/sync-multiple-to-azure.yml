@@ -1,7 +1,11 @@
 name: sync-multiple-to-azure
 
 on: 
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      repositories:
+        required: true
+        type: string
 
 # concurrency:
 #   group: ${{ github.workflow }}-${{ github.ref }}
@@ -14,8 +18,8 @@ jobs:
     steps:
       - id: set-matrix
         run: |
-          echo "::add-mask::${{ secrets.REPOSITORY }}"
-          echo "matrix=${{ secrets.REPOSITORY }}" >> $GITHUB_OUTPUT
+          echo "::add-mask::${{ inputs.repositories }}"
+          echo "matrix=${{ inputs.repositories }}" >> $GITHUB_OUTPUT
   build:
     needs: job1
     strategy:
