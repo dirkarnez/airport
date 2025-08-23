@@ -20,7 +20,7 @@ jobs:
       #     submodules: 'recursive'
       - shell: bash
         run: |
-          repos=$(echo "${{ secrets.REPOSITORY }}" | tr "," "\n")
+          repos=$(echo "${{ secrets.REPOSITORY }}" | tr -d ",")
           for repo in $repos
           do
               git clone "https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/$repo.git"
