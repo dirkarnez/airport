@@ -10,8 +10,6 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    env:
-      REPOSITORY: ${{ secrets.REPOSITORY }}
     steps:
       # - uses: actions/checkout@v5.0.0
       #   with:
@@ -22,7 +20,7 @@ jobs:
       #     submodules: 'recursive'
       - shell: bash
         run: |
-          repos=$(echo $REPOSITORY | tr "," "\n")
+          repos=$(echo "${{ secrets.REPOSITORY }}" | tr "," "\n")
           for repo in $repos
           do
               echo "> [$repo]"
