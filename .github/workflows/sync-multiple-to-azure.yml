@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    env:
+      REPOSITORY: ${{ secrets.REPOSITORY }}
     steps:
       # - uses: actions/checkout@v5.0.0
       #   with:
@@ -18,11 +20,9 @@ jobs:
       #     repository: 'dirkarnez/${{ secrets.repository }}'
       #     path: '${{ secrets.repository }}'
       #     submodules: 'recursive'
-      - shell: cmd
-        env:
-          REPOSITORY: ${{ secrets.REPOSITORY }}
+      - shell: bash
         run: |
-            git clone https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/%REPOSITORY%.git
+            git clone https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/$REPOSITORY.git
             
     # Powershell:  [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("dirkarnez:MY_PAT"))
       - continue-on-error: true
