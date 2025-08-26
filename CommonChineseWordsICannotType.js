@@ -36,6 +36,7 @@ function CommonChineseWordsICannotType() {
           { word: "曱", howto: "日中" },
           { word: "甴", howto: "中日" },
           { word: "屯", howto: "心山" },
+          { word: "邨", howto: "心中" },
           { word: "函", howto: "弓水" },
           { word: "幽", howto: "山戈" },
           { word: "繼", howto: "女戈" },
