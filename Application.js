@@ -2,7 +2,7 @@
 "module.exports" / "export default" is not needed.
 browser version of babel do all the work for us.
 */
-function Application({entryPoints}) {
+function Application({ entryPoints }) {
       
       const [currentApp, setCurrentApp] = React.useState("");
       
@@ -217,7 +217,9 @@ function Application({entryPoints}) {
               <a href="https://dirkarnez.github.io/primrose-playground">primrose-playground</a><br />
               <a href="https://dirkarnez.github.io/web-compiler">Web Compiler</a><br />
               <a href="https://dirkarnez.github.io/printing-units-calculator">Printing Units Calculator</a><br />
-              <a href="https://github.com/dirkarnez/chrome-extension-manifest-converter">chrome-extension-manifest-converter</a>
+              <a href="https://github.com/dirkarnez/chrome-extension-manifest-converter">chrome-extension-manifest-converter</a><br />
+              <a href="https://connect.raspberrypi.com/sign-in">Sign in with your Raspberry Pi ID – Raspberry Pi Connect</a><br />
+              <a href="https://connect.raspberrypi.com/devices">Personal devices – Raspberry Pi Connect</a>
             </div>
             <div className="col">
               <a href="https://dirkarnez.github.io/indexed-images-to-pdf/">indexed images to pdf</a><br />
