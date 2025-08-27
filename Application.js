@@ -154,7 +154,7 @@ function Application({ entryPoints }) {
                   <OnlineDocViewer/>
             </div>
           </div>
-                        
+      
             <br />         
 
           <div className="row">
@@ -182,6 +182,15 @@ function Application({ entryPoints }) {
  
                         
           <br />
+
+          <div className="row">
+            <div className="col">
+                  <ASCIILookup/>
+            </div>
+          </div>
+ 
+                        
+          <br />     
 
           <div className="row">
             <div className="col" id="whatsapp">
