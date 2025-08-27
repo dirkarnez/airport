@@ -11,18 +11,46 @@ browser version of babel do all the work for us.
 [ASCII Table - ASCII Character Codes, HTML, Octal, Hex, Decimal](https://www.asciitable.com/)
 [【前端HTML】&amp;&amp;&nbsp在html里是什么意思 - 青墟 - 博客园](https://www.cnblogs.com/guoxinyu/p/12659075.html)
 */
-function ASCIILookup() {
-  const divRef = React.useRef(null);
-   function handleClick() {
-    divRef.current.innerHTML = "Chris&apos; corner";
-    console.log(divRef.current.innerText)
-  }
+
+const TextInputComponent = () => {
+  const [ inputValue, setInputValue ] = useState('');
+  const [ transformedValue, setTransformedValue ] = useState('');
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  React.useEffect(() => {
+    if (!inputValue) {
+      return;
+    }
+    
+    const div = document.createElement("div");
+    div.innerHTML = inputValue;
+    setTransformedValue(div.innerText);
+  }, [ inputValue ]);
 
   return (
-    <div className="myDiv" >
-      <div ref={divRef} />
-      <h2>This is a heading in a div element</h2>
-      <button onClick={handleClick}>This is some text in a div element.</button>
-    </div>
+    <React.Fragment>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={handleChange}
+      />
+      <p>Transformed: {transformedValue}</p>
+    </React.Fragment>
+  );
+};
+
+
+function ASCIILookup() {
+  // const divRef = React.useRef(null);
+  //  function handleClick() {
+  //   divRef.current.innerHTML = "Chris&apos; corner";
+  //   console.log(divRef.current.innerText)
+  // }
+  //    <div ref={divRef} />
+  return (
+    <TextInputComponent/>
   )
 }
