@@ -12,8 +12,8 @@ browser version of babel do all the work for us.
 [【前端HTML】&amp;&amp;&nbsp在html里是什么意思 - 青墟 - 博客园](https://www.cnblogs.com/guoxinyu/p/12659075.html)
 */
 const TextInputComponent = () => {
-  const [ inputValue, setInputValue ] = useState('');
-  const [ transformedValue, setTransformedValue ] = useState('');
+  const [ inputValue, setInputValue ] = React.useState('');
+  const [ transformedValue, setTransformedValue ] = React.useState('');
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
