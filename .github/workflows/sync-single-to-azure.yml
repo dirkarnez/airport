@@ -21,8 +21,10 @@ jobs:
       - shell: cmd
         env:
           REPOSITORY: ${{ secrets.REPOSITORY }}
+          TESTING: toJSON(${{ secrets.REPOSITORY }})
         run: |
-            git clone https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/%REPOSITORY%.git
+          echo $TESTING
+          git clone https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/%REPOSITORY%.git
             
     # Powershell:  [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("dirkarnez:MY_PAT"))
       - continue-on-error: true
