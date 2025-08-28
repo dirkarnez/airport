@@ -31,7 +31,10 @@ const TextInputComponent = () => {
 
   return (
     <React.Fragment>
+      <label htmlfor="ascii-input">Input example: &amp;amp;, &amp;#39;</label>
+      <br/>
       <input
+        name="ascii-input"
         type="text"
         value={inputValue}
         onChange={handleChange}
