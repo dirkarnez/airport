@@ -23,9 +23,7 @@ jobs:
           REPOSITORY: ${{ secrets.REPOSITORY }}
           TESTING: ${{ toJSON(secrets.REPOSITORY) }}
         run: |
-          echo testing
           repos=(${TESTING//,/ })
-          echo ${repos[0]}
           for repo in "${repos[@]}"
           do
             repo=$(echo -n "$repo" | tr -d '"')
