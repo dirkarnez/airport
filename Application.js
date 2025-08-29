@@ -13,33 +13,33 @@ function Application({ entryPoints }) {
                   <h3>Common</h3>
                   <a href="https://www.goethe.de/prj/dfd/en/index.cfm">Learn German</a><br/>
                   <a href="https://outlook.office365.com/owa/calendar/IEMakerLabSelfserviceBooking3DPrinterSmall@polyuit.onmicrosoft.com/bookings/">3D printing</a><br/>  
-                  <a href="https://webcammictest.com/">Webcam test - Check camera online</a><br />
-                  <a href="https://mic-test.com/">Mic Test | Mic Test</a><br />                    
-                  <a href="https://booking3.lib.polyu.edu.hk/login">iBooking</a><br />
-                  <a href="https://ftp.ee.polyu.edu.hk/Student/Login">EEE Student Intranet</a><br />
-                  <a href="https://appserver.eie.polyu.edu.hk/student-intranet/">EIE Student Intranet</a><br />
-                  <a href="https://www.polyu.edu.hk/campus-map/">Hong Kong Polytechnic University Campus Map</a><br />
-                  { /* <a href="https://ilearningx.huawei.com/portal/micro/course-v1:HuaweiX+EBG2020NCHW1100015+microcourse/about?blockID=85fed4a9ea3344f99f1e5e7d3fabca83">Huawei ICT Competition 2021-2022—Cloud Track (19081126d, 35234772)</a><br /> */ }
-                  <a href="https://vdesk.polyu.edu.hk/RDWeb/Pages/en-US/login.aspx">vdesk</a><br />
-                  <a href="https://puuds.polyu.edu.hk/uds/page/services">uds</a><br />
-                  <a href="https://www.polyu.edu.hk/its/orientation/NewStudent/vscc.php">vscc</a><br />
-                  <a href="https://ptps-fo.polyu.edu.hk/ptpsauth">Part-time Payment System</a><br />
-                  <a href="https://pvrp-sao.polyu.edu.hk/student/login">Job Seeker Login | PolyU VRP</a><br />
-                  <a href="https://www.polyu.edu.hk/cfso/docdrive/_sso/services/both/lostandfound.html">Lost property</a><br />
-                  <a href="https://www.aha-music.com/identify-songs-music-recognition-online">Identify Songs Online - Music Recognition Online</a><br />
-                  <a href="https://www.hangseng.com/zh-hk/security">eBanking</a><br />
-                  <a href="https://forms.office.com/r/FfhfP3X6E1">IC Facilities Booking Request (HSC)</a><br />
+                  <a href="https://webcammictest.com/">Webcam test - Check camera online</a><br/>
+                  <a href="https://mic-test.com/">Mic Test | Mic Test</a><br/>                    
+                  <a href="https://booking3.lib.polyu.edu.hk/login">iBooking</a><br/>
+                  <a href="https://ftp.ee.polyu.edu.hk/Student/Login">EEE Student Intranet</a><br/>
+                  <a href="https://appserver.eie.polyu.edu.hk/student-intranet/">EIE Student Intranet</a><br/>
+                  <a href="https://www.polyu.edu.hk/campus-map/">Hong Kong Polytechnic University Campus Map</a><br/>
+                  { /* <a href="https://ilearningx.huawei.com/portal/micro/course-v1:HuaweiX+EBG2020NCHW1100015+microcourse/about?blockID=85fed4a9ea3344f99f1e5e7d3fabca83">Huawei ICT Competition 2021-2022—Cloud Track (19081126d, 35234772)</a><br/> */ }
+                  <a href="https://vdesk.polyu.edu.hk/RDWeb/Pages/en-US/login.aspx">vdesk</a><br/>
+                  <a href="https://puuds.polyu.edu.hk/uds/page/services">uds</a><br/>
+                  <a href="https://www.polyu.edu.hk/its/orientation/NewStudent/vscc.php">vscc</a><br/>
+                  <a href="https://ptps-fo.polyu.edu.hk/ptpsauth">Part-time Payment System</a><br/>
+                  <a href="https://pvrp-sao.polyu.edu.hk/student/login">Job Seeker Login | PolyU VRP</a><br/>
+                  <a href="https://www.polyu.edu.hk/cfso/docdrive/_sso/services/both/lostandfound.html">Lost property</a><br/>
+                  <a href="https://www.aha-music.com/identify-songs-music-recognition-online">Identify Songs Online - Music Recognition Online</a><br/>
+                  <a href="https://www.hangseng.com/zh-hk/security">eBanking</a><br/>
+                  <a href="https://forms.office.com/r/FfhfP3X6E1">IC Facilities Booking Request (HSC)</a><br/>
 { /*    
                   <hr/>
                   <div>
-                        <a href="https://www.bmf.edu.hk/">佛教茂峰法師紀念中學</a><br />
-                        <a href="https://maps.app.goo.gl/yPqhY2ZaQwGQfDth9">Map</a><br />
+                        <a href="https://www.bmf.edu.hk/">佛教茂峰法師紀念中學</a><br/>
+                        <a href="https://maps.app.goo.gl/yPqhY2ZaQwGQfDth9">Map</a><br/>
                         <a href="https://bit.ly/43k3scg6">materials</a>
                   </div>
                   <br/>
                   <div>
-                        <a href="https://www.ymtcps.edu.hk/">油⿇地天主教小學</a><br />
-                        <a href="https://maps.app.goo.gl/nS2XUkMCAoY2AGwC9">Map</a><br />
+                        <a href="https://www.ymtcps.edu.hk/">油⿇地天主教小學</a><br/>
+                        <a href="https://maps.app.goo.gl/nS2XUkMCAoY2AGwC9">Map</a><br/>
                         <a href="https://bit.ly/43DoGGa">materials</a>
                   </div>
 */ }            
@@ -48,10 +48,10 @@ function Application({ entryPoints }) {
                   <h3>Courses</h3>
               <a href="https://github.com/dirkarnez/EIE3105">EIE3105 Integrated Project</a><a
                       href="https://learn.polyu.edu.hk/ultra/courses/_93112_1/cl/outline"><img className="bb"
-                        src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
+                        src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br/>
              <a href="https://github.com/dirkarnez/EIE3100">EIE3100 Analogue Circuit Fundamentals</a><a
                             href="https://learn.polyu.edu.hk/ultra/courses/_93109_1/cl/outline"><img className="bb"
-                              src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
+                              src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br/>
               <a href="https://github.com/dirkarnez/EIE4433">EIE4433 Honours Project</a><a
                 href="https://learn.polyu.edu.hk/ultra/courses/_93133_1/cl/outline"><img className="bb"
                   src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a>
@@ -61,10 +61,10 @@ function Application({ entryPoints }) {
               </ul>
               <a href="https://github.com/dirkarnez/EIE3333">EIE3333 Data And Computer Communications </a><a
                       href="https://learn.polyu.edu.hk/ultra/courses//cl/outline"><img className="bb"
-                        src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
+                        src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br/>
               <a href="https://github.com/dirkarnez/EIE3312">EIE3312 Linear Systems</a><a
                       href="https://learn.polyu.edu.hk/ultra/courses//cl/outline"><img className="bb"
-                        src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
+                        src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br/>
             <hr />
              <a href="https://github.com/dirkarnez/AMA2104">AMA2104 Probability and Engineering Statistics</a><a
                 href="https://learn.polyu.edu.hk/ultra/courses/_96485_1/cl/outline">
@@ -88,7 +88,7 @@ function Application({ entryPoints }) {
             <hr />
               <a href="https://github.com/dirkarnez/EIE3100">EIE2102 Basic Electronics</a>
               <a href="https://teams.microsoft.com/_?culture=zh-hk&country=HK&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school/files/General?threadId=19:KGkcYY8WSyx5wI-WwHwIYg6is1-9OvPWshAcIrUDIy01@thread.tacv2&ctx=channel&rootfolder=%252Fsites%252FEIE2102_20212_A%252FShared%2520Documents%252FGeneral%252FRecordings%252FView%2520Only">
-                <img className="bb" src="https://statics.teams.cdn.office.net/hashed/favicon/prod/favicon-9e2b8f1.ico"></img></a><br />
+                <img className="bb" src="https://statics.teams.cdn.office.net/hashed/favicon/prod/favicon-9e2b8f1.ico"></img></a><br/>
               <a href="https://github.com/dirkarnez/EIE3112">EIE3112 Database System</a><a
                 href="https://learn.polyu.edu.hk/ultra/courses/_96549_1/cl/outline">
                 <img
@@ -102,7 +102,7 @@ function Application({ entryPoints }) {
               <a href="https://github.com/dirkarnez/CLC3241P">CLC3241P Professional Communication in Chinese</a><a
                 href="https://learn.polyu.edu.hk/ultra/courses/_98891_1/cl/outline">
                 <img className="bb"
-                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
+                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br/>
               <a href="https://github.com/dirkarnez/IC382">IC382 Multidisciplinary Manufacturing Project</a><a
                 href="https://learn.polyu.edu.hk/ultra/courses/_93077_1/cl/outline">
                 <img className="bb"
@@ -114,27 +114,27 @@ function Application({ entryPoints }) {
               </ul>
               <a href="https://github.com/dirkarnez/TM1114">IC2114_TM1114 Engineering Drawing for EIE</a><a
                 href="https://learn.polyu.edu.hk/ultra/courses/_98099_1/cl/outline"><img className="bb"
-                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
+                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br/>
               <a href="https://github.com/dirkarnez/TM1115">IC2114_TM1115 Introduction of Embedded System</a><a
                 href="https://learn.polyu.edu.hk/ultra/courses/_98109_1/cl/outline"><img className="bb"
-                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
+                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br/>
               <hr />
               <a href="https://github.com/dirkarnez/AF3625">AF3625 Engineering Economics</a><a
                 href="https://learn.polyu.edu.hk/ultra/courses/_94224_1/cl/outline"><img className="bb"
-                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
+                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br/>
               <ul>
                 <li><a href="https://dirkarnez.github.io/economics-cheatsheet/">dirkarnez.github.io/economics-cheatsheet</a>
                 </li>
               </ul>
               <a href="https://github.com/dirkarnez/ENG3004">ENG3004 Society and the Engineer</a><a
                 href="https://learn.polyu.edu.hk/ultra/courses/_93687_1/cl/outline"><img className="bb"
-                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br />
+                  src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br/>
               <ul>
                 <li><a href="https://drive.google.com/drive/folders/1St1UaDbiRAP_-NZcxLb6rp6Wuaxfxwhq">Folder - Google Drive</a></li>
               </ul>
             </div>
           </div>
-          <br />
+          <br/>
           <div className="row">
             <div className="col">
               <div className="zxing-header">
@@ -155,7 +155,7 @@ function Application({ entryPoints }) {
             </div>
           </div>
       
-            <br />         
+            <br/>         
 
           <div className="row">
             <div className="col">
@@ -163,7 +163,7 @@ function Application({ entryPoints }) {
             </div>
           </div>
                         
-            <br />
+            <br/>
                         
           <div className="row">
             <div className="col">
@@ -171,7 +171,7 @@ function Application({ entryPoints }) {
             </div>
           </div>    
                         
-            <br />         
+            <br/>         
 
                         
           <div className="row">
@@ -181,7 +181,7 @@ function Application({ entryPoints }) {
           </div>
  
                         
-          <br />
+          <br/>
 
           <div className="row">
             <div className="col">
@@ -190,13 +190,13 @@ function Application({ entryPoints }) {
           </div>
  
                         
-          <br />     
+          <br/>     
 
           <div className="row">
             <div className="col" id="whatsapp">
               <img src="https://static.xx.fbcdn.net/rsrc.php/yz/r/lOol7j-zq4u.svg"></img>&nbsp;&nbsp;Chat on WhatsApp
-              <br />
-              <br />
+              <br/>
+              <br/>
               <form
                 onSubmit={() => {
                   window.open(`https://api.whatsapp.com/send?phone=852${document.getElementById('tel-input').value}`, '_blank');
@@ -212,26 +212,29 @@ function Application({ entryPoints }) {
           </div>
           <div className="row">
             <div className="col">
-              <a href="https://dirkarnez.github.io/cpk-automated/">cpk-automated</a><br />
-              <a href="https://dirkarnez.github.io/music-notation-cheatsheet/">Music Notation Cheatsheet</a><br />
-              <a href="https://dirkarnez.github.io/responsive-viewport">Responsive Viewport</a><br />
-              <a href="https://dirkarnez.github.io/filetype-detecter">filetype-detecter</a><br />
-              <a href="https://dirkarnez.github.io/webcam-playground">webcam-playground</a><br />
-              <a href="https://dirkarnez.github.io/git-script-generator">git-script-generator</a><br />
-              <a href="https://dirkarnez.github.io/gl-matrix-playground">gl-matrix-playground</a><br />
-              <a href="https://dirkarnez.github.io/json-repl">json-repl</a><br />
-              <a href="https://dirkarnez.github.io/githubjs-wrapper">githubjs-wrapper</a><br />
-              <a href="https://dirkarnez.github.io/github-forms">github-forms</a><br />
-              <a href="https://dirkarnez.github.io/spotify-playlist-exporter">spotify-playlist-exporter</a><br />
-              <a href="https://dirkarnez.github.io/primrose-playground">primrose-playground</a><br />
-              <a href="https://dirkarnez.github.io/web-compiler">Web Compiler</a><br />
-              <a href="https://dirkarnez.github.io/printing-units-calculator">Printing Units Calculator</a><br />
-              <a href="https://github.com/dirkarnez/chrome-extension-manifest-converter">chrome-extension-manifest-converter</a><br />
-              <a href="https://connect.raspberrypi.com/sign-in">Sign in with your Raspberry Pi ID – Raspberry Pi Connect</a><br />
+              <a href="https://dirkarnez.github.io/cpk-automated/">cpk-automated</a><br/>
+              <a href="https://dirkarnez.github.io/music-notation-cheatsheet/">Music Notation Cheatsheet</a><br/>
+              <a href="https://dirkarnez.github.io/responsive-viewport">Responsive Viewport</a><br/>
+              <a href="https://dirkarnez.github.io/filetype-detecter">filetype-detecter</a><br/>
+              <a href="https://dirkarnez.github.io/webcam-playground">webcam-playground</a><br/>
+              <a href="https://dirkarnez.github.io/git-script-generator">git-script-generator</a><br/>
+              <a href="https://dirkarnez.github.io/gl-matrix-playground">gl-matrix-playground</a><br/>
+              <a href="https://dirkarnez.github.io/json-repl">json-repl</a><br/>
+              <a href="https://dirkarnez.github.io/githubjs-wrapper">githubjs-wrapper</a><br/>
+              <a href="https://dirkarnez.github.io/github-forms">github-forms</a><br/>
+              <a href="https://dirkarnez.github.io/spotify-playlist-exporter">spotify-playlist-exporter</a><br/>
+              <a href="https://dirkarnez.github.io/primrose-playground">primrose-playground</a><br/>
+              <a href="https://dirkarnez.github.io/web-compiler">Web Compiler</a><br/>
+              <a href="https://dirkarnez.github.io/printing-units-calculator">Printing Units Calculator</a><br/>
+              <a href="https://github.com/dirkarnez/chrome-extension-manifest-converter">chrome-extension-manifest-converter</a><br/>
+              <a href="https://connect.raspberrypi.com/sign-in">Sign in with your Raspberry Pi ID – Raspberry Pi Connect</a><br/>
               <a href="https://connect.raspberrypi.com/devices">Personal devices – Raspberry Pi Connect</a>
             </div>
             <div className="col">
-              <a href="https://dirkarnez.github.io/indexed-images-to-pdf/">indexed images to pdf</a><br />
+                  <a href="https://dirkarnez.github.io/indexed-images-to-pdf/">indexed images to pdf</a><br/>
+                  <a href="https://matplotlib.online/project?id=0">matplotlib.online | Create online plots with python and matplotlib</a><br/>
+                  <a href="https://dirkarnez.github.io/calculus-calculator">dirkarnez/calculus-calculator</a><br/>
+                  <a href="https://dirkarnez.github.io/convolution-calculator/">dirkarnez/convolution-calculator</a>
             </div>
           </div>
 
@@ -244,7 +247,7 @@ function Application({ entryPoints }) {
                 }} />
             </div>
           </div>
-          <br />
+          <br/>
              {entryPoints.map(entryPoint => (
               <div>
                         <input type="radio" 
@@ -256,13 +259,13 @@ function Application({ entryPoints }) {
                         <label for={entryPoint} style={{paddingLeft: "10px"}}>{entryPoint}</label>
                 </div>
               ))}
-            <br />
+            <br/>
             {entryPoints.map(entryPoint => {
                   const App = window[entryPoint];
                   return App && currentApp === entryPoint && <App />
             })}
-          <br />
-          <br />
+          <br/>
+          <br/>
           <div className="row">
             <iframe
               src="https://calendar.google.com/calendar/embed?height=1000&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FShanghai&showNav=0&showTitle=0&showCalendars=1&showPrint=0&showDate=1&mode=WEEK&src=c21hbGxkaXJrYWxleEBnbWFpbC5jb20&src=ZW4uaG9uZ19rb25nI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA&color=%237986CB"
