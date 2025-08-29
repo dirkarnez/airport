@@ -28,7 +28,7 @@ jobs:
           echo ${repos[0]}
           for repo in "${repos[@]}"
           do
-            git clone "https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/$repo.git"
+            git clone https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/$repo.git
             curl -X POST "https://dev.azure.com/dirkarnez/My%20GitHub%20backup/_apis/git/repositories?api-version=7.1" \
             -H 'Content-Type: application/json' \
             -H "Authorization: Basic $result"  \
