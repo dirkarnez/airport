@@ -2,14 +2,11 @@ name: sync-multiple-to-azure
 
 on: 
   workflow_dispatch:
-    inputs:
-      repositories:
-        required: true
-        type: string
-
+  
 # concurrency:
 #   group: ${{ github.workflow }}-${{ github.ref }}
 #   cancel-in-progress: true
+
 jobs:
   job1:
     runs-on: ubuntu-latest
