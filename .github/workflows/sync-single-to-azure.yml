@@ -30,7 +30,6 @@ jobs:
         env:
           REPOSITORIES: ${{ inputs.repositories }}
         run: |
-          echo "::add-mask::${{ inputs.repositories }}"
           echo "::add-mask::$REPOSITORIES"
           repos=(${REPOSITORIES//,/ })
           for repo in "${repos[@]}"
