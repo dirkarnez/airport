@@ -1,7 +1,11 @@
 name: sync-single-to-azure
 
 on: 
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      repositories:
+        required: true
+        type: string
 
 # concurrency:
 #   group: ${{ github.workflow }}-${{ github.ref }}
@@ -18,15 +22,18 @@ jobs:
       #     repository: 'dirkarnez/${{ secrets.repository }}'
       #     path: '${{ secrets.repository }}'
       #     submodules: 'recursive'
+      # env:
+      #   REPOSITORY: ${{ secrets.REPOSITORY }}
+      #   TESTING: ${{ toJSON(secrets.REPOSITORY) }}      
       - shell: bash
         env:
-          REPOSITORY: ${{ secrets.REPOSITORY }}
-          TESTING: ${{ toJSON(secrets.REPOSITORY) }}
+          REPOSITORIES: ${{ inputs.repositories }}
         run: |
-          repos=(${TESTING//,/ })
+          echo "::add-mask::${{ inputs.repositories }}"
+          echo "::add-mask::$REPOSITORIES"
+          repos=(${REPOSITORIES//,/ })
           for repo in "${repos[@]}"
           do
-            repo=$(echo -n "$repo" | tr -d '"')
             echo "::add-mask::$repo"
             git clone https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/$repo.git
             result="$(echo -n "dirkarnez:${{ secrets.AZURE_PAT }}" | base64 | tr -d '\n')" && \
