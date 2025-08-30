@@ -35,6 +35,11 @@ jobs:
             -H "Authorization: Basic $result"  \
             -d "{\"name\":\"$repo\"}" && \
             ls
+            cd $repo && \
+            git config --global user.name "dirkarnez" && \
+            git config --global user.email "smalldirkalex@gmail.com" && \
+            git remote add azure https://dirkarnez:${{ secrets.AZURE_PAT }}@dev.azure.com/dirkarnez/My%20GitHub%20backup/_git/$repo && \
+            git push -u azure main
           done
       
 
@@ -52,23 +57,23 @@ jobs:
       #       git push -u azure main
             
     # Powershell:  [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("dirkarnez:MY_PAT"))
-      - continue-on-error: true
-        shell: bash
-        run: |
-          result="$(echo -n "dirkarnez:${{ secrets.AZURE_PAT }}" | base64 | tr -d '\n')" && \
-          curl -X POST "https://dev.azure.com/dirkarnez/My%20GitHub%20backup/_apis/git/repositories?api-version=7.1" \
-          -H 'Content-Type: application/json' \
-          -H "Authorization: Basic $result"  \
-          -d '{"name":"${{ secrets.repository }}"}' && \
-          ls
+      # - continue-on-error: true
+      #   shell: bash
+      #   run: |
+      #     result="$(echo -n "dirkarnez:${{ secrets.AZURE_PAT }}" | base64 | tr -d '\n')" && \
+      #     curl -X POST "https://dev.azure.com/dirkarnez/My%20GitHub%20backup/_apis/git/repositories?api-version=7.1" \
+      #     -H 'Content-Type: application/json' \
+      #     -H "Authorization: Basic $result"  \
+      #     -d '{"name":"${{ secrets.repository }}"}' && \
+      #     ls
 
-      - shell: bash
-        run: | 
-          cd ${{ secrets.repository }} && \
-          git config --global user.name "dirkarnez" && \
-          git config --global user.email "smalldirkalex@gmail.com" && \
-          git remote add azure 'https://dirkarnez:${{ secrets.AZURE_PAT }}@dev.azure.com/dirkarnez/My%20GitHub%20backup/_git/${{ secrets.repository }}' && \
-          git push -u azure main
+      # - shell: bash
+      #   run: | 
+      #     cd ${{ secrets.repository }} && \
+      #     git config --global user.name "dirkarnez" && \
+      #     git config --global user.email "smalldirkalex@gmail.com" && \
+      #     git remote add azure 'https://dirkarnez:${{ secrets.AZURE_PAT }}@dev.azure.com/dirkarnez/My%20GitHub%20backup/_git/${{ secrets.repository }}' && \
+      #     git push -u azure main
           
       # - uses: yesolutions/mirror-action@v0.7.0
       #   with:
