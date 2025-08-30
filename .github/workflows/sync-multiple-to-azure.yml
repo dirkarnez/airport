@@ -1,4 +1,4 @@
-name: sync-single-to-azure
+name: sync-multiple-to-azure
 
 on: 
   workflow_dispatch:
