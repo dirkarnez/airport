@@ -2,11 +2,6 @@ name: sync-single-to-azure
 
 on: 
   workflow_dispatch:
-    inputs:
-      repositories:
-        required: true
-        type: string
-
 # concurrency:
 #   group: ${{ github.workflow }}-${{ github.ref }}
 #   cancel-in-progress: true
@@ -28,7 +23,7 @@ jobs:
       - name: loop
         shell: bash
         env:
-          REPOSITORIES: ${{ inputs.repositories }}
+          REPOSITORIES: ${{ secrets.REPOSITORY }}
         run: |
           echo "::add-mask::$REPOSITORIES"
           repos=(${REPOSITORIES//,/ })
