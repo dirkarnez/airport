@@ -25,7 +25,8 @@ jobs:
       # env:
       #   REPOSITORY: ${{ secrets.REPOSITORY }}
       #   TESTING: ${{ toJSON(secrets.REPOSITORY) }}      
-      - shell: bash
+      - name: loop
+        shell: bash
         env:
           REPOSITORIES: ${{ inputs.repositories }}
         run: |
