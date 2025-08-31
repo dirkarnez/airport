@@ -232,6 +232,7 @@ function Application({ entryPoints }) {
             </div>
             <div className="col">
                   <a href="https://dirkarnez.github.io/indexed-images-to-pdf/">indexed images to pdf</a><br/>
+                  <a href="https://dirkarnez.github.io/math.js-playground/">math.js-playground</a><br/>
                   <a href="https://matplotlib.online/project?id=0">matplotlib.online | Create online plots with python and matplotlib</a><br/>
                   <a href="https://dirkarnez.github.io/calculus-calculator">dirkarnez/calculus-calculator</a><br/>
                   <a href="https://dirkarnez.github.io/convolution-calculator/">dirkarnez/convolution-calculator</a>
