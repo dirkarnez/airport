@@ -235,6 +235,7 @@ function Application({ entryPoints }) {
                   <a href="https://dirkarnez.github.io/math.js-playground/">dirkarnez/math.js-playground</a><br/>
                   <a href="https://dirkarnez.github.io/statistics-playground/">dirkarnez/statistics-playground</a><br/>
                   <a href="https://matplotlib.online/project?id=0">matplotlib.online | Create online plots with python and matplotlib</a><br/>
+                  <a href="https://baseconvert.com/">Base Convert: the simple floating point base calculator</a><br/>
                   <a href="https://dirkarnez.github.io/calculus-calculator">dirkarnez/calculus-calculator</a><br/>
                   <a href="https://dirkarnez.github.io/convolution-calculator/">dirkarnez/convolution-calculator</a>
             </div>
