@@ -23,12 +23,12 @@ const TextInputComponent = () => {
 
   React.useEffect(() => {
     if (!inputValue) {
-      return;
+      setTransformedValue("");
+    } else {
+      const div = document.createElement("div");
+      div.innerHTML = inputValue;
+      setTransformedValue(div.innerText);
     }
-    
-    const div = document.createElement("div");
-    div.innerHTML = inputValue;
-    setTransformedValue(div.innerText);
   }, [ inputValue ]);
 
   return (
