@@ -41,7 +41,7 @@ const TextInputComponent = () => {
         value={inputValue}
         onChange={handleChange}
       />
-      <p>Transformed: ->&gt;{transformedValue}&lt;-</p>
+      <p>Transformed: -&gt;{transformedValue}&lt;-</p>
     </React.Fragment>
   );
 };
