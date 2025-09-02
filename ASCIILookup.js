@@ -39,11 +39,10 @@ const TextInputComponent = () => {
         value={inputValue}
         onChange={handleChange}
       />
-      <p>Transformed: ->{transformedValue}<-</p>
+      <p>Transformed: ->&gt;{transformedValue}&lt;-</p>
     </React.Fragment>
   );
 };
-
 
 function ASCIILookup() {
   // const divRef = React.useRef(null);
