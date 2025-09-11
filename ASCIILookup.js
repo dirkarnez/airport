@@ -39,12 +39,11 @@ const TextInputComponent = () => {
       value: ""
     };
     if (!!inputValue) {
-      const type = detect(inputValue);
       result = {
         ...result, 
-        type
+        type: detect(inputValue);
       };
-      switch(type) {
+      switch(result.type) {
         case "URL_ENCODED":
           result = {
             ...result, 
@@ -66,7 +65,6 @@ const TextInputComponent = () => {
             ...result, 
             value: ""
           };
-          break;
       }
     }
     setTransformedValue(result);
