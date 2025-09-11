@@ -15,20 +15,61 @@ todos: \u00A0
 */
 const TextInputComponent = () => {
   const [ inputValue, setInputValue ] = React.useState('');
-  const [ transformedValue, setTransformedValue ] = React.useState('');
-
+  const [ transformedValue, setTransformedValue ] = React.useState({
+    type: "",
+    value: ""
+  });
+//  /%[0-9A-Fa-f]{2}/.test("Hello%20World")
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
 
-  React.useEffect(() => {
-    if (!inputValue) {
-      setTransformedValue("");
-    } else {
-      const div = document.createElement("div");
-      div.innerHTML = inputValue;
-      setTransformedValue(div.innerText);
+  const detect = str => {
+    if (/&[a-zA-Z0-9#]+;/.test(str)) {
+      return "HTML_ENTITIES";
+    } else if (/%[0-9A-Fa-f]{2}/.test(str)) {
+      return "URL_ENCODED";
     }
+    return "UNKNOWN";
+  };
+  
+  React.useEffect(() => {
+    let result = {
+      type: "",
+      value: ""
+    };
+    if (!!inputValue) {
+      const type = detect(inputValue);
+      result = {
+        ...result, 
+        type
+      };
+      switch(type) {
+        case "URL_ENCODED":
+          result = {
+            ...result, 
+            value: encodeURIComponent(inputValue)
+          };
+          break;
+        case "HTML_ENTITIES":
+          result = {
+            ...result, 
+            value: ((value) => {
+              const div = document.createElement("div");
+              div.innerHTML = value;
+              return div.innerText;
+            })(inputValue)
+          };
+          break;
+        default:
+          result = {
+            ...result, 
+            value: ""
+          };
+          break;
+      }
+    }
+    setTransformedValue(result);
   }, [ inputValue ]);
 
   return (
