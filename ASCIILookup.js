@@ -41,7 +41,7 @@ const TextInputComponent = () => {
     if (!!inputValue) {
       result = {
         ...result, 
-        type: detect(inputValue);
+        type: detect(inputValue)
       };
       switch(result.type) {
         case "URL_ENCODED":
