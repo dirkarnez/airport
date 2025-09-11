@@ -13,24 +13,28 @@ todos: \u00A0
 [ASCII Table - ASCII Character Codes, HTML, Octal, Hex, Decimal](https://www.asciitable.com/)
 [【前端HTML】&amp;&amp;&nbsp在html里是什么意思 - 青墟 - 博客园](https://www.cnblogs.com/guoxinyu/p/12659075.html)
 */
+const HTML_ENTITIES = "HTML_ENTITIES";
+const URL_ENCODED = "URL_ENCODED";
+const UNKNOWN = "UNKNOWN";
+
 const TextInputComponent = () => {
   const [ inputValue, setInputValue ] = React.useState('');
   const [ transformedValue, setTransformedValue ] = React.useState({
     type: "",
     value: ""
   });
-//  /%[0-9A-Fa-f]{2}/.test("Hello%20World")
+
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
 
   const detect = str => {
     if (/&[a-zA-Z0-9#]+;/.test(str)) {
-      return "HTML_ENTITIES";
+      return HTML_ENTITIES;
     } else if (/%[0-9A-Fa-f]{2}/.test(str)) {
-      return "URL_ENCODED";
+      return URL_ENCODED;
     }
-    return "UNKNOWN";
+    return UNKNOWN;
   };
 
   const transformHTMLEntities = str => {
@@ -50,13 +54,13 @@ const TextInputComponent = () => {
         type: detect(inputValue)
       };
       switch(result.type) {
-        case "URL_ENCODED":
+        case URL_ENCODED:
           result = {
             ...result, 
-            value: encodeURIComponent(inputValue)
+            value: decodeURIComponent(inputValue)
           };
           break;
-        case "HTML_ENTITIES":
+        case HTML_ENTITIES:
           result = {
             ...result, 
             value: transformHTMLEntities(inputValue)
@@ -74,7 +78,7 @@ const TextInputComponent = () => {
 
   return (
     <React.Fragment>
-      <label htmlfor="ascii-input">Input example: &amp;amp;, &amp;#39;</label>
+      <label htmlfor="ascii-input">Input example: <span style={{background: "#373737", color: "white"}}>&amp;amp;</span>, <span style={{background: "#373737", color: "white"}}>&amp;#39;</span></label>
       <br/>
       <input
         name="ascii-input"
@@ -82,7 +86,7 @@ const TextInputComponent = () => {
         value={inputValue}
         onChange={handleChange}
       />
-      <p>Transformed: -&gt;{transformedValue}&lt;-</p>
+      <p>Transformed ({transformedValue.type}): -&gt;{transformedValue.value}&lt;-</p>
     </React.Fragment>
   );
 };
