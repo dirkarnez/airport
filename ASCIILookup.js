@@ -32,6 +32,12 @@ const TextInputComponent = () => {
     }
     return "UNKNOWN";
   };
+
+  const transformHTMLEntities = str => {
+    const div = document.createElement("div");
+    div.innerHTML = `${str}`;
+    return div.innerText;
+  };
   
   React.useEffect(() => {
     let result = {
@@ -53,11 +59,7 @@ const TextInputComponent = () => {
         case "HTML_ENTITIES":
           result = {
             ...result, 
-            value: ((value) => {
-              const div = document.createElement("div");
-              div.innerHTML = value;
-              return div.innerText;
-            })(inputValue)
+            value: transformHTMLEntities(inputValue)
           };
           break;
         default:
