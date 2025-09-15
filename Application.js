@@ -45,6 +45,19 @@ function Application({ entryPoints }) {
             </div>
             <div className="col-sm-8">
                   <h3>Courses</h3>
+                  <a href="https://github.com/dirkarnez/EIE3331">EIE3331 Integrated Project</a><a
+                      href="https://learn.polyu.edu.hk/ultra/courses/_93112_1/cl/outline"><img className="bb"
+                        src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br/>
+                  <a href="https://github.com/dirkarnez/AMA2104">AMA2104 Integrated Project</a><a
+                      href="https://learn.polyu.edu.hk/ultra/courses/_93112_1/cl/outline"><img className="bb"
+                        src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br/>
+                  <a href="https://github.com/dirkarnez/EIE3105">EIE3105 Integrated Project</a><a
+                      href="https://learn.polyu.edu.hk/ultra/courses/_93112_1/cl/outline"><img className="bb"
+                        src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a>
+                  <ul>
+                  <li><a href="https://learn.polyu.edu.hk/ultra/courses/_126156_1/cl/outline" target="_blank">EIE3373</a></li>
+                  </ul>
+               <hr />
               <a href="https://github.com/dirkarnez/EIE3105">EIE3105 Integrated Project</a><a
                       href="https://learn.polyu.edu.hk/ultra/courses/_93112_1/cl/outline"><img className="bb"
                         src="https://learn-ap-southeast-1-prod-fleet02-xythos.content.blackboardcdn.com/favicon.ico"></img></a><br/>
