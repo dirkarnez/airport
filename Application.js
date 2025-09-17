@@ -261,7 +261,8 @@ function Application({ entryPoints }) {
               <input type="text" id="github-auth" defaultValue={Cookies.get(window.key) || ""} style={{ width: "100%" }}
                 onChange={() => {
                   Cookies.set(window.key, event.target.value);
-                }} />
+                }} /><br/>
+{!!window.decrypted && window.decrypted}
             </div>
           </div>
           <br/>
