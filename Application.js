@@ -269,7 +269,7 @@ function Application({ entryPoints }) {
                                   .writeText(window.decrypted)
                                   .then(() => alert("Copied!"))
                                   .catch(e => { alert("Cannot copy!") }) 
-                            }}>Copy {window.decrypted}</button>
+                            }}>Copy "{window.decrypted}"</button>
                       )
                   }
             </div>
