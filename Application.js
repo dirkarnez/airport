@@ -262,7 +262,16 @@ function Application({ entryPoints }) {
                 onChange={() => {
                   Cookies.set(window.key, event.target.value);
                 }} /><br/>
-{!!window.decrypted && window.decrypted}
+                {
+                      !!window.decrypted && (
+                      <button onClick={() => {  
+                            navigator.clipboard
+                                  .writeText(window.decrypted)
+                                  .then(() => alert("Copied!"))
+                                  .catch(e => { alert("Cannot copy!") }) 
+                            }}>Copy {window.decrypted}</button>
+                      )
+                  }
             </div>
           </div>
           <br/>
