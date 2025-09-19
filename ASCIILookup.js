@@ -78,7 +78,7 @@ const TextInputComponent = () => {
 
   return (
     <React.Fragment>
-      <label htmlfor="ascii-input">Input example: <span style={{background: "#373737", color: "white"}}>&amp;amp;</span>, <span style={{background: "#373737", color: "white"}}>&amp;#39;</span></label>
+      <label htmlfor="ascii-input">Input example: <span style={{background: "#373737", color: "white"}}>&amp;amp;</span>, <span style={{background: "#373737", color: "white"}}>&amp;#39;</span>, <span style={{background: "#373737", color: "white"}}>%2A</span></label>
       <br/>
       <input
         name="ascii-input"
