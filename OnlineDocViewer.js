@@ -21,7 +21,7 @@ function OnlineDocViewer() {
 		<React.Fragment>
 			<input type="text" value={url} onChange={handleChange} style={{width: "100%"}}/>
 			<br/>
-			<button onClick={() => setURL(`https://www.polyu.edu.hk/cfso/docdrive/Operation_mode_and_opening_hours_of_campus_catering_outlets.pdf`)}>PolyU canteens</button>
+			<button type="button" onClick={() => setURL(`https://www.polyu.edu.hk/cfso/docdrive/Operation_mode_and_opening_hours_of_campus_catering_outlets.pdf`)}>PolyU canteens</button>
 			<br/>
 			<iframe src={`https://docs.google.com/gview?embedded=true&url=${url}`} style={{width: "100%", height: "1000px"}} frameborder="0"></iframe>
 		</React.Fragment>
