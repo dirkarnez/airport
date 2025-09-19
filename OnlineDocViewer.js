@@ -27,7 +27,7 @@ function OnlineDocViewer() {
 			<button type="button" onClick={() => setURL(`https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/Digital_Station_information_leaflet_WTS_Mar_2024_171108O95980.pdf`)}>Wong Tai Sin Leaflet</button>
 			<button type="button" onClick={() => setURL(`https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/HUH_Digital_Leaflet_032025_174n29584r99.pdf`)}>Hung Hom Leaflet</button>
 			<br/>
-			<iframe src={`https://docs.google.com/gview?embedded=true&url=${url}`} style={{width: "100%", height: "1000px"}} frameborder="0"></iframe>
+			{ !!url && <iframe src={`https://docs.google.com/gview?embedded=true&url=${url}`} style={{width: "100%", height: "1000px"}} frameborder="0"></iframe> }
 		</React.Fragment>
     )
 }
