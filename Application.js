@@ -300,9 +300,16 @@ function Application({ entryPoints }) {
           <br/>
           <br/>
           <div className="row">
-            <iframe
-              src="https://calendar.google.com/calendar/embed?height=1000&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FShanghai&showNav=0&showTitle=0&showCalendars=1&showPrint=0&showDate=1&mode=WEEK&src=c21hbGxkaXJrYWxleEBnbWFpbC5jb20&src=ZW4uaG9uZ19rb25nI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA&color=%237986CB"
-              style={{ borderWidth: 0 }} frameBorder={0} scrolling={"no"}></iframe>
+                <div className="col">
+                  <iframe
+                    src="https://calendar.google.com/calendar/embed?height=1000&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FShanghai&showNav=0&showTitle=0&showCalendars=1&showPrint=0&showDate=1&mode=WEEK&src=c21hbGxkaXJrYWxleEBnbWFpbC5jb20&src=ZW4uaG9uZ19rb25nI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA&color=%237986CB"
+                    style={{ borderWidth: 0 }} frameBorder={0} scrolling={"no"}></iframe>
+            </div>
+          </div>
+        <div className="row">
+            <div className="col">
+                  <iframe style={{ borderWidth: 0 }} frameBorder={0} scrolling={"no"} src="https://polyuit.sharepoint.com/sites/Grp_ITS_ITSLearningandTeaching/_layouts/15/Doc.aspx?sourcedoc={a11eaaff-7ac4-4cd0-ad2d-6be73f47c5ab}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+            </div>
           </div>
         </div>
       )
