@@ -257,6 +257,7 @@ function Application({ entryPoints }) {
                   <a href="https://baseconvert.com/">Base Convert: the simple floating point base calculator</a><br/>
                   <a href="https://dirkarnez.github.io/calculus-calculator">dirkarnez/calculus-calculator</a><br/>
                   <a href="https://dirkarnez.github.io/convolution-calculator/">dirkarnez/convolution-calculator</a><br/>
+                  <a href="https://www.instagram.com/p/DOYhQTuiSkO/">Euler's Formula | Instagram</a><br/>
                   <a href="https://github.com/dirkarnez/stirlingpdf-action">dirkarnez/stirlingpdf-action</a>
             </div>
           </div>
