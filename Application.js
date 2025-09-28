@@ -250,6 +250,8 @@ function Application({ entryPoints }) {
             </div>
             <div className="col">
                   <a href="https://dirkarnez.github.io/indexed-images-to-pdf/">dirkarnez/indexed-images-to-pdf</a><br/>
+                  <a href="https://dirkarnez.github.io/complex-number-calculator/">dirkarnez/complex-number-calculator</a><br/>
+                  <a href="https://dirkarnez.github.io/telecommunication-cheatsheet/">dirkarnez/telecommunication-cheatsheet</a><br/>
                   <a href="https://dirkarnez.github.io/math.js-playground/">dirkarnez/math.js-playground</a><br/>
                   <a href="https://dirkarnez.github.io/statistics-playground/">dirkarnez/statistics-playground</a><br/>
                   <a href="https://github.com/dirkarnez/internal-statistics-cheatsheet">dirkarnez/internal-statistics-cheatsheet</a><br/>
