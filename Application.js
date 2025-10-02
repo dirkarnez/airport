@@ -311,6 +311,7 @@ function Application({ entryPoints }) {
           </div>
         <div className="row">
             <div className="col">
+                  <a href="https://polyuit.sharepoint.com/:x:/r/sites/Grp_ITS_ITSLearningandTeaching/Shared%20Documents/General/Student%20Helper/2025-2026/Student%20Helper%20Roster2025-2026.xlsx?d=wa11eaaff7ac44cd0ad2d6be73f47c5ab&e=4%3a168a37eaed3b4fd7a002ff2ad14240b6&sharingv2=true&fromShare=true&at=9" target="_blank">Direct Link</a><br/>
                   <iframe style={{ borderWidth: 0 }} frameBorder={0} scrolling={"no"} src="https://polyuit.sharepoint.com/sites/Grp_ITS_ITSLearningandTeaching/_layouts/15/Doc.aspx?sourcedoc={a11eaaff-7ac4-4cd0-ad2d-6be73f47c5ab}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
             </div>
           </div>
