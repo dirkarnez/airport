@@ -3,9 +3,32 @@
 browser version of babel do all the work for us.
 */
 
-/*
-.replaceAll("/", "-").replaceAll("_", "-").toLocaleLowerCase()
-*/
+const TextInputComponent = () => {
+  const [ inputValue, setInputValue ] = React.useState('');
+  const [ transformedValue, setTransformedValue ] = React.useState("");
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+  
+  React.useEffect(() => {
+    setTransformedValue(!!inputValue ? inputValue.replaceAll("/", "-").replaceAll("_", "-").toLocaleLowerCase() : "");
+  }, [ inputValue ]);
+
+  return (
+    <React.Fragment>
+      <label htmlfor="input">Input</label>
+      <br/>
+      <input
+        name="input"
+        type="text"
+        value={inputValue}
+        onChange={handleChange}
+      />
+      <p>Transformed: {transformedValue}</p>
+    </React.Fragment>
+  );
+};
 
 function RepoNameNormalizer() {
   // const divRef = React.useRef(null);
