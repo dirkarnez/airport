@@ -208,8 +208,17 @@ function Application({ entryPoints }) {
           </div>
  
                         
-          <br/>     
-
+          <br/>  
+                        
+          <div className="row">
+            <div className="col">
+                  <RepoNameNormalizer/>
+            </div>
+          </div>
+ 
+                        
+          <br/>  
+                        
           <div className="row">
             <div className="col" id="whatsapp">
               <img src="https://static.xx.fbcdn.net/rsrc.php/yz/r/lOol7j-zq4u.svg"></img>&nbsp;&nbsp;Chat on WhatsApp
