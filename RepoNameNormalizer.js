@@ -22,6 +22,7 @@ const TextInputComponent = () => {
       <input
         name="input"
         type="text"
+        style={{width: "100%"}}
         value={inputValue}
         onChange={handleChange}
       />
