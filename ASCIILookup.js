@@ -83,6 +83,7 @@ const TextInputComponent = () => {
       <input
         name="ascii-input"
         type="text"
+        style={{width: "100%"}}
         value={inputValue}
         onChange={handleChange}
       />
@@ -99,6 +100,8 @@ function ASCIILookup() {
   // }
   //    <div ref={divRef} />
   return (
-    <TextInputComponent/>
+    <div style={{border: "solid", padding: "1rem"}}>
+      <TextInputComponent/>
+    </div>
   )
 }
