@@ -101,6 +101,7 @@ function ASCIILookup() {
   //    <div ref={divRef} />
   return (
     <div style={{border: "solid", padding: "1rem"}}>
+      <h5>ASCII Lookup</h5>
       <TextInputComponent/>
     </div>
   )
