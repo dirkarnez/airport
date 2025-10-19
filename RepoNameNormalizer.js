@@ -38,6 +38,8 @@ function RepoNameNormalizer() {
   // }
   //    <div ref={divRef} />
   return (
-    <TextInputComponent/>
+    <div style={{border: "solid", padding: "1rem"}}>
+      <TextInputComponent/>
+    </div>
   )
 }
