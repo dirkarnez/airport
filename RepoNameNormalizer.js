@@ -40,6 +40,7 @@ function RepoNameNormalizer() {
   //    <div ref={divRef} />
   return (
     <div style={{border: "solid", padding: "1rem"}}>
+      <h5>Repo Name Normalizer</h5>
       <TextInputComponent/>
     </div>
   )
