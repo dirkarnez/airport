@@ -30,6 +30,7 @@ function CommonChineseWordsICannotType() {
           { word: "尹", howto: "尸大" },
           { word: "肉", howto: "人人" },
           { word: "片", howto: "中中" },
+          { word: "民", howto: "口心" },
           { word: "敷衍", howto: "戈大" },
           { word: "面面相覷", howto: "卜山" },
           { word: "凹", howto: "尸山" },
