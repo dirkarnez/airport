@@ -5,7 +5,7 @@ browser version of babel do all the work for us.
 
 function Div({children}) {
   return (
-    <div style={{ border: "1px solid black", padding: "20px", fontSize: "30px", textAlign: "center" }}>{children}</div>
+    <div style={{ border: "1px solid black", padding: "20px", fontSize: "1rem", textAlign: "center" }}>{children}</div>
   )
 }
 
