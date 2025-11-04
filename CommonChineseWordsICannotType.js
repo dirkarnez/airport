@@ -23,7 +23,7 @@ function CommonChineseWordsICannotType() {
     <React.Fragment>
       <a href="https://www.hkcards.com" target="_blank">hkcards 倉頡字典</a>
       <br/>
-      <div style={{maxHeight: "300px", overflowY: "scroll"}}>
+      <div style={{maxHeight: "200px", overflowY: "scroll"}}>
       {
         [
           { word: "窗", howto: "十大" },
