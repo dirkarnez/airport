@@ -205,7 +205,9 @@ function Application({ entryPoints }) {
 
           <div className="row">
             <div className="col">
-                  <ASCIILookup/>
+                  <div style={{border: "solid", padding: "1rem"}}>
+                        <ASCIILookup/>
+                  </div>
             </div>
           </div>
  
