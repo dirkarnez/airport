@@ -21,7 +21,7 @@ function CommonChineseWordsICannotType() {
   
   return (
     <React.Fragment>
-      <h5>Common Chinese Words I Cannot Type</h5>
+      <h5><a href="https://github.com/dirkarnez/airport/blob/main/CommonChineseWordsICannotType.js" target="_blank">Common Chinese Words I Cannot Type</a></h5>
       <a href="https://www.hkcards.com" target="_blank">hkcards 倉頡字典</a>
       <br/>
       <div style={{maxHeight: "200px", overflowY: "scroll"}}>
