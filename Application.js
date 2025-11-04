@@ -169,7 +169,9 @@ function Application({ entryPoints }) {
                         
           <div className="row">
             <div className="col">
-                  <OnlineDocViewer/>
+                  <div style={{border: "solid", padding: "1rem"}}>
+                        <OnlineDocViewer/>
+                  </div>
             </div>
           </div>
       
