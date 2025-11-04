@@ -100,9 +100,9 @@ function ASCIILookup() {
   // }
   //    <div ref={divRef} />
   return (
-    <div style={{border: "solid", padding: "1rem"}}>
+    <React.Fragment>
       <h5>ASCII Lookup</h5>
       <TextInputComponent/>
-    </div>
+    </React.Fragment>
   )
 }
