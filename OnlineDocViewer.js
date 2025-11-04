@@ -19,6 +19,7 @@ function OnlineDocViewer() {
 	
     return (
 		<React.Fragment>
+			<h5><a href="https://github.com/dirkarnez/airport/blob/main/OnlineDocViewer.js" target="_blank">Online Doc Viewer</a></h5>
 			<input type="text" value={url} onChange={handleChange} style={{width: "100%"}}/>
 			<br/>
 			<button type="button" onClick={() => setURL(`https://www.polyu.edu.hk/cfso/docdrive/Operation_mode_and_opening_hours_of_campus_catering_outlets.pdf`)}>PolyU canteens</button>
