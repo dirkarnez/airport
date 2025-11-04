@@ -185,7 +185,9 @@ function Application({ entryPoints }) {
                         
           <div className="row">
             <div className="col">
-                  <CommonChineseWordsICannotType/>
+                  <div style={{border: "solid", padding: "1rem"}}>
+                        <CommonChineseWordsICannotType/>
+                  </div>
             </div>
           </div>    
                         
@@ -212,7 +214,9 @@ function Application({ entryPoints }) {
                         
           <div className="row">
             <div className="col">
-                  <RepoNameNormalizer/>
+                  <div style={{border: "solid", padding: "1rem"}}>
+                        <RepoNameNormalizer/>
+                  </div>
             </div>
           </div>
  
