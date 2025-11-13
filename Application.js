@@ -270,6 +270,7 @@ function Application({ entryPoints }) {
                   <a href="https://dirkarnez.github.io/complex-number-calculator/">dirkarnez/complex-number-calculator</a><br/>
                   <a href="https://dirkarnez.github.io/telecommunication-cheatsheet/">dirkarnez/telecommunication-cheatsheet</a><br/>
                   <a href="https://dirkarnez.github.io/math.js-playground/">dirkarnez/math.js-playground</a><br/>
+                  <a href="https://dirkarnez.github.io/complex-number-plot/">dirkarnez/complex-number-plot</a><br/>
                   <a href="https://dirkarnez.github.io/statistics-playground/">dirkarnez/statistics-playground</a><br/>
                   <a href="https://github.com/dirkarnez/internal-statistics-cheatsheet">dirkarnez/internal-statistics-cheatsheet</a><br/>
                   <a href="https://matplotlib.online/project?id=0">matplotlib.online | Create online plots with python and matplotlib</a><br/>
