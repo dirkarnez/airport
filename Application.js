@@ -317,7 +317,11 @@ function Application({ entryPoints }) {
             <br/>
             {entryPoints.map(entryPoint => {
                   const App = window[entryPoint];
-                  return App && currentApp === entryPoint && <App />
+                  return App && currentApp === entryPoint && (
+                        <div style={{border: "solid", padding: "1rem"}}>
+                             <App/>
+                        </div>
+                  )
             })}
           <br/>
           <br/>
