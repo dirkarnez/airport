@@ -109,3 +109,5 @@
 - [ ] Web audio API - Monkey's audio codec
 - [ ] 'https://developer.mozilla.org/en-US/docs/Web/API/Location/hash' to jump to apps
 
+### Tools
+- https://transform.tools/html-to-jsx
