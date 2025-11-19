@@ -212,7 +212,17 @@ function Application({ entryPoints }) {
                   </div>
             </div>
           </div>
- 
+      
+          <br/>  
+
+
+          <div className="row">
+            <div className="col">
+                  <div style={{border: "solid", padding: "1rem"}}>
+                        <OnScreenRuler/>
+                  </div>
+            </div>
+          </div>
                         
           <br/>  
                         
