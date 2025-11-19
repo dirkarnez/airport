@@ -1,6 +1,7 @@
 [airport](https://dirkarnez.github.io/airport/)
 ===============================================
 ### TODOs
+- [ ] Defer login so easier to use apps
 - [x] https://github.com/dirkarnez/minimal-react-development
 - [x] Solution for workaround (`setTimeout`) for hidden async babel transformation
   - [babel/packages/babel-standalone at main · babel/babel](https://github.com/babel/babel/tree/main/packages/babel-standalone)
