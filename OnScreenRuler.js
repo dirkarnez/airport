@@ -9,9 +9,7 @@ function OnScreenRuler() {
         textAlign: "center"
       }}
     >
-      ↑<br />
-      72pt / 2.54
-      <br />↓
+      1 cm
     </span>
   )
 }
