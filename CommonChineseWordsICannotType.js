@@ -36,6 +36,7 @@ function CommonChineseWordsICannotType() {
           { word: "敷衍", howto: "戈大" },
           { word: "面面相覷", howto: "卜山" },
           { word: "小丑", howto: "弓土" },
+          { word: "韋", howto: "木手" },
           { word: "凹", howto: "尸山" },
           { word: "凸", howto: "月尸" },
           { word: "曱", howto: "日中" },
