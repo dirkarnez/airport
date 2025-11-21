@@ -204,7 +204,7 @@
           return;
         }
         try {
-          window.decrypted = CryptoJS.AES.decrypt("U2FsdGVkX190ohKmFeOYzFVnQblFhbumzpqXS3IGp8XSA30sduTat9Uu1O6ZsIXh5xQ0+zR+uijYBNUA6S8fUw==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
+          window.decrypted = CryptoJS.AES.decrypt("U2FsdGVkX19esXygFgQ36NL+QrQrdYOtlDB6ZO+8MzKselrviok9/RJGIfFZ15QxTtqxkDwhkKMOCXqKCDch6w==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
           window.myOctokit = new octokitCore.Octokit({ auth: window.decrypted });
           
           var githubClientPrivateApps = window.github(window.myOctokit);
