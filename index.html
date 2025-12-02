@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script
-    src="https://github.com/dirkarnez/webpack-umd-action/releases/download/%40octokit%2Fcore.2.0.10/core.2.0.10.min.js"></script>
+  <script src="https://github.com/dirkarnez/webpack-umd-action/releases/download/%40octokit%2Fcore.2.0.10/core.2.0.10.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -18,6 +17,27 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/libsodium-wrappers/0.5.2/sodium.min.js" integrity="sha512-WVg6DDUF676j0oHA9N3fqGMEslqBgvm97/gdW6Nxw209TuRZ6ekWcw6VFsoXOYIJpMOmqa4xBfuUnu6G83ZtAQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     window.key = "github-auth-cookie-secret-key";
+  </script>
+  <script>
+    function base64ToBlob(b64Data, contentType = '', sliceSize = 512) {
+      const byteCharacters = atob(b64Data);
+      const byteArrays = [];
+
+      for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+        const slice = byteCharacters.slice(offset, offset + sliceSize);
+
+        const byteNumbers = new Array(slice.length);
+        for (let i = 0; i < slice.length; i++) {
+          byteNumbers[i] = slice.charCodeAt(i);
+        }
+
+        const byteArray = new Uint8Array(byteNumbers);
+        byteArrays.push(byteArray);
+      }
+
+      const blob = new Blob(byteArrays, { type: contentType });
+      return blob;
+    }
   </script>
   <script>
     if ('serviceWorker' in navigator) {
@@ -36,27 +56,6 @@
         .catch(error => {
           console.error('Service Worker registration failed:', error);
         });
-    }
-  </script>
-  <script>
-    function b64toBlob(b64Data, contentType = '', sliceSize = 512) {
-      const byteCharacters = atob(b64Data);
-      const byteArrays = [];
-
-      for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
-        const slice = byteCharacters.slice(offset, offset + sliceSize);
-
-        const byteNumbers = new Array(slice.length);
-        for (let i = 0; i < slice.length; i++) {
-          byteNumbers[i] = slice.charCodeAt(i);
-        }
-
-        const byteArray = new Uint8Array(byteNumbers);
-        byteArrays.push(byteArray);
-      }
-
-      const blob = new Blob(byteArrays, { type: contentType });
-      return blob;
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
