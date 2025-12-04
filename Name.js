@@ -13,7 +13,6 @@ function Name() {
   return (
     <React.Fragment>
       <h5><a href="https://github.com/dirkarnez/airport/blob/main/Name.js" target="_blank">Name</a></h5>
-      <a href="https://www.hkcards.com" target="_blank">hkcards 倉頡字典</a>
       <br/>
       <div style={{ display: "grid", gridTemplateColumns: "auto auto", border: "1px solid black" }}>
         <Div>姓</Div>
