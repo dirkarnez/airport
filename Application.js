@@ -303,7 +303,10 @@ function Application({ entryPoints }) {
                 }} /><br/>
                 {
                       !!window.decrypted && (
-                      <button style={{ wordBreak: "break-all" }} onClick={() => {  
+                      <button 
+                            className="btn btn-primary"
+                            style={{ wordBreak: "break-all", width: "100%" }}
+                              onClick={() => {  
                             navigator.clipboard
                                   .writeText(window.decrypted)
                                   .then(() => alert("Copied!"))
