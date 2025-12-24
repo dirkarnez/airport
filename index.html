@@ -267,7 +267,9 @@
       })
       .catch(e => {
         Cookies.set(window.key, prompt('Type here'));
-        githubReadBranchRecursive();
+        if (!!Cookies.get(window.key)) {
+          githubReadBranchRecursive();
+        }
       });
     }
 
