@@ -31,7 +31,7 @@ const TextInputComponent = () => {
   );
 };
 
-function RichManCalculator() {
+function RichestBillionairesCalculator() {
   // const divRef = React.useRef(null);
   //  function handleClick() {
   //   divRef.current.innerHTML = "Chris&apos; corner";
@@ -40,7 +40,8 @@ function RichManCalculator() {
   //    <div ref={divRef} />
   return (
     <React.Fragment>
-      <h5>Rich Man Calculator</h5>
+      <h5>Richest Billionaires Calculator</h5>
+      <a href="https://www.forbes.com/real-time-billionaires/" target="_blank">Forbes Real Time Billionaires List - The World's Richest People</a>
       <TextInputComponent/>
     </React.Fragment>
   )
