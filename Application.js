@@ -215,6 +215,15 @@ function Application({ entryPoints }) {
       
           <br/>  
 
+          <div className="row">
+            <div className="col">
+                  <div style={{border: "solid", padding: "1rem"}}>
+                        <RichestBillionairesCalculator/>
+                  </div>
+            </div>
+          </div>
+      
+          <br/>
 
           <div className="row">
             <div className="col">
