@@ -43,7 +43,7 @@ function RichestBillionairesCalculator() {
   //   console.log(divRef.current.innerText)
   // }
   //    <div ref={divRef} />
-  const [ people, setPeople ] = React.setState([]);
+  const [ people, setPeople ] = React.useState([]);
   
   return (
     <React.Fragment>
