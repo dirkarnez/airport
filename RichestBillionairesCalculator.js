@@ -40,8 +40,8 @@ function RichestBillionairesCalculator() {
   //    <div ref={divRef} />
   return (
     <React.Fragment>
-      <h5>Richest Billionaires Calculator</h5>
-      <a href="https://www.forbes.com/real-time-billionaires/" target="_blank">Forbes Real Time Billionaires List - The World's Richest People</a>
+      <h5><a href="https://github.com/dirkarnez/airport/edit/main/RichestBillionairesCalculator.js" target="_blank">Richest Billionaires Calculator</a></h5>
+      <a href="https://www.forbes.com/real-time-billionaires/" target="_blank">Forbes Real Time Billionaires List - The World's Richest People</a></br>
       <TextInputComponent/>
     </React.Fragment>
   )
