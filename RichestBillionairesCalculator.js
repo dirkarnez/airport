@@ -48,7 +48,7 @@ function RichestBillionairesCalculator() {
   return (
     <React.Fragment>
       <h5><a href="https://github.com/dirkarnez/airport/edit/main/RichestBillionairesCalculator.js" target="_blank">Richest Billionaires Calculator</a></h5>
-      <a href="https://www.forbes.com/real-time-billionaires/" target="_blank">Forbes Real Time Billionaires List</a></br>
+      <a href="https://www.forbes.com/real-time-billionaires/" target="_blank">Forbes Real Time Billionaires List</a><br/>
       <button type="button" className="btn btn-primary" onClick={() => setPeople({name: "", money: 0 })}>Add person</button>
       <div style={{ display: "grid", gridTemplateColumns: Array.from({length: 3 + people.length}).fill("auto").join(String.fromCharCode(32)), border: "1px solid black" }}>
         <Div>Person</Div>
