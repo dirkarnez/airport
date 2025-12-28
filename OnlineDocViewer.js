@@ -25,6 +25,7 @@ function OnlineDocViewer() {
 			<br/>
 			<div>
 				<button type="button" className="btn btn-primary" onClick={() => setURL(`https://www.polyu.edu.hk/cfso/docdrive/Operation_mode_and_opening_hours_of_campus_catering_outlets.pdf`)}>PolyU canteens</button>
+				<button type="button" className="btn btn-primary" onClick={() => setURL(`https://www.ti.com/lit/ds/symlink/lm386.pdf`)}>LM386</button>
 				<button type="button" className="btn btn-primary" onClick={() => setURL(`https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/WEK-leaflet-Digital-202506_175099b64I96.pdf`)}>High Speed Rail Leaflet</button>
 				<button type="button" className="btn btn-primary" onClick={() => setURL(`https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/DIH_17459803p3n8.pdf`)}>Diamond Hill Leaflet</button>
 				<button type="button" className="btn btn-primary" onClick={() => setURL(`https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/Digital_Station_information_leaflet_WTS_Mar_2024_171108O95980.pdf`)}>Wong Tai Sin Leaflet</button>
