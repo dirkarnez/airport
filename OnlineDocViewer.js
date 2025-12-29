@@ -19,7 +19,7 @@ const typedPDFs = Object.groupBy([
 	{ url: "https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/DIH_17459803p3n8.pdf", name: "Diamond Hill Leaflet", type: "Map" },
 	{ url: "https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/Digital_Station_information_leaflet_WTS_Mar_2024_171108O95980.pdf", name: "Wong Tai Sin Leaflet", type: "Map" },
 	{ url: "https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/HUH_Digital_Leaflet_032025_174n29584r99.pdf", name: "Hung Hom Leaflet", type: "Map" },
-	{ url: "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf", name: "Manual", type: "map" }
+	{ url: "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf", name: "Ngspice Manual", type: "Manual" }
 ], ({ type }) =>
   type
 );
