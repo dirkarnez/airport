@@ -48,7 +48,7 @@ function OnlineDocViewer() {
 					.map((type) => {
 						const pdfList = typedPDFs[type];
 						return (
-							<details key={type} open={type == expanded} onToggle={() => setExpanded(type)}>
+							<details key={type} open={type == expanded} onClick={(e) => {e.preventDefault(); setExpanded(type);}}>
 								<summary>{type}</summary>
 								{
 									pdfList.map(pdf => (
