@@ -27,7 +27,9 @@ const typedPDFs = Object.groupBy([
 
 function OnlineDocViewer() {
 	const [ url, setURL ] = React.useState(``);
-
+	
+	const [ expanded, setExpanded ] = React.useState(``);
+	
   	const handleChange = (event) => {
 		setURL(event.target.value);
 	};
@@ -40,10 +42,10 @@ function OnlineDocViewer() {
 			<div>
 				{
 					Object.keys(typedPDFs)
-					.map(type => {
+					.map((type) => {
 						const pdfList = typedPDFs[type];
 						return (
-							<details>
+							<details key={type} open={type == expanded} onClick={() => setExpanded(type)}>
 								<summary>{type}</summary>
 								{
 									pdfList.map(pdf => <button type="button" className="btn btn-primary" onClick={() => setURL(pdf.url)}>{pdf.name}</button>)
