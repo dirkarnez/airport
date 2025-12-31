@@ -14,6 +14,9 @@ https://docs.google.com/viewer?url=https://github.com/poychang/blog.poychang.net
 
 const typedPDFs = Object.groupBy([
 	{ url: "https://www.ti.com/lit/ds/symlink/lm386.pdf", name: "LM386", type: "Datasheet" },
+	{ url: "https://www.ti.com/lit/ds/symlink/lm741.pdf", name: "LM741", type: "Datasheet" },
+	{ url: "https://www.onsemi.com/pdf/datasheet/p2n2222a-d.pdf", name: "P2N2222A", type: "Datasheet" },
+	{ url: "https://www.onsemi.com/download/data-sheet/pdf/2n3903-d.pdf", name: "2N3903, 2N3904", type: "Datasheet" },
 	{ url: "https://www.polyu.edu.hk/cfso/docdrive/Operation_mode_and_opening_hours_of_campus_catering_outlets.pdf", name: "PolyU canteens", type: "Timetable" },
 	{ url: "https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/WEK-leaflet-Digital-202506_175099b64I96.pdf", name: "High Speed Rail Leaflet", type: "Map" },
 	{ url: "https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/DIH_17459803p3n8.pdf", name: "Diamond Hill Leaflet", type: "Map" },
@@ -48,7 +51,9 @@ function OnlineDocViewer() {
 							<details key={type} open={type == expanded} onToggle={() => setExpanded(type)}>
 								<summary>{type}</summary>
 								{
-									pdfList.map(pdf => <button type="button" className="btn btn-primary" onClick={() => setURL(pdf.url)}>{pdf.name}</button>)
+									pdfList.map(pdf => (
+										<button type="button" className="btn btn-primary" onClick={() => setURL(pdf.url)}>{pdf.name}</button>
+									))
 								}
 							</details>
 						);
