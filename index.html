@@ -241,7 +241,7 @@
             })
             .then(INDEX_JS_SHA => githubClientPerApp.readAsString(INDEX_JS_SHA))
             .then(content => new Promise((resolve, reject) => {
-            
+              
               const code = Babel.transform(content, {
                 presets: ['es2015', 'react']
               }).code;
@@ -253,11 +253,18 @@
                 
 //                   return App
 //               })(); App()
-            
-              resolve({
-                entryPoint: app.entry,
-                code: eval(`(() => { ${code}; return ${app.entry}; })()`)
-              });
+
+              try {
+                resolve({
+                  entryPoint: app.entry,
+                  code: eval(`(() => { ${code}; return ${app.entry}; })()`)
+                });
+              }
+              catch(e) {
+                debugger;
+                reject(e);
+              }
+
             }));
         });
         return Promise.all(tasks);
