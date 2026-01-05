@@ -12,8 +12,10 @@ https://docs.google.com/viewer?url=https://github.com/poychang/blog.poychang.net
 */
  /* className="d-flex justify-content-around"*/
 
+/* { url: "", name: "", type: "" }, */
 const typedPDFs = Object.groupBy([
 	{ url: "https://arxiv.org/pdf/1507.08439", name: "LightFM paper", type: "Paper" },
+	{ url: "https://arxiv.org/pdf/1706.03762", name: "Attention Is All You Need", type: "Paper" },
 	{ url: "https://www.ti.com/lit/ds/symlink/lm386.pdf", name: "LM386", type: "Datasheet" },
 	{ url: "https://www.ti.com/lit/ds/symlink/lm741.pdf", name: "LM741", type: "Datasheet" },
 	{ url: "https://www.onsemi.com/pdf/datasheet/p2n2222a-d.pdf", name: "P2N2222A", type: "Datasheet" },
