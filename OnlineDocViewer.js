@@ -14,6 +14,10 @@ https://docs.google.com/viewer?url=https://github.com/poychang/blog.poychang.net
 
 /* { url: "", name: "", type: "" }, */
 const typedPDFs = Object.groupBy([
+	{ url: "https://developer.adobe.com/document-services/docs/assets/5b15559b96303194340b99820d3a70fa/PDF_ISO_32000-2.pdf", name: "PDF Specification", type: "Specification" }, 
+	{ url: "https://www.mathworks.com/help/pdf_doc/matlab/matfile_format.pdf", name: "MAT-File Format Specification", type: "Specification" },
+	{ url: "https://heap.ovh/files/mPCIe-electromechanical.pdf", name: "mPCIe ElectromechanicalSpecification", type: "" },
+	{ url: "https://www.usb.org/sites/default/files/USB%20Type-C%20Spec%20R2.0%20-%20August%202019.pdf", name: "USB Type-C Cable and ConnectorSpecification", type: "Specification" },
 	{ url: "https://arxiv.org/pdf/1507.08439", name: "LightFM paper", type: "Paper" },
 	{ url: "https://arxiv.org/pdf/1706.03762", name: "Attention Is All You Need", type: "Paper" },
 	{ url: "https://www.ti.com/lit/ds/symlink/lm386.pdf", name: "LM386", type: "Datasheet" },
