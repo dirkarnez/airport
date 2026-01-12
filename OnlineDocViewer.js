@@ -57,8 +57,8 @@ function OnlineDocViewer() {
 					.map((type) => {
 						const pdfList = typedPDFs[type];
 						return (
-							<details key={type} open={type == expanded} onClick={(e) => {e.preventDefault(); setExpanded(type);}}>
-								<summary>{type}</summary>
+							<details key={type} open={type == expanded}>
+								<summary onClick={(e) => {e.preventDefault(); setExpanded(type == expanded ? "" : type);}}>{type}</summary>
 								{
 									pdfList.map(pdf => (
 										<button type="button" className="btn btn-primary" onClick={() => setURL(pdf.url)}>{pdf.name}</button>
