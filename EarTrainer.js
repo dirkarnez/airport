@@ -4,5 +4,5 @@ browser version of babel do all the work for us.
 */
 
 function EarTrainer() {
-  return "123";
+  return "1234";
 }
