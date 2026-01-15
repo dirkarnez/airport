@@ -49,7 +49,8 @@ function OnlineDocViewer() {
     return (
 		<React.Fragment>
 			<h5><a href="https://github.com/dirkarnez/airport/blob/main/OnlineDocViewer.js" target="_blank">Online Doc Viewer</a></h5>
-			<input type="text" value={url} onChange={handleChange} style={{width: "100%"}}/>
+			<input type="text" value={url} onChange={handleChange} style={{width: "80%"}}/>
+			<a href={pdf.url} target="_blank">{pdf.name}</a>
 			<br/>
 			<div>
 				{
