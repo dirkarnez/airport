@@ -24,6 +24,7 @@ function Application({ entryPoints }) {
                   <a href="https://ftp.ee.polyu.edu.hk/Student/Login">EEE Student Intranet</a><br/>
                   <a href="https://appserver.eie.polyu.edu.hk/student-intranet/">EIE Student Intranet</a><br/>
                   <a href="https://www.polyu.edu.hk/campus-map/">Hong Kong Polytechnic University Campus Map</a><br/>
+                  <a href="https://www.polyu.edu.hk/wgils/roomsearch.php">PolyU| Working Group on Innovative Learning Spaces - Classroom Search</a><br/>
                   { /* <a href="https://ilearningx.huawei.com/portal/micro/course-v1:HuaweiX+EBG2020NCHW1100015+microcourse/about?blockID=85fed4a9ea3344f99f1e5e7d3fabca83">Huawei ICT Competition 2021-2022—Cloud Track (19081126d, 35234772)</a><br/> */ }
                   <a href="https://vdesk.polyu.edu.hk/RDWeb/Pages/en-US/login.aspx">vdesk</a><br/>
                   <a href="https://puuds.polyu.edu.hk/uds/page/services">uds</a><br/>
