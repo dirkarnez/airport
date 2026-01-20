@@ -22,6 +22,7 @@ const typedPDFs = Object.groupBy([
 	{ url: "https://heap.ovh/files/mPCIe-electromechanical.pdf", name: "mPCIe Electromechanical Specification", type: "Specification" },
 	{ url: "https://www.usb.org/sites/default/files/USB%20Type-C%20Spec%20R2.0%20-%20August%202019.pdf", name: "USB Type-C Cable and Connector Specification", type: "Specification" },
 	{ url: "https://arxiv.org/pdf/1507.08439", name: "LightFM paper", type: "Paper" },
+	{ url: "https://arxiv.org/pdf/2305.07759", name: "TinyStories: How Small Can Language Models Be and Still Speak Coherent English?", type: "Paper" },
 	{ url: "https://arxiv.org/pdf/1706.03762", name: "Attention Is All You Need", type: "Paper" },
 	{ url: "https://www.ti.com/lit/ds/symlink/lm386.pdf", name: "LM386", type: "Datasheet" },
 	{ url: "https://www.ti.com/lit/ds/symlink/lm741.pdf", name: "LM741", type: "Datasheet" },
