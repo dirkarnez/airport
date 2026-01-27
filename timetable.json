@@ -1,0 +1,80 @@
+[
+  {
+    "Subject Code": "EIE3105",
+    "Subject Title": "INTEGRATED PROJECT",
+    "Subject Group": "201",
+    "Component Code": "LAB001",
+    "For Every (Week)": "1",
+    "Start Week": "1",
+    "End Week": "13",
+    "Day of Week ": "Fri",
+    "Start Time": "12:30",
+    "End Time": "15:20",
+    "Venue": "CF105, CF502, EF402"
+  },
+  {
+    "Subject Code": "EIE3105",
+    "Subject Title": "INTEGRATED PROJECT",
+    "Subject Group": "201",
+    "Component Code": "LEC001",
+    "For Every (Week)": "1",
+    "Start Week": "1",
+    "End Week": "13",
+    "Day of Week ": "Fri",
+    "Start Time": "16:30",
+    "End Time": "18:20",
+    "Venue": "HJ203"
+  },
+  {
+    "Subject Code": "EIE3312",
+    "Subject Title": "LINEAR SYSTEMS",
+    "Subject Group": "201",
+    "Component Code": "LAB001",
+    "For Every (Week)": "1",
+    "Start Week": "3",
+    "End Week": "13",
+    "Day of Week ": "Tue",
+    "Start Time": "12:30",
+    "End Time": "15:20",
+    "Venue": "CD514, CF105"
+  },
+  {
+    "Subject Code": "EIE3312",
+    "Subject Title": "LINEAR SYSTEMS",
+    "Subject Group": "201",
+    "Component Code": "LEC001",
+    "For Every (Week)": "1",
+    "Start Week": "1",
+    "End Week": "13",
+    "Day of Week ": "Mon",
+    "Start Time": "08:30",
+    "End Time": "11:20",
+    "Venue": "TU201"
+  },
+  {
+    "Subject Code": "EIE3333",
+    "Subject Title": "DATA AND COMPUTER COMMUNICATIONS",
+    "Subject Group": "201",
+    "Component Code": "LEC001",
+    "For Every (Week)": "1",
+    "Start Week": "1",
+    "End Week": "13",
+    "Day of Week ": "Wed",
+    "Start Time": "12:30",
+    "End Time": "15:20",
+    "Venue": "TU201"
+  },
+  {
+    "Subject Code": "EIE4413",
+    "Subject Title": "DIGITAL SIGNAL PROCESSING",
+    "Subject Group": "202",
+    "Component Code": "GST001",
+    "For Every (Week)": "1",
+    "Start Week": "1",
+    "End Week": "13",
+    "Day of Week ": "",
+    "Start Time": "",
+    "End Time": "",
+    "Venue": "N/A"
+  }
+]
