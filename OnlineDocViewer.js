@@ -14,6 +14,7 @@ https://docs.google.com/viewer?url=https://github.com/poychang/blog.poychang.net
 
 /* { url: "", name: "", type: "" }, */
 const typedPDFs = Object.groupBy([
+	{ url: "https://arxiv.org/pdf/2307.09288", name: "Llama 2: Open Foundation and Fine-Tuned Chat Models", type: "Paper" },
 	{ url: "https://www.polyu.edu.hk/ar/docdrive/polyu-students/AC.pdf", name: "Academic Calendar", type: "Calendar" },
 	{ url: "https://developer.adobe.com/document-services/docs/assets/5b15559b96303194340b99820d3a70fa/PDF_ISO_32000-2.pdf", name: "PDF Specification", type: "Specification" }, 
 	{ url: "https://www.mathworks.com/help/pdf_doc/matlab/matfile_format.pdf", name: "MAT-File Format Specification", type: "Specification" },
