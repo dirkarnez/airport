@@ -14,6 +14,15 @@ https://docs.google.com/viewer?url=https://github.com/poychang/blog.poychang.net
 
 /* { url: "", name: "", type: "" }, */
 const typedPDFs = Object.groupBy([
+	{ url: "https://docs.kicad.org/9.0/en/introduction/introduction.pdf", name: "Introduction", type: "KiCad" },
+	{ url: "https://docs.kicad.org/9.0/en/getting_started_in_kicad/getting_started_in_kicad.pdf", name: "Getting Started in KiCad", type: "KiCad" },
+	{ url: "https://docs.kicad.org/9.0/en/kicad/kicad.pdf", name: "KiCad", type: "KiCad" },
+	{ url: "https://docs.kicad.org/9.0/en/eeschema/eeschema.pdf", name: "Schematic Editor", type: "KiCad" },
+	{ url: "https://docs.kicad.org/9.0/en/pcbnew/pcbnew.pdf", name: "PCB Editor", type: "KiCad" },
+	{ url: "https://docs.kicad.org/9.0/en/gerbview/gerbview.pdf", name: "Gerber Viewer", type: "KiCad" },
+	{ url: "https://docs.kicad.org/9.0/en/pl_editor/pl_editor.pdf", name: "Drawing Sheet Editor", type: "KiCad" },
+	{ url: "https://docs.kicad.org/9.0/en/pcb_calculator/pcb_calculator.pdf", name: "Calculator Tools", type: "KiCad" },
+	{ url: "https://docs.kicad.org/9.0/en/cli/cli.pdf", name: "KiCad Command-Line Interface", type: "KiCad" },
 	{ url: "https://arxiv.org/pdf/2307.09288", name: "Llama 2: Open Foundation and Fine-Tuned Chat Models", type: "Paper" },
 	{ url: "https://www.polyu.edu.hk/ar/docdrive/polyu-students/AC.pdf", name: "Academic Calendar", type: "Calendar" },
 	{ url: "https://developer.adobe.com/document-services/docs/assets/5b15559b96303194340b99820d3a70fa/PDF_ISO_32000-2.pdf", name: "PDF Specification", type: "Specification" }, 
