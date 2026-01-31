@@ -275,6 +275,7 @@ function Application({ entryPoints }) {
               <a href="https://dirkarnez.github.io/git-script-generator">git-script-generator</a><br/>
               <a href="https://dirkarnez.github.io/gl-matrix-playground">gl-matrix-playground</a><br/>
               <a href="https://dirkarnez.github.io/json-repl">json-repl</a><br/>
+              <a href="https://dirkarnez.github.io/html-repl">html-repl</a><br/>
               <a href="https://dirkarnez.github.io/githubjs-wrapper">githubjs-wrapper</a><br/>
               <a href="https://dirkarnez.github.io/github-forms">github-forms</a><br/>
               <a href="https://dirkarnez.github.io/spotify-playlist-exporter">spotify-playlist-exporter</a><br/>
