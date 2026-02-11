@@ -12,38 +12,51 @@ https://docs.google.com/viewer?url=https://github.com/poychang/blog.poychang.net
 */
  /* className="d-flex justify-content-around"*/
 
-/* { url: "", name: "", type: "" }, */
+const DocTypes = {
+  Paper: 'Paper',
+  KiCad: 'KiCad',
+  Calendar: 'Calendar',
+  Specification: 'Specification',
+  Datasheet: 'Datasheet',
+  Timetable: 'Timetable',
+  Map: 'Map',
+  Manual: 'Manual'
+};
+/* 
+	{ url: "", name: "", type: "" },
+*/
 const typedPDFs = Object.groupBy([
-	{ url: "https://docs.kicad.org/9.0/en/introduction/introduction.pdf", name: "Introduction", type: "KiCad" },
-	{ url: "https://docs.kicad.org/9.0/en/getting_started_in_kicad/getting_started_in_kicad.pdf", name: "Getting Started in KiCad", type: "KiCad" },
-	{ url: "https://docs.kicad.org/9.0/en/kicad/kicad.pdf", name: "KiCad", type: "KiCad" },
-	{ url: "https://docs.kicad.org/9.0/en/eeschema/eeschema.pdf", name: "Schematic Editor", type: "KiCad" },
-	{ url: "https://docs.kicad.org/9.0/en/pcbnew/pcbnew.pdf", name: "PCB Editor", type: "KiCad" },
-	{ url: "https://docs.kicad.org/9.0/en/gerbview/gerbview.pdf", name: "Gerber Viewer", type: "KiCad" },
-	{ url: "https://docs.kicad.org/9.0/en/pl_editor/pl_editor.pdf", name: "Drawing Sheet Editor", type: "KiCad" },
-	{ url: "https://docs.kicad.org/9.0/en/pcb_calculator/pcb_calculator.pdf", name: "Calculator Tools", type: "KiCad" },
-	{ url: "https://docs.kicad.org/9.0/en/cli/cli.pdf", name: "KiCad Command-Line Interface", type: "KiCad" },
-	{ url: "https://arxiv.org/pdf/2307.09288", name: "Llama 2: Open Foundation and Fine-Tuned Chat Models", type: "Paper" },
-	{ url: "https://www.polyu.edu.hk/ar/docdrive/polyu-students/AC.pdf", name: "Academic Calendar", type: "Calendar" },
-	{ url: "https://developer.adobe.com/document-services/docs/assets/5b15559b96303194340b99820d3a70fa/PDF_ISO_32000-2.pdf", name: "PDF Specification", type: "Specification" }, 
-	{ url: "https://www.mathworks.com/help/pdf_doc/matlab/matfile_format.pdf", name: "MAT-File Format Specification", type: "Specification" },
-	{ url: "http://l.web.umkc.edu/lizhu/teaching/2016sp.video-communication/ref/mp4.pdf", name: "MP4 Specification", type: "Specification" },
-	{ url: "https://www.stroustrup.com/macis09.pdf", name: "Internal Program Representation for C++", type: "Paper", github: "https://github.com/GabrielDosReis/ipr" },
-	{ url: "https://heap.ovh/files/mPCIe-electromechanical.pdf", name: "mPCIe Electromechanical Specification", type: "Specification" },
-	{ url: "https://www.usb.org/sites/default/files/USB%20Type-C%20Spec%20R2.0%20-%20August%202019.pdf", name: "USB Type-C Cable and Connector Specification", type: "Specification" },
-	{ url: "https://arxiv.org/pdf/1507.08439", name: "LightFM paper", type: "Paper" },
-	{ url: "https://arxiv.org/pdf/2305.07759", name: "TinyStories: How Small Can Language Models Be and Still Speak Coherent English?", type: "Paper" },
-	{ url: "https://arxiv.org/pdf/1706.03762", name: "Attention Is All You Need", type: "Paper" },
-	{ url: "https://www.ti.com/lit/ds/symlink/lm386.pdf", name: "LM386", type: "Datasheet" },
-	{ url: "https://www.ti.com/lit/ds/symlink/lm741.pdf", name: "LM741", type: "Datasheet" },
-	{ url: "https://www.onsemi.com/pdf/datasheet/p2n2222a-d.pdf", name: "P2N2222A", type: "Datasheet" },
-	{ url: "https://www.onsemi.com/download/data-sheet/pdf/2n3903-d.pdf", name: "2N3903, 2N3904", type: "Datasheet" },
-	{ url: "https://www.polyu.edu.hk/cfso/docdrive/Operation_mode_and_opening_hours_of_campus_catering_outlets.pdf", name: "PolyU canteens", type: "Timetable" },
-	{ url: "https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/WEK-leaflet-Digital-202506_175099b64I96.pdf", name: "High Speed Rail Leaflet", type: "Map" },
-	{ url: "https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/DIH_17459803p3n8.pdf", name: "Diamond Hill Leaflet", type: "Map" },
-	{ url: "https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/Digital_Station_information_leaflet_WTS_Mar_2024_171108O95980.pdf", name: "Wong Tai Sin Leaflet", type: "Map" },
-	{ url: "https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/HUH_Digital_Leaflet_032025_174n29584r99.pdf", name: "Hung Hom Leaflet", type: "Map" },
-	{ url: "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf", name: "Ngspice Manual", type: "Manual" }
+	{ url: "https://arxiv.org/pdf/1709.01782", name: "Automatic Document Image Binarization using Bayesian Optimization", type: `${DocTypes.Paper}` },
+	{ url: "https://docs.kicad.org/9.0/en/introduction/introduction.pdf", name: "Introduction", type: `${DocTypes.KiCad}` },
+	{ url: "https://docs.kicad.org/9.0/en/getting_started_in_kicad/getting_started_in_kicad.pdf", name: "Getting Started in KiCad", type: `${DocTypes.KiCad}` },
+	{ url: "https://docs.kicad.org/9.0/en/kicad/kicad.pdf", name: "KiCad", type: `${DocTypes.KiCad}` },
+	{ url: "https://docs.kicad.org/9.0/en/eeschema/eeschema.pdf", name: "Schematic Editor", type: `${DocTypes.KiCad}` },
+	{ url: "https://docs.kicad.org/9.0/en/pcbnew/pcbnew.pdf", name: "PCB Editor", type: `${DocTypes.KiCad}` },
+	{ url: "https://docs.kicad.org/9.0/en/gerbview/gerbview.pdf", name: "Gerber Viewer", type: `${DocTypes.KiCad}` },
+	{ url: "https://docs.kicad.org/9.0/en/pl_editor/pl_editor.pdf", name: "Drawing Sheet Editor", type: `${DocTypes.KiCad}` },
+	{ url: "https://docs.kicad.org/9.0/en/pcb_calculator/pcb_calculator.pdf", name: "Calculator Tools", type: `${DocTypes.KiCad}` },
+	{ url: "https://docs.kicad.org/9.0/en/cli/cli.pdf", name: "KiCad Command-Line Interface", type: `${DocTypes.KiCad}` },
+	{ url: "https://arxiv.org/pdf/2307.09288", name: "Llama 2: Open Foundation and Fine-Tuned Chat Models", type: `${DocTypes.Paper}` },
+	{ url: "https://www.polyu.edu.hk/ar/docdrive/polyu-students/AC.pdf", name: "Academic Calendar", type: `${DocTypes.Calendar}` },
+	{ url: "https://developer.adobe.com/document-services/docs/assets/5b15559b96303194340b99820d3a70fa/PDF_ISO_32000-2.pdf", name: "PDF Specification", type: `${DocTypes.Specification}` }, 
+	{ url: "https://www.mathworks.com/help/pdf_doc/matlab/matfile_format.pdf", name: "MAT-File Format Specification", type: `${DocTypes.Specification}` },
+	{ url: "http://l.web.umkc.edu/lizhu/teaching/2016sp.video-communication/ref/mp4.pdf", name: "MP4 Specification", type: `${DocTypes.Specification}` },
+	{ url: "https://www.stroustrup.com/macis09.pdf", name: "Internal Program Representation for C++", type: `${DocTypes.Paper}`, github: "https://github.com/GabrielDosReis/ipr" },
+	{ url: "https://heap.ovh/files/mPCIe-electromechanical.pdf", name: "mPCIe Electromechanical Specification", type: `${DocTypes.Specification}` },
+	{ url: "https://www.usb.org/sites/default/files/USB%20Type-C%20Spec%20R2.0%20-%20August%202019.pdf", name: "USB Type-C Cable and Connector Specification", type: `${DocTypes.Specification}` },
+	{ url: "https://arxiv.org/pdf/1507.08439", name: "LightFM paper", type: `${DocTypes.Paper}` },
+	{ url: "https://arxiv.org/pdf/2305.07759", name: "TinyStories: How Small Can Language Models Be and Still Speak Coherent English?", type: `${DocTypes.Paper}` },
+	{ url: "https://arxiv.org/pdf/1706.03762", name: "Attention Is All You Need", type: `${DocTypes.Paper}` },
+	{ url: "https://www.ti.com/lit/ds/symlink/lm386.pdf", name: "LM386", type: `${DocTypes.Datasheet}` },
+	{ url: "https://www.ti.com/lit/ds/symlink/lm741.pdf", name: "LM741", type: `${DocTypes.Datasheet}` },
+	{ url: "https://www.onsemi.com/pdf/datasheet/p2n2222a-d.pdf", name: "P2N2222A", type: `${DocTypes.Datasheet}` },
+	{ url: "https://www.onsemi.com/download/data-sheet/pdf/2n3903-d.pdf", name: "2N3903, 2N3904", type: `${DocTypes.Datasheet}` },
+	{ url: "https://www.polyu.edu.hk/cfso/docdrive/Operation_mode_and_opening_hours_of_campus_catering_outlets.pdf", name: "PolyU canteens", type: `${DocTypes.Timetable}` },
+	{ url: "https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/WEK-leaflet-Digital-202506_175099b64I96.pdf", name: "High Speed Rail Leaflet", type: `${DocTypes.Map}` },
+	{ url: "https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/DIH_17459803p3n8.pdf", name: "Diamond Hill Leaflet", type: `${DocTypes.Map}` },
+	{ url: "https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/Digital_Station_information_leaflet_WTS_Mar_2024_171108O95980.pdf", name: "Wong Tai Sin Leaflet", type: `${DocTypes.Map}` },
+	{ url: "https://www.mtr.com.hk/digitalleaflet/data/upload/en/article/pdf/HUH_Digital_Leaflet_032025_174n29584r99.pdf", name: "Hung Hom Leaflet", type: `${DocTypes.Map}` },
+	{ url: "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf", name: "Ngspice Manual", type: `${DocTypes.Manual}` }
 ], ({ type }) =>
   type
 );
