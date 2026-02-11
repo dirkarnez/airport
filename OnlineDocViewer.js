@@ -13,19 +13,22 @@ https://docs.google.com/viewer?url=https://github.com/poychang/blog.poychang.net
  /* className="d-flex justify-content-around"*/
 
 const DocTypes = {
-  Paper: 'Paper',
-  KiCad: 'KiCad',
-  Calendar: 'Calendar',
-  Specification: 'Specification',
-  Datasheet: 'Datasheet',
-  Timetable: 'Timetable',
-  Map: 'Map',
-  Manual: 'Manual'
+	Paper: 'Paper',
+	KiCad: 'KiCad',
+	Calendar: 'Calendar',
+	Specification: 'Specification',
+	Datasheet: 'Datasheet',
+	Timetable: 'Timetable',
+	Map: 'Map',
+	Manual: 'Manual',
+	Schematics: 'Schematics'
 };
 /* 
-	{ url: "", name: "", type: "" },
+	{ url: "", name: "", type: `${DocTypes.}` },
 */
 const typedPDFs = Object.groupBy([
+	{ url: "https://datasheets.raspberrypi.com/pcie/pcie-connector-standard.pdf", name: "Raspberry Pi Connector for PCIe", type: `${DocTypes.Specification}` },
+	{ url: "https://datasheets.raspberrypi.com/m2-hat-plus/raspberry-pi-m2-hat-plus-schematics.pdf", name: "Raspberry Pi M.2 M-Key HAT+", type: `${DocTypes.Schematics}` },
 	{ url: "https://arxiv.org/pdf/1709.01782", name: "Automatic Document Image Binarization using Bayesian Optimization", type: `${DocTypes.Paper}` },
 	{ url: "https://docs.kicad.org/9.0/en/introduction/introduction.pdf", name: "Introduction", type: `${DocTypes.KiCad}` },
 	{ url: "https://docs.kicad.org/9.0/en/getting_started_in_kicad/getting_started_in_kicad.pdf", name: "Getting Started in KiCad", type: `${DocTypes.KiCad}` },
