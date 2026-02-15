@@ -27,10 +27,9 @@ const DocTypes = {
 	{ url: "", name: "", type: `${DocTypes.}` },
 */
 
-// https://aclanthology.org/2024.emnlp-main.681.pdf
-// https://minigpt-4.github.io/
-
 const typedPDFs = Object.groupBy([
+	{ url: "https://arxiv.org/pdf/2304.10592", name: "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models", homepage: "https://minigpt-4.github.io" type: `${DocTypes.Paper}` },
+	{ url: "https://aclanthology.org/2024.emnlp-main.681.pdf", name: "Where Am I From? Identifying Origin of LLM-generated Content", type: `${DocTypes.Paper}` },
 	{ url: "https://datasheets.raspberrypi.com/pcie/pcie-connector-standard.pdf", name: "Raspberry Pi Connector for PCIe", type: `${DocTypes.Specification}` },
 	{ url: "https://datasheets.raspberrypi.com/m2-hat-plus/raspberry-pi-m2-hat-plus-schematics.pdf", name: "Raspberry Pi M.2 M-Key HAT+", type: `${DocTypes.Schematics}` },
 	{ url: "https://arxiv.org/pdf/1709.01782", name: "Automatic Document Image Binarization using Bayesian Optimization", type: `${DocTypes.Paper}` },
