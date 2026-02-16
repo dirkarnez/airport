@@ -199,10 +199,6 @@
     function githubReadBranchRecursive() {
       document.getElementById('app').innerHTML = "Loading...";
       new Promise((res, rej) => {
-        if (!Cookies.get(window.key)) {
-          rej();
-          return;
-        }
         try {
           window.decrypted = CryptoJS.AES.decrypt("U2FsdGVkX1/a1VfGGm8MJ3hwPja+fE8/dVJZ+HstF0gaUCoK49pPHF4Tv0zdYJe9Xo3Tu947Wl+A6Teju/9Yvw==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
           window.myOctokit = new octokitCore.Octokit({ auth: window.decrypted });
@@ -215,8 +211,7 @@
             .then(response => response.data.tree.filter(leaf => !!leaf.path && (leaf.path == "README.yaml"))[0].sha)
             .then(README_YAML_SHA => res(githubClientPrivateApps.readAsString(README_YAML_SHA)))
             .catch(e => {
-              alert("pw wrong")
-              rej(e);
+              rej(new Error("pw wrong"));
             });
         } catch (error) {
           rej(error)
@@ -241,7 +236,6 @@
             })
             .then(INDEX_JS_SHA => githubClientPerApp.readAsString(INDEX_JS_SHA))
             .then(content => new Promise((resolve, reject) => {
-              
               const code = Babel.transform(content, {
                 presets: ['es2015', 'react']
               }).code;
@@ -262,9 +256,8 @@
               }
               catch(e) {
                 debugger;
-                reject(e);
+                reject(new Error(`${app.entry} error ${e}`));
               }
-
             }));
         });
         return Promise.all(tasks);
@@ -273,6 +266,7 @@
         window.init(appObjects);
       })
       .catch(e => {
+        debugger;
         Cookies.set(window.key, prompt('Type here'));
         if (!!Cookies.get(window.key)) {
           githubReadBranchRecursive();
