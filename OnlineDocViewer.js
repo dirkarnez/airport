@@ -28,6 +28,7 @@ const DocTypes = {
 */
 
 const typedPDFs = Object.groupBy([
+	{ url: "https://is.hkjc.com/ocb/ocbbizhour_ch.pdf", name: "場外投注處服務時間", type: `${DocTypes.Timetable}` },
 	{ url: "https://arxiv.org/pdf/2304.10592", name: "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models", homepage: "https://minigpt-4.github.io", type: `${DocTypes.Paper}` },
 	{ url: "https://aclanthology.org/2024.emnlp-main.681.pdf", name: "Where Am I From? Identifying Origin of LLM-generated Content", type: `${DocTypes.Paper}` },
 	{ url: "https://datasheets.raspberrypi.com/pcie/pcie-connector-standard.pdf", name: "Raspberry Pi Connector for PCIe", type: `${DocTypes.Specification}` },
