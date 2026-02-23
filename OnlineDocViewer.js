@@ -27,7 +27,10 @@ const DocTypes = {
 	{ url: "", name: "", type: `${DocTypes.}` },
 */
 
+// https://www.connectedpapers.com/
 const typedPDFs = Object.groupBy([
+	{ url: "https://arxiv.org/pdf/2208.07339", name: "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale", type: `${DocTypes.Paper}` },
+	{ url: "https://arxiv.org/pdf/2506.04544", name: "hdl2v: A Code Translation Dataset for Enhanced LLM Verilog Generation", type: `${DocTypes.Paper}` },
 	{ url: "https://is.hkjc.com/ocb/ocbbizhour_ch.pdf", name: "場外投注處服務時間", type: `${DocTypes.Timetable}` },
 	{ url: "https://arxiv.org/pdf/2304.10592", name: "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models", homepage: "https://minigpt-4.github.io", type: `${DocTypes.Paper}` },
 	{ url: "https://aclanthology.org/2024.emnlp-main.681.pdf", name: "Where Am I From? Identifying Origin of LLM-generated Content", type: `${DocTypes.Paper}` },
