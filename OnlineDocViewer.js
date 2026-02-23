@@ -28,7 +28,8 @@ const DocTypes = {
 */
 
 // https://www.connectedpapers.com/
-const typedPDFs = Object.groupBy([
+const typedPDFs = Object.groupBy([ 
+	{ url: "https://ww1.microchip.com/downloads/en/DeviceDoc/doc7799.pdf", name: "atemga16u2", type: `${DocTypes.Datasheet}` },
 	{ url: "https://arxiv.org/pdf/2208.07339", name: "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale", type: `${DocTypes.Paper}` },
 	{ url: "https://arxiv.org/pdf/2506.04544", name: "hdl2v: A Code Translation Dataset for Enhanced LLM Verilog Generation", type: `${DocTypes.Paper}` },
 	{ url: "https://is.hkjc.com/ocb/ocbbizhour_ch.pdf", name: "場外投注處服務時間", type: `${DocTypes.Timetable}` },
