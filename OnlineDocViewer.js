@@ -21,7 +21,8 @@ const DocTypes = {
 	Timetable: 'Timetable',
 	Map: 'Map',
 	Manual: 'Manual',
-	Schematics: 'Schematics'
+	Schematics: 'Schematics',
+	Yosys: 'Yosys'
 };
 /* 
 	{ url: "", name: "", type: `${DocTypes.}` },
@@ -29,6 +30,9 @@ const DocTypes = {
 
 // https://www.connectedpapers.com/
 const typedPDFs = Object.groupBy([
+	{ url: "https://yosyshq.net/yosys/files/intersynth-yosys-springer2013.pdf", name: "InterSynth Yosys Springer 2013", type: `${DocTypes.Yosys}` },
+	{ url: "https://yosyshq.net/yosys/files/yosys-austrochip2013.pdf", name: "Yosys - A Free Verilog Synthesis Suite", type: `${DocTypes.Yosys}` },
+	{ url: "https://yosyshq.net/yosys/files/yosys_manual.pdf", name: "Yosys Manual", type: `${DocTypes.Yosys}` },
 	{ url: "https://www.nsnam.org/docs/release/3.47/tutorial/ns-3-tutorial.pdf", name: "ns-3 Tutorial (v3.47)", type: `${DocTypes.Manual}` },
 	{ url: "https://ww1.microchip.com/downloads/en/DeviceDoc/doc7799.pdf", name: "atemga16u2", type: `${DocTypes.Datasheet}` },
 	{ url: "https://arxiv.org/pdf/2208.07339", name: "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale", type: `${DocTypes.Paper}` },
