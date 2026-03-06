@@ -22,7 +22,8 @@ const DocTypes = {
 	Map: 'Map',
 	Manual: 'Manual',
 	Schematics: 'Schematics',
-	Yosys: 'Yosys'
+	Yosys: 'Yosys',
+	Verilog: 'Verilog'
 };
 /* 
 	{ url: "", name: "", type: `${DocTypes.}` },
@@ -30,6 +31,7 @@ const DocTypes = {
 
 // https://www.connectedpapers.com/
 const typedPDFs = Object.groupBy([
+	{ url: "https://www.accellera.org/images/downloads/standards/v-ams/VAMS-LRM-2023.pdf", name: "Verilog-AMS Language Reference Manual", type: `${DocTypes.Verilog}` },
 	{ url: "https://yosyshq.net/yosys/files/intersynth-yosys-springer2013.pdf", name: "InterSynth Yosys Springer 2013", type: `${DocTypes.Yosys}` },
 	{ url: "https://yosyshq.net/yosys/files/yosys-austrochip2013.pdf", name: "Yosys - A Free Verilog Synthesis Suite", type: `${DocTypes.Yosys}` },
 	{ url: "https://yosyshq.net/yosys/files/yosys_manual.pdf", name: "Yosys Manual", type: `${DocTypes.Yosys}` },
