@@ -32,6 +32,7 @@ const DocTypes = {
 
 // https://www.connectedpapers.com/
 const typedPDFs = Object.groupBy([
+	{ url: "https://ecommons.cornell.edu/server/api/core/bitstreams/44925cec-f158-41fe-8061-d863754d1170/content", name: "Uncovering Psychopaths: An Automated Linguistic Approach", type: `${DocTypes.Paper}` },
 	{ url: "https://www.isec.tugraz.at/wp-content/uploads/2019/09/Introduction-to-SMT-with-Z3.pdf", name: "Introduction to SMT with Z3", type: `${DocTypes.Z3}` },
 	{ url: "https://www.accellera.org/images/downloads/standards/v-ams/VAMS-LRM-2023.pdf", name: "Verilog-AMS Language Reference Manual", type: `${DocTypes.Verilog}` },
 	{ url: "https://yosyshq.net/yosys/files/intersynth-yosys-springer2013.pdf", name: "InterSynth Yosys Springer 2013", type: `${DocTypes.Yosys}` },
