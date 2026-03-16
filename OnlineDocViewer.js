@@ -33,6 +33,7 @@ const DocTypes = {
 
 // https://www.connectedpapers.com/
 const typedPDFs = Object.groupBy([
+	{ url: "https://arxiv.org/pdf/2602.21141", name: "SynthRender and IRIS: Open-Source Framework and Dataset for Bidirectional Sim-Real Transfer in Industrial Object Perception", type: `${DocTypes.Paper}` },
 	{ url: "https://www.hkfsd.gov.hk/chi/source/circular/2005_02.pdf", name: "通風╱空氣調節控制系統", type: `${DocTypes.Circular}` },
 	{ url: "https://ecommons.cornell.edu/server/api/core/bitstreams/44925cec-f158-41fe-8061-d863754d1170/content", name: "Uncovering Psychopaths: An Automated Linguistic Approach", type: `${DocTypes.Paper}` },
 	{ url: "https://www.isec.tugraz.at/wp-content/uploads/2019/09/Introduction-to-SMT-with-Z3.pdf", name: "Introduction to SMT with Z3", type: `${DocTypes.Z3}` },
