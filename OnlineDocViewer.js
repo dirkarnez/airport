@@ -13,6 +13,7 @@ https://docs.google.com/viewer?url=https://github.com/poychang/blog.poychang.net
  /* className="d-flex justify-content-around"*/
 
 const DocTypes = {
+	FFTW3: "FFTW3",
 	Circular: "Circular",
 	Paper: 'Paper',
 	KiCad: 'KiCad',
@@ -33,6 +34,8 @@ const DocTypes = {
 
 // https://www.connectedpapers.com/
 const typedPDFs = Object.groupBy([
+	{ url: "https://www.fftw.org/fftw-paper-ieee.pdf", name: "The Design and Implementation of FFTW3", type: `${DocTypes.FFTW3}` },
+	{ url: "https://www.fftw.org/fftw3.pdf", name: "FFTW3 Manual", type: `${DocTypes.FFTW3}` },
 	{ url: "https://arxiv.org/pdf/2602.21141", name: "SynthRender and IRIS: Open-Source Framework and Dataset for Bidirectional Sim-Real Transfer in Industrial Object Perception", type: `${DocTypes.Paper}` },
 	{ url: "https://www.hkfsd.gov.hk/chi/source/circular/2005_02.pdf", name: "通風╱空氣調節控制系統", type: `${DocTypes.Circular}` },
 	{ url: "https://ecommons.cornell.edu/server/api/core/bitstreams/44925cec-f158-41fe-8061-d863754d1170/content", name: "Uncovering Psychopaths: An Automated Linguistic Approach", type: `${DocTypes.Paper}` },
