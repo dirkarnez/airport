@@ -34,6 +34,8 @@ const DocTypes = {
 
 // https://www.connectedpapers.com/
 const typedPDFs = Object.groupBy([
+	{ url: "https://www.ti.com/lit/ug/sprugv7e/sprugv7e.pdf", name: "KeyStone I Architecture Antenna Interface 2 (AIF2)", type: `${DocTypes.Manual}` },
+	{ url: "https://www.ti.com/lit/an/sprab27b/sprab27b.pdf", name: "Multicore Programming Guide (Rev. B)", type: `${DocTypes.Manual}` },
 	{ url: "https://www.fftw.org/fftw-paper-ieee.pdf", name: "The Design and Implementation of FFTW3", type: `${DocTypes.FFTW3}` },
 	{ url: "https://www.fftw.org/fftw3.pdf", name: "FFTW3 Manual", type: `${DocTypes.FFTW3}` },
 	{ url: "https://arxiv.org/pdf/2602.21141", name: "SynthRender and IRIS: Open-Source Framework and Dataset for Bidirectional Sim-Real Transfer in Industrial Object Perception", type: `${DocTypes.Paper}` },
