@@ -16,6 +16,7 @@ const DocTypes = {
 	FFTW3: "FFTW3",
 	Circular: "Circular",
 	Paper: 'Paper',
+	Guidelines: 'Guidelines',
 	KiCad: 'KiCad',
 	Calendar: 'Calendar',
 	Specification: 'Specification',
@@ -34,6 +35,7 @@ const DocTypes = {
 
 // https://www.connectedpapers.com/
 const typedPDFs = Object.groupBy([
+	{ url: "https://www.renesas.com/en/document/apn/b-027-designing-printed-antennas-bluetooth-low-energy", name: "AN-B-027: Designing Printed Antennas for Bluetooth Low Energy", type: `${DocTypes.Guidelines}` },
 	{ url: "https://www.ti.com/lit/ug/sprugv7e/sprugv7e.pdf", name: "KeyStone I Architecture Antenna Interface 2 (AIF2)", type: `${DocTypes.Manual}` },
 	{ url: "https://www.ti.com/lit/an/sprab27b/sprab27b.pdf", name: "Multicore Programming Guide (Rev. B)", type: `${DocTypes.Manual}` },
 	{ url: "https://www.fftw.org/fftw-paper-ieee.pdf", name: "The Design and Implementation of FFTW3", type: `${DocTypes.FFTW3}` },
