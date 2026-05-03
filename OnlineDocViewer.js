@@ -35,6 +35,7 @@ const DocTypes = {
 
 // https://www.connectedpapers.com/
 const typedPDFs = Object.groupBy([
+	{ url: "https://aclanthology.org/2023.findings-emnlp.740.pdf", name: "TreePiece: Faster Semantic Parsing via Tree Tokenization", type: `${DocTypes.Paper}` }, 
 	{ url: "https://link.springer.com/content/pdf/10.1007%2F978-3-540-78800-3_24.pdf", name: "LNCS 4963 - Z3: An Efficient SMT Solver", type: `${DocTypes.Z3}` },
 	{ url: "https://www.renesas.com/en/document/apn/b-027-designing-printed-antennas-bluetooth-low-energy", name: "AN-B-027: Designing Printed Antennas for Bluetooth Low Energy", type: `${DocTypes.Guidelines}` },
 	{ url: "https://www.ti.com/lit/ug/sprugv7e/sprugv7e.pdf", name: "KeyStone I Architecture Antenna Interface 2 (AIF2)", type: `${DocTypes.Manual}` },
