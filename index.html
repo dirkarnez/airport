@@ -200,7 +200,7 @@
       document.getElementById('app').innerHTML = "Loading...";
       new Promise((res, rej) => {
         try {
-          window.decrypted = CryptoJS.AES.decrypt("U2FsdGVkX1/I1dUXBpR3fXVTkMCdbYLt2LFWXsydnXs5mfVf/M/o3HAVCGFNvbYZTXu/x0SFUBrmNaBh4sP+qQ==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
+          window.decrypted = CryptoJS.AES.decrypt("U2FsdGVkX1+ibjEdrnXnPYoOrlbFamwp9xW/c9h7VepCNzXF4+GTS3qmTK4m7auLpn8FfaOgV97tQ0fNrwYbiQ==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
           window.myOctokit = new octokitCore.Octokit({ auth: window.decrypted });
           
           var githubClientPrivateApps = window.github(window.myOctokit);
