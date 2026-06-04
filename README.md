@@ -109,6 +109,28 @@
     ```
 - [ ] Web audio API - Monkey's audio codec
 - [ ] 'https://developer.mozilla.org/en-US/docs/Web/API/Location/hash' to jump to apps
+- [ ] Lazy-load
+  - ```jsx
+    var ReactGridLayoutLibrary = null;
+    
+    function MyGrid() {
+      const [ loaded, setLoaded ] = React.useState(false);
+    
+      React.useEffect(() => {
+        fetch("./ReactGridLayoutLibrary.v.2.1.1.js")
+        .then(a => a.text())
+        .then(a => {
+            eval(a);
+            ReactGridLayoutLibrary.ReactGridLayout.WidthProvider(ReactGridLayoutLibrary.ReactGridLayout);
+            setLoaded(true);
+        });
+    
+      }, []);
+    	return (
+        loaded && <MyGridReal/>
+    	);
+    }
+    ```
 
 ### Tools
 - https://transform.tools/html-to-jsx
