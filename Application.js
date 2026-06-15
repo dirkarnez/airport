@@ -313,12 +313,14 @@ function Application({ entryPoints }) {
                 onChange={() => {
                   Cookies.set(window.key, event.target.value);
                 }} /><br/>
+              <a href="https://github.com/dirkarnez/rocket/blob/main/setup.cmd">setup.cmd</a>
+              <br/>
                 {
                       !!window.decrypted && (
                       <button 
                             className="btn btn-primary"
                             style={{ wordBreak: "break-all", width: "100%" }}
-                              onClick={() => {  
+                            onClick={() => {  
                             navigator.clipboard
                                   .writeText(window.decrypted)
                                   .then(() => alert("Copied!"))
