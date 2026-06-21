@@ -6,6 +6,7 @@ function Netvigator() {
       <h5>
         <a href="https://github.com/dirkarnez/airport/blob/main/Netvigator.js" target="_blank">Netvigator</a>
       </h5>
+      <span>68-110012-0861-59 (Bill type 62)</span>
       <br/>
       <img src={dataURI} alt="" style={{ width: "100%" }}/>
     </React.Fragment>
