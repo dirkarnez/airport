@@ -175,6 +175,15 @@ function Application({ entryPoints }) {
                   </div>
             </div>
           </div>
+
+           <br/>    
+                <div className="row">
+            <div className="col">
+                  <div style={{border: "solid", padding: "1rem"}}>
+                        <Netvigator/>
+                  </div>
+            </div>
+          </div>
       
             <br/>         
 
@@ -183,8 +192,8 @@ function Application({ entryPoints }) {
                   <Name/>
             </div>
           </div>
-                        
-            <br/>
+      
+      <br/>
                         
           <div className="row">
             <div className="col">
