@@ -18,6 +18,8 @@ function Application({ entryPoints }) {
                   <h3>Common</h3>
                   <a href="https://www.goethe.de/prj/dfd/en/index.cfm">Learn German</a><br/>
                   <a href="https://outlook.office365.com/owa/calendar/IEMakerLabSelfserviceBooking3DPrinterSmall@polyuit.onmicrosoft.com/bookings/">3D printing</a><br/>  
+                  <a href="https://alumportal.polyu.edu.hk/enus">PolyU Alumni Portal</a><br/>
+                  <a href="https://idportal.polyu.edu.hk/">IdPortal</a><br/>
                   <a href="https://webcammictest.com/">Webcam test - Check camera online</a><br/>
                   <a href="https://mic-test.com/">Mic Test | Mic Test</a><br/>                    
                   <a href="https://booking3.lib.polyu.edu.hk/login">iBooking</a><br/>
