@@ -169,6 +169,14 @@ function Application({ entryPoints }) {
               </form>
             </div>
           </div>
+
+          <div className="row">
+            <div className="col">
+                  <div style={{border: "solid", padding: "1rem"}}>
+                        <Authenticator/>
+                  </div>
+            </div>
+          </div>
                         
           <div className="row">
             <div className="col">
