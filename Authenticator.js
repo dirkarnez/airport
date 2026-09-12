@@ -89,7 +89,7 @@ function Countdown({secret}) {
     return () => clearTimeout(timerId);
   }, []); // Empty array ensures this runs only once on mount
 
-  return <div><p>Time remaining: {seconds}s</p><p>{code}</p><p>{secondsLeft}</p></div>;
+  return <div><p>Time remaining: {secondsLeft}s</p><p>{code}</p></div>;
 }
 
 function Authenticator() {
