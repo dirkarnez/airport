@@ -1,3 +1,25 @@
+function Countdown() {
+  const [ seconds, setSeconds ] = React.useState(30);
+
+  React.useEffect(() => {
+    // 1. Start the interval
+    const timerId = setInterval(() => {
+      setSeconds((prevSeconds) => {
+        if (prevSeconds <= 1) {
+          clearInterval(timerId); // Stop timer at 0
+          return 0;
+        }
+        return prevSeconds - 1;
+      });
+    }, 1000);
+
+    // 2. Return the cleanup function to clear interval on unmount
+    return () => clearInterval(timerId);
+  }, []); // Empty array ensures this runs only once on mount
+
+  return <div>Time remaining: {seconds}s</div>;
+}
+
 function Authenticator() {
     // React.useEffect(() => {
     //     return () => {
@@ -14,6 +36,8 @@ function Authenticator() {
             <br/>
             <span>{CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8) }</span>
             <br/>
+            <Countdown/>
         </React.Fragment>
     )
 }
+
