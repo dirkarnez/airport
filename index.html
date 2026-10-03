@@ -203,7 +203,7 @@
       document.getElementById('app').innerHTML = "Loading...";
       new Promise((res, rej) => {
         try {
-          window.decrypted = CryptoJS.AES.decrypt("U2FsdGVkX1+WyDx0R7TkH7/4ugAc/yvnvMeQkv8tQGWlm9l0d95Apug6klPJm8PgW54WvakViNNLOmwCPbPLbU9tLZyurH/JEQu6OLZqCfMQ3arVOTcQ/Ow8a/2yIZxi5nUtzdbVwe2CMf8lfoyr2w==", (JSON.parse(Cookies.get(window.key)) || "")).toString(CryptoJS.enc.Utf8);
+          window.decrypted = CryptoJS.AES.decrypt("U2FsdGVkX1+WyDx0R7TkH7/4ugAc/yvnvMeQkv8tQGWlm9l0d95Apug6klPJm8PgW54WvakViNNLOmwCPbPLbU9tLZyurH/JEQu6OLZqCfMQ3arVOTcQ/Ow8a/2yIZxi5nUtzdbVwe2CMf8lfoyr2w==", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8);
           window.myOctokit = new octokitCore.Octokit({ auth: window.decrypted });
           
           var githubClientPrivateApps = window.github(window.myOctokit);
