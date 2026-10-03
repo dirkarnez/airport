@@ -185,6 +185,17 @@
       window.root.render(<Application entryPoints={appObjects.map(appObject => appObject.entryPoint)}/>);
     };
   </script> -->
+
+  <script type="text/babel">
+    // window.init = (appObjects) => {
+    //   appObjects.forEach(appObject => {
+    //     window[appObject.entryPoint] = appObject.code;
+    //   });
+      document.getElementById('app').innerHTML = "";
+      window.root = ReactDOM.createRoot(document.getElementById('app'));
+      window.root.render(<Application entryPoints={[]}/>);
+    };
+  </script>
   <!-- <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script> -->
 
   <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
