@@ -258,7 +258,6 @@
                 });
               }
               catch(e) {
-                debugger;
                 reject(new Error(`${app.entry} error ${e}`));
               }
             }));
@@ -269,7 +268,7 @@
         window.init(appObjects);
       })
       .catch(e => {
-        Cookies.set(window.key, prompt('Wrong pass. Retype here'));
+        Cookies.set(window.key, prompt(`Error: ${e}. Retry`));
         githubReadBranchRecursive();
       });
     }
