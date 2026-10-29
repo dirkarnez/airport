@@ -87,7 +87,7 @@ function Countdown({secret}) {
 
     // 離開網頁（元件卸載）時，務必清除計時器，避免記憶體流失
     return () => clearTimeout(timerId);
-  }, []); // Empty array ensures this runs only once on mount
+  }, [ secret ]); // Empty array ensures this runs only once on mount
 
   return <div><p>Time remaining: {secondsLeft}s</p><p>{code}</p></div>;
 }
