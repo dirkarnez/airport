@@ -93,12 +93,12 @@ function Countdown({secret}) {
 }
 
 function Authenticator() {
-    // React.useEffect(() => {
-    //     return () => {
-    //     // Optional cleanup function goes here
-    //     };
-    // }, []);
+    React.useEffect(() => {
+		setSecret(CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", input).toString(CryptoJS.enc.Utf8)
+    }, [ input ]);
+	
 	const [ input, setInput ] = React.useState(``);
+	const [ secret, setSecret ] = React.useState(``);
 	
   	const handleChange = (event) => {
 		setInput(event.target.value);
@@ -113,9 +113,7 @@ function Authenticator() {
             <br/>
             <input type="text" value={input} onChange={handleChange} style={{width: "100%"}} name="input"/>
             <br/>
-            <Countdown secret={CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", input).toString(CryptoJS.enc.Utf8) }/>
-            <br/>
-			{input}
+            <Countdown secret={secret) }/>
         </React.Fragment>
     )
 }
