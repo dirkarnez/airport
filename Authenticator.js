@@ -94,7 +94,7 @@ function Countdown({secret}) {
 
 function Authenticator() {
     React.useEffect(() => {
-		setSecret(CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", input).toString(CryptoJS.enc.Utf8)
+		setSecret(CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", input).toString(CryptoJS.enc.Utf8));
     }, [ input ]);
 	
 	const [ input, setInput ] = React.useState(``);
