@@ -98,9 +98,9 @@ function Authenticator() {
 	
     React.useEffect(() => {
 		if (!!input) {
-			const temp = CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", input).toString(CryptoJS.enc.Utf8);
+			const temp = CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", input);
 			if (!!temp) {
-				setSecret(temp);
+				setSecret(temp.toString(CryptoJS.enc.Utf8));
 			}
 		}
     }, [ input ]);
