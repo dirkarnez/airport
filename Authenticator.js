@@ -100,7 +100,7 @@ function Authenticator() {
             <h5><a href="https://github.com/dirkarnez/airport/blob/main/Authenticator.js" target="_blank">Authenticator</a></h5>
             <a href="https://github.com/dirkarnez/my-authenticator" target="_blank">dirkarnez/my-authenticator</a>
             <br/>
-            <input type="text" value={input} onChange={event => { 
+            <input type="text" onChange={event => { 
 				try {
 					setSecret(CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", event.target.value).toString(CryptoJS.enc.Utf8));
 				}
