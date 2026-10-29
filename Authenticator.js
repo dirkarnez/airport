@@ -113,7 +113,7 @@ function Authenticator() {
             <br/>
             <input type="text" value={input} onChange={handleChange} style={{width: "100%"}} name="input"/>
             <br/>
-            <Countdown secret={secret) }/>
+            <Countdown secret={secret}/>
         </React.Fragment>
     )
 }
