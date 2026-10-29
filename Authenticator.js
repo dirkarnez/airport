@@ -93,24 +93,19 @@ function Countdown({secret}) {
 }
 
 function Authenticator() {
-	const [ input, setInput ] = React.useState(``);
 	const [ secret, setSecret ] = React.useState(``);
-	
-    React.useEffect(() => {
-		if (!!input) {
-			const temp = CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", input);
-			if (!!temp) {
-				setSecret(temp.toString(CryptoJS.enc.Utf8));
-			}
-		}
-    }, [ input ]);
 	
     return (
         <React.Fragment>
             <h5><a href="https://github.com/dirkarnez/airport/blob/main/Authenticator.js" target="_blank">Authenticator</a></h5>
             <a href="https://github.com/dirkarnez/my-authenticator" target="_blank">dirkarnez/my-authenticator</a>
             <br/>
-            <input type="text" value={input} onChange={event => { setInput(event.target.value); }} style={{width: "100%"}} name="input"/>
+            <input type="text" value={input} onChange={event => { 
+				try {
+					setSecret(CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", event.target.value).toString(CryptoJS.enc.Utf8));
+				}
+				catch (e) { }
+			}} style={{width: "100%"}} name="input"/>
             <br/>
             <Countdown secret={secret}/>
         </React.Fragment>
