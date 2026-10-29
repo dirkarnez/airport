@@ -98,22 +98,19 @@ function Authenticator() {
 	
     React.useEffect(() => {
 		if (!!input) {
-			setSecret(CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", input).toString(CryptoJS.enc.Utf8));
+			const temp = CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", input).toString(CryptoJS.enc.Utf8);
+			if (!!temp) {
+				setSecret(temp);
+			}
 		}
     }, [ input ]);
 	
-  	const handleChange = (event) => {
-		setInput(event.target.value);
-	};
-    
     return (
         <React.Fragment>
-            <h5>
-                <a href="https://github.com/dirkarnez/airport/blob/main/Authenticator.js" target="_blank">Authenticator</a>
-            </h5>
+            <h5><a href="https://github.com/dirkarnez/airport/blob/main/Authenticator.js" target="_blank">Authenticator</a></h5>
             <a href="https://github.com/dirkarnez/my-authenticator" target="_blank">dirkarnez/my-authenticator</a>
             <br/>
-            <input type="text" value={input} onChange={handleChange} style={{width: "100%"}} name="input"/>
+            <input type="text" value={input} onChange={event => { setInput(event.target.value); }} style={{width: "100%"}} name="input"/>
             <br/>
             <Countdown secret={secret}/>
         </React.Fragment>
