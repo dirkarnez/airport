@@ -98,6 +98,11 @@ function Authenticator() {
     //     // Optional cleanup function goes here
     //     };
     // }, []);
+	const [ input, setInput ] = React.useState(``);
+	
+  	const handleChange = (event) => {
+		setInput(event.target.value);
+	};
     
     return (
         <React.Fragment>
@@ -106,7 +111,9 @@ function Authenticator() {
             </h5>
             <a href="https://github.com/dirkarnez/my-authenticator" target="_blank">dirkarnez/my-authenticator</a>
             <br/>
-            <Countdown secret={CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", (Cookies.get(window.key) || "")).toString(CryptoJS.enc.Utf8) }/>
+            <input type="text" value={input} onChange={handleChange} style={{width: "100%"}} name="input"/>
+            <br/>
+            <Countdown secret={CryptoJS.AES.decrypt("U2FsdGVkX19awg7dFkjJiwsC+VCVSe+yeG/MVphxqeCm5MLAwPqmPO1cszORCOK8", input).toString(CryptoJS.enc.Utf8) }/>
         </React.Fragment>
     )
 }
